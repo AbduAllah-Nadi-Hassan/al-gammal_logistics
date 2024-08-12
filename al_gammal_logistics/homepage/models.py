@@ -1,0 +1,12 @@
+from django.db import models
+
+class Article(models.Model):
+    title = models.CharField("Article's title", max_length=200)
+    description = models.CharField("Short description of the Article (for SEO)", max_length=300)
+    body = models.TextField("Article's body")
+    image = models.ImageField(upload_to="Articles images")
+
+
+class Jobs(models.Model):
+    title = models.CharField("Job title", max_length=150)
+    description = models.TextField("Job description")
