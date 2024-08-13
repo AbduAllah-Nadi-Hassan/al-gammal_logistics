@@ -6,7 +6,15 @@ class Article(models.Model):
     body = models.TextField("Article's body")
     image = models.ImageField(upload_to="Articles images")
 
+    class Meta:
+        verbose_name = "Article"
+        verbose_name_plural = "Articles"
+
 
 class Jobs(models.Model):
     title = models.CharField("Job title", max_length=150)
     description = models.TextField("Job description")
+
+    class Meta:
+        verbose_name = "Job"
+        verbose_name_plural = "Jobs"

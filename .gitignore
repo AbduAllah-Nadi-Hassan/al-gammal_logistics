@@ -1,0 +1,4 @@
+venv-gammal/
+.env
+.pyc
+__pycache__
