@@ -2,3 +2,5 @@ venv-gammal/
 .env
 .pyc
 __pycache__
+media/
+static/
