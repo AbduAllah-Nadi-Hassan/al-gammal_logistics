@@ -3,4 +3,3 @@ venv-gammal/
 .pyc
 __pycache__
 media/
-static/
