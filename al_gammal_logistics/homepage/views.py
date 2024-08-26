@@ -33,3 +33,17 @@ def blog(request):
 
 def contact(request):
     return render(request, "homepage/Contact_us.html")
+
+
+def articles(request, article_id):
+    article = get_object_or_404(Article, pk=article_id)
+    try:
+        prev_article = Article.objects.get(pk=article_id-1)
+    except Article.DoesNotExist:
+        prev_article = None
+    try:
+        next_article = Article.objects.get(pk=article_id+1)
+    except Article.DoesNotExist:
+        next_article = None
+    return render(request, "homepage/article.html",
+                 {"article": article, "prev_article": prev_article, "next_article": next_article})
