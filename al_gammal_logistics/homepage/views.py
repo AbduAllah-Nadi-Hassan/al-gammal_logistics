@@ -45,5 +45,7 @@ def articles(request, article_id):
         next_article = Article.objects.get(pk=article_id+1)
     except Article.DoesNotExist:
         next_article = None
-    return render(request, "homepage/article.html",
-                 {"article": article, "prev_article": prev_article, "next_article": next_article})
+    return render(
+        request,
+        "homepage/article.html",
+        {"article": article, "prev_article": prev_article, "next_article": next_article})
