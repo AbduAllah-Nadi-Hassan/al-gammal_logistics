@@ -1,11 +1,10 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    {% load static %}
     <!-- CSS Links -->
     <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
@@ -22,7 +21,7 @@
 
     <nav class="navbar navbar-expand-lg ftco-navbar-light">
         <div class="container-xl">
-            <a class="navbar-brand aside-stretch align-items-center" href="index.html">
+            <a class="navbar-brand aside-stretch align-items-center" href="{% url 'homepage:index' %}">
                 <img src="{% static 'homepage/images/logo_psd.webp' %}" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -32,13 +31,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'fleet' %}">Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'advantage' %}l">Competitive advantage</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'career' %}">Career</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleet' %}">Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
                 </ul>
             </div>
         </div>

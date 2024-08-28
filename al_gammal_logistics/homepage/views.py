@@ -15,7 +15,7 @@ def fleet(request):
 
 
 def advantage(request):
-    return render(request, "homepage/Competitive_advantage")
+    return render(request, "homepage/Competitive_advantage.html")
 
 
 def career(request):
