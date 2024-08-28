@@ -1,0 +1,77 @@
+/* h2 {
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+}
+
+.card h4 {
+    color: #007bff;
+}
+
+.card ul li {
+    margin-bottom: 15px;
+}
+
+.advantage-card {
+    transition: transform 0.3s ease;
+}
+
+.advantage-card:hover {
+    transform: translateY(-10px);
+} */
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    position: relative;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.advantage-card {
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.card ul li {
+    margin-bottom: 15px;
+}
+
+.card ul li strong {
+    color: #17a2b8;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
