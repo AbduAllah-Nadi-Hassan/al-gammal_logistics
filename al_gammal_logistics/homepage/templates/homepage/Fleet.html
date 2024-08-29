@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css links  -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/About us.css">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/About us.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
 
     <!-- js links -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -27,7 +28,7 @@
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg  ftco-navbar-light">
         <div class="container-xl">
-            <a class="navbar-brand aside-stretch align-items-center" href="index.html">
+            <a class="navbar-brand aside-stretch align-items-center" href="{% url 'homepage:index' %}">
                 <img src="images/logo_psd.webp" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -37,13 +38,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="About us.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Fleet.html">Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Competitive advantage.html">Competitive advantage</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Career.html">Career</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Contact us.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleet' %}">Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -56,7 +57,7 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 pt-5 text-center">
-                    <p class="breadcrumbs"><span class="me-2"><a href="index.html">Home <i
+                    <p class="breadcrumbs"><span class="me-2"><a href="{% url 'homepage:index' %}">Home <i
                                     class="fa fa-chevron-right"></i></a></span> <span>Fleet <i
                                 class="fa fa-chevron-right"></i></span></p>
                     <h1 class="mb-0 bread">Fleet</h1>
@@ -121,13 +122,13 @@
 <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 
     <!-- js links -->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="{% static 'homepage/js/popper.min.js' %}"></script>
+    <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'homepage/js/main.js' %}"></script>
 
 
     <script>
