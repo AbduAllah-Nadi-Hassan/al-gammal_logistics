@@ -41,7 +41,7 @@
    <link rel="stylesheet" href="css/About us.css">
     <!-- js links -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>article </title>
+    <title>{{article.title}} </title>
 
     <style>
 
@@ -143,18 +143,30 @@
                 <div class="col-md-6 col-lg-4 d-flex">
                     <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
                         data-aos-duration="1000" data-aos-delay="100">
+
+
+                         <!-- put the photo in this link -->
                         <a href="artical.html" class="block-20 img d-flex align-items-end"
                             style="background-image: url('images/track.webp');">
+
+
+                            <!-- write here the date  -->
                             <div class="meta-date mb-0 ms-4">
                                 <span>16</span>
                                 <small>Jan</small>
                             </div>
+
                         </a>
                         <div class="text">
-                            <h3 class="heading mb-3"><a href="#">Biggest Logistic in Cairo, EGY</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                            <!-- write here the main title -->
+                             
+                            <h3 class="heading mb-3"><a href="#">{{article.title}}/a></h3>
+
+                            <!-- write here the paragraph -->
+                            <p>{{article.body}}</p>
                         </div>
+
+
                     </div>
                 </div>
             </div>
