@@ -25,3 +25,8 @@ class Jobs(models.Model):
     class Meta:
         verbose_name = "Job"
         verbose_name_plural = "Jobs"
+
+
+class Services(models.Model):
+    name = models.CharField("Service's name", max_length=(200))
+    description = models.TextField("Service's Description")

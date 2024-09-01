@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Article, Jobs
+from .models import Article, Jobs, Services
 
 from datetime import date
 
@@ -54,5 +54,6 @@ def articles(request, article_id):
         {"article": article, "prev_article": prev_article, "next_article": next_article})
 
 
-def services(request):
-    pass
+def services(request, service_id):
+    service = get_object_or_404(Services, pk=service_id)
+    return render(request, "homepage/Services.html", {"service": service})
