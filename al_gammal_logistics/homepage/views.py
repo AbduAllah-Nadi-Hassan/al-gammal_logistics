@@ -52,3 +52,7 @@ def articles(request, article_id):
         request,
         "homepage/article.html",
         {"article": article, "prev_article": prev_article, "next_article": next_article})
+
+
+def services(request):
+    pass
