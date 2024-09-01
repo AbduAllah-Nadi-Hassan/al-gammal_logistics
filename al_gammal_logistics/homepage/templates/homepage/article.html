@@ -1,44 +1,14 @@
-<<<<<<< HEAD
-<!-- <html lang="en">
-=======
 {% load static %}
-<html lang="en">
->>>>>>> 1773a59360694a4762e8f568b7c502a8c8ea8e52
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{{article.description}}">
-        <title>{{article.title}}</title>
-    </head>
-    <body>
-        <header>
-           
-        <header>
-        <main>
-            <article>
-                <h1>{{article.title}}</h1>
-                <figure>
-                    <img src="{{article.image.url}}" alt="Article image">
-                </figure>
-                <p>{{article.body}}</p>
-            </article>
-        </main>
-        <footer>
-            
-        </footer>
-    </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- css links  -->
-   <link rel="stylesheet" href="css/all.min.css">
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/style2.css">
-   <link rel="stylesheet" href="css/About us.css">
+    <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/About_us.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
     <!-- js links -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>{{article.title}} </title>
@@ -95,13 +65,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="About us.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Fleet.html">Fleet</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Competitive advantage.html">Competitive advantage</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Career.html">Career</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Contact us.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleet' %}">Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -128,7 +98,7 @@
 
 
         
-        <!-- bolg section -->
+        <!-- article section -->
     <section class="ftco-section bg-light ftco-no-pt p-5">
         <div class="container-xl">
             <div class="row justify-content-center mb-5">
@@ -146,21 +116,20 @@
 
 
                          <!-- put the photo in this link -->
-                        <a href="artical.html" class="block-20 img d-flex align-items-end"
+                        <a href="{{article.image.url}}" class="block-20 img d-flex align-items-end"
                             style="background-image: url('images/track.webp');">
 
 
                             <!-- write here the date  -->
                             <div class="meta-date mb-0 ms-4">
-                                <span>16</span>
-                                <small>Jan</small>
+                                <span>{{article.pub_date}}</span>
                             </div>
 
                         </a>
                         <div class="text">
                             <!-- write here the main title -->
                              
-                            <h3 class="heading mb-3"><a href="#">{{article.title}}/a></h3>
+                            <h3 class="heading mb-3"><a href="#">{{article.title}}</h3>
 
                             <!-- write here the paragraph -->
                             <p>{{article.body}}</p>
@@ -211,13 +180,14 @@
     <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
     
         <!-- js links -->
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery-3.7.1.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="{% static 'homepage/js/popper.min.js' %}"></script>
+        <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
+        <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
     
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="{% static 'homepage/js/main.js' %}"></script>
+    
     
     
     <script>
