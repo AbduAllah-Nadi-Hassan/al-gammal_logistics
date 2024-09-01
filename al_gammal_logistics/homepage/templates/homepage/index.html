@@ -12,32 +12,10 @@
 
     <title>Home</title>
 
-<style>
-/* Initial state of the arrow */
+    <style>
+        /* Initial state of the arrow */
+    </style>
 
-
-/* Text styling */
-.services .text {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the arrow and text within the text container */
-}
-
-/* Initial state of the arrow */
-.services .arrow {
-    color: transparent; /* Arrow is initially hidden */
-    transition: color 0.3s ease;
-    
-}
-
-/* Hover state */
-.services:hover .arrow {
-    color: rgb(255, 183, 0); /* Arrow becomes visible and yellow on hover */
-}
-
-
-</style>
-    
 </head>
 
 <body>
@@ -127,7 +105,7 @@
                         <div class="row mt-4 g-lg-2">
                             <div class="col-lg-6 d-flex align-items-stretch services-wrap">
                                 <div class="services d-flex">
-                                    <div class="icon"><span> <i class="fas fa-rocket"></i></span></div>
+                                    <div class="icon"><span><i class="fas fa-rocket"></i></span></div>
                                     <div class="text">
                                         <h2>Transport</h2>
                                         <p class="mb-0">Safe & Reliable Logistic Solutions!.</p>
@@ -157,7 +135,7 @@
                                 <div class="services d-flex">
                                     <div class="icon"><span class="flaticon-construction"></span></div>
                                     <div class="text">
-                                        <h2>Logistic Services</h2>
+                                        <h2>Contract Logistics</h2>
                                         <p class="mb-0">Far far away, behind the word mountains.</p>
                                     </div>
                                 </div>
@@ -215,85 +193,97 @@
 
                     <a href="{% url 'homepage:services' 1 %}" class="ser">
 
-                        <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                        <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
-                            <div class="icon"><span class="flaticon-construction"></span></div>
-                            <div class="text">
-                            
-                                <h2>
-                                  
-                                    Bulk transportation</h2>
+                            <div class="services d-flex">
+                                <div class="icon">
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                        </svg>
+                                    </span>
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <h2>Bulk <br> transportation</h2>
+                                </div>
                             </div>
                         </div>
-
                     </a>
 
 
 
                     <a href="{% url 'homepage:services' 2 %}" class="ser">
 
-                        <div class="services d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
+                        <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
                             data-aos-duration="1000">
-                            <div class="icon"><span class="flaticon-house-1"></span></div>
-                            <div class="text">
-                                <h2>
+                            <div class="services d-flex">
+                                <div class="icon">
                                     <span class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                        </svg>
                                     </span>
-                                    Good and raw materials transportation</h2>
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <h2>Good and raw materials transportation</h2>
+                                </div>
                             </div>
                         </div>
                     </a>
 
 
                     <a href="" class="ser">
-                        <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                        <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
                             data-aos-duration="1000">
-                            <div class="icon"><span class="flaticon-engineer"></span></div>
-                            <div class="text">
-                                <h2>
+                            <div class="services d-flex">
+                                <div class="icon">
                                     <span class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                        </svg>
                                     </span>
-                                    Container Transportation</h2>
-
-
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <h2>Automated Distribution System</h2>
+                                </div>
                             </div>
                         </div>
                     </a>
 
 
                     <a href="{% url 'homepage:services' 4 %}" class="ser">
-                        <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                            data-aos-duration="1000">
-                            <div class="icon"><span class="flaticon-construction"></span></div>
-                            <div class="text">
-                                <h2>FMCG Distribution & Management</h2>
-                            </div>
-                        </div>
-                    </a>
-
-
-                    <a href="{% url 'homepage:services' 5 %}" class="ser">
-                        <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
-                            data-aos-duration="1000">
-                            <div class="icon"><span class="flaticon-engineer"></span></div>
-                            <div class="text">
-                                <h2>
+                        <div class="services d-flex active  aos-init aos-animate" data-aos="fade-up"
+                            data-aos-delay="100" data-aos-duration="1000">
+                            <div class="services d-flex">
+                                <div class="icon">
                                     <span class="arrow">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                                             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                                           </svg>
                                     </span>
-                                    Project Transportation</h2>
+                                </span></div>
+                                <div class="text">
+                                    <h2>Contract <br> Logistics</h2>
+                                </div>
                             </div>
                         </div>
                     </a>
 
+
+
+                    
 
                 </div>
 
@@ -307,18 +297,23 @@
                 <div class="col-md-4">
 
                     <a href="{% url 'homepage:services' 6 %}" class="ser">
-                        <div class="services d-flex active aos-init aos-animate ser" data-aos="fade-up" data-aos-delay="100"
-                            data-aos-duration="1000">
-                            <div class="icon"><span class="flaticon-construction"></span></div>
-                            <div class="text">
-                                <h2>
+                        <div class="services d-flex active aos-init aos-animate ser" data-aos="fade-up"
+                            data-aos-delay="100" data-aos-duration="1000">
+                            <div class="services d-flex">
+                                <div class="icon">
                                     <span class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                        </svg>
                                     </span>
-                                    Chemical Transportation</h2>
-
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <h2>Chemical Transportation</h2>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -327,11 +322,21 @@
                     <a href="{% url 'homepage:services' 7%}" class="ser">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
                             data-aos-duration="1000">
-                            <div class="icon"><span class="flaticon-house-1"></span></div>
-                            <div class="text">
-                                <h2>Warehousing & Distribution Management</h2>
-
-
+                            <div class="services d-flex">
+                                <div class="icon">
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                        </svg>
+                                    </span>
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <h2>Warehousing & Distribution Management</h2>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -340,17 +345,21 @@
                     <a href="{% url 'homepage:services' 8 %}" class="ser">
                         <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
                             data-aos-duration="1000">
-                            <div class="icon"><span class="flaticon-engineer"></span></div>
-                            <div class="text">
-                                <h2>
+                            <div class="services d-flex">
+                                <div class="icon">
                                     <span class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                        </svg>
                                     </span>
-                                    Contract Logistics</h2>
-
-
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <h2>Container Transportation</h2>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -359,17 +368,44 @@
                     <a href="{% url 'homepage:services' 9 %}" class="ser">
                         <div class="services d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
-                            <div class="icon"><span class="flaticon-construction"></span></div>
-                            <div class="text">
-                                <h2>
+                            <div class="services d-flex">
+                                <div class="icon">
                                     <span class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                        </svg>
                                     </span>
-                                    Automated Distribution System</h2>
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <h2>FMCG Distribution & Management</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
 
 
+                    <a href="{% url 'homepage:services' 5 %}" class="ser">
+                        <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                            data-aos-duration="1000">
+                            <div class="services d-flex">
+                                <div class="icon">
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                        </svg>
+                                    </span>
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <h2>Project Transportation</h2>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -380,8 +416,8 @@
     </section>
 
     <!-- Projects Section 6 -->
-    
-     <section class="ftco-gallery ftco-section">
+
+    <section class="ftco-gallery ftco-section">
         <div class="container-xl-fluid">
             <div class="row justify-content-center pb-4">
                 <div class="col-md-7 text-center heading-section aos-init aos-animate" data-aos="fade-up">
@@ -392,24 +428,24 @@
             <div class="row g-0">
 
                 <!-- 1 -->
-                 
-                <a  href="{% url 'homepage:index' %}">
-                <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                    data-aos-duration="1000">
-                    <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/1.webp' %}');">
-                        
-                        <a href="images/work-1.webp"
-                            class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
-                                class="fa fa-search"></span></a>
-                        <div class="desc w-100 px-4">
-                            <span>Building</span>
-                            <h2><a href="#">High Tower Works</a></h2>
+
+                <a href="{% url 'homepage:index' %}">
+                    <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                        data-aos-duration="1000">
+                        <div class="gallery-wrap img d-flex align-items-end justify-content-center"
+                            style="background-image: url('{% static 'homepage/images/1.webp' %}');">
+
+                            <a href="images/work-1.webp"
+                                class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
+                                    class="fa fa-search"></span></a>
+                            <div class="desc w-100 px-4">
+                                <span>Building</span>
+                                <h2><a href="#">High Tower Works</a></h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
-            <!-- </a> -->
+                </a>
+                <!-- </a> -->
                 <!-- 2 -->
 
                 <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
@@ -477,20 +513,20 @@
 
 
 
-            <!-- 6 -->
-            <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
-            data-aos-duration="1000">
-            <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                style="background-image: url('{% static 'homepage/images/6.webp' %}');">
-                <a href="images/work-6.webp"
-                    class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
-                        class="fa fa-search"></span></a>
-                <div class="desc w-100 px-4">
-                    <span>Building</span>
-                    <h2><a href="#">High Tower Works</a></h2>
+                <!-- 6 -->
+                <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                    data-aos-duration="1000">
+                    <div class="gallery-wrap img d-flex align-items-end justify-content-center"
+                        style="background-image: url('{% static 'homepage/images/6.webp' %}');">
+                        <a href="images/work-6.webp"
+                            class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
+                                class="fa fa-search"></span></a>
+                        <div class="desc w-100 px-4">
+                            <span>Building</span>
+                            <h2><a href="#">High Tower Works</a></h2>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
 
 
@@ -515,14 +551,23 @@
         <div class="container-fluid px-0 py-5 bg-darken">
             <div class="container-xl">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
-                        <p>Phone: <a href="tel:+201200000416">+20 120 0000 416</a></p>
+
+
+                    <div class="col-md-6 text-center">
                         <iframe id="location"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
-                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <small>&copy; Copyright {{year}}, Al-Gammal Transportation and Services</small>
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                   
+                        <p>Phone: <a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000 416</a></p>
+                    </div>
+
+                    <div class="col-md-12 text-center p-3">
+                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
+                            <small>&copy; Copyright {{year}}, Al-Gammal Transportation and Services</small>
                         </p>
                     </div>
                 </div>
