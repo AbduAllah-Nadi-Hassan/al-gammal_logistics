@@ -50,13 +50,14 @@
             background-color: #0056b3;
             color: #f8f9fa;
         }
-
-        /*    .page-link.active {
-            background-color: #ffaf30;
-            color: white;
-            border-color: #ffaf30;
+        p
+        {
+            color: black;
         }
-        */
+     
+    
+
+
     </style>
 </head>
 
@@ -96,28 +97,9 @@
 
     <!-- section 2  -->
 
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'homepage/images/2.webp' %}');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 pt-5 text-center">
-                    <p class="breadcrumbs"><span class="me-2"><a href="index.html">Home <i
-                                    class="fa fa-chevron-right"></i></a></span> <span>Services <i
-                                class="fa fa-chevron-right"></i></span></p>
-                    <h1 class="mb-0 bread"> </h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-        <section class="ftco-section bg-light ftco-no-pt p-5">
+        <section class="ftco-section bg-light ftco-no-pt p-5  shadow-lg p-3 mb-5 bg-body-tertiary rounded">
             <div class="container-xl">
-                <div class="row justify-content-center mb-5">
-
-                </div>
+         
                 <div class="row justify-content-center">
 
                     <div class="col-md-10 col-lg-5 d-flex">
@@ -134,7 +116,7 @@
                                  <!-- write here the main title -->
                                 <h1 class="heading mb-3"><a href="#">{{service.name}}</a></h1>  
                                 <!-- write here the paragraph -->
-                                <p>{{service.description|linebreaks}}</p>
+                                <p class="serDes">{{service.description|linebreaks}}</p>
                             </div>
 
 
