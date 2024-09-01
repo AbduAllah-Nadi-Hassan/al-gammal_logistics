@@ -1,14 +1,15 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- css links  -->
-   <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
-   <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
-   <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
-   <link rel="stylesheet" href="{% static 'homepage/css/About us.css' %}">
+    <!-- css links  -->
+    <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/About us.css' %}">
     <!-- js links -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>blog</title>
@@ -16,75 +17,90 @@
 
     <style>
         .btn-custom {
-            background-color: #ffc107; /* Default background color */
-            color: white; /* Default text color */
-            padding: 10px 20px; /* Padding around the button */
-            text-decoration: none; /* Remove underline from the link */
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+            background-color: #ffc107;
+            /* Default background color */
+            color: white;
+            /* Default text color */
+            padding: 10px 20px;
+            /* Padding around the button */
+            text-decoration: none;
+            /* Remove underline from the link */
+            border-radius: 5px;
+            /* Rounded corners */
+            transition: background-color 0.3s ease;
+            /* Smooth transition for hover effect */
         }
-        
+
         .btn-custom:hover {
-            background-color: #e3aa00; /* Background color on hover */
-            color: #ffffff; /* Text color on hover */
+            background-color: #e3aa00;
+            /* Background color on hover */
+            color: #ffffff;
+            /* Text color on hover */
         }
-        
+
+        .arrow {
+            font-size: 1rem;
+            color: #4B4B4B;
+            /* Arrow color similar to the gray in the image */
+        }
     </style>
 </head>
+
 <body>
 
-        <!-- Loading Screen -->
-        <!-- <div id="loading-screen">
+    <!-- Loading Screen -->
+    <!-- <div id="loading-screen">
             <div class="spinner"></div>
         </div> -->
 
-        <!-- Nav bar -->
-        <nav class="navbar navbar-expand-lg  ftco-navbar-light">
-            <div class="container-xl">
-                <a class="navbar-brand aside-stretch align-items-center" href="{% url 'homepage:index' %}">
-                    <img src="{% static 'homepage/images/logo_psd.webp' %}" class="logo-img">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="fa fa-bars"></span> Menu
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleet' %}">Fleet</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:blog' %}">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
-                    </ul>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg  ftco-navbar-light">
+        <div class="container-xl">
+            <a class="navbar-brand aside-stretch align-items-center" href="{% url 'homepage:index' %}">
+                <img src="{% static 'homepage/images/logo_psd.webp' %}" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleet' %}">Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive
+                            advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- section 2  -->
+
+    <!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg-2.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 pt-5 text-center">
+                    <p class="breadcrumbs"><span class="me-2"><a href="{% url 'homepage:index' %}">Home <i
+                                    class="fa fa-chevron-right"></i></a></span> <span>Blog <i
+                                class="fa fa-chevron-right"></i></span></p>
+                    <h1 class="mb-0 bread">Blog</h1>
                 </div>
             </div>
-        </nav>
-    
-    
-        <!-- section 2  -->
-    
-        <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg-2.jpg');">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row no-gutters slider-text align-items-center justify-content-center">
-                    <div class="col-md-9 pt-5 text-center">
-                        <p class="breadcrumbs"><span class="me-2"><a href="{% url 'homepage:index' %}">Home <i
-                                        class="fa fa-chevron-right"></i></a></span> <span>Blog <i
-                                    class="fa fa-chevron-right"></i></span></p>
-                        <h1 class="mb-0 bread">Blog</h1>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section> -->
 
 
 
 
-        
-        <!-- bolg section -->
+
+    <!-- bolg section -->
     <section class="ftco-section bg-light ftco-no-pt p-5">
         <div class="container-xl">
             <div class="row justify-content-center mb-5">
@@ -94,83 +110,93 @@
                     <h2>Recent Blog</h2>
                 </div>
             </div>
-            <div class="row justify-content-center">
-  
-                <div class="col-md-6 col-lg-4 d-flex">
+            <div class="row">
+    
+                <!-- 1 -->
+                <div class="col-md-6 col-lg-6 d-flex">
                     <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
                         data-aos-duration="1000" data-aos-delay="100">
                         <a href="article .html" class="block-20 img d-flex align-items-end"
-                            style="background-image: url('images/banner-bg.webp');">
+                            style="background-image: url('{% static 'homepage/images/banner-bg.webp' %}');">
                             <div class="meta-date mb-0 ms-4">
                                 <span>16</span>
                                 <small>Jan</small>
                             </div>
                         </a>
                         <div class="text">
-                            <!-- <p class="meta"><span><i class="fa fa-user me-1"></i>Admin</span> <span><a href="#"><i
-                                            class="fa fa-comment me-1"></i> 3 Comments</a></span></p> -->
                             <h3 class="heading mb-3"><a href="#">Biggest Logistic in Cairo, EGY</a></h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
-
-                                <p><a href="article .html" class="btn-custom">Learn More</a></p>
-                            
+                            <p><a href="article.html" class="btn-custom">Learn More <span class="arrow">&#8594;</span></a></p>
                         </div>
                     </div>
                 </div>
+    
             </div>
         </div>
 
     </section>
 
 
-        <!-- footer -->
-        <footer class="ftco-footer">
+    <!-- footer -->
+   
+    <footer class="ftco-footer">
 
-            <div class="container-fluid px-0 py-5 bg-darken">
-                <div class="container-xl">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">Copyright ©
-                                <script type="text/javascript" async=""
-                                    src="https://www.google-analytics.com/analytics.js"></script>
-                                <script>document.write(new Date().getFullYear());</script>2024 All rights reserved | This
-                                template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
-                                    href="" target="_blank" rel="nofollow noopener">Nada gamal</a>
-                            </p>
-                        </div>
+        <div class="container-fluid px-0 py-5 bg-darken">
+            <div class="container-xl">
+                <div class="row">
+
+
+                    <div class="col-md-6 text-center">
+                        <iframe id="location"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                            width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                   
+                        <p>Phone: <a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000 416</a></p>
+                    </div>
+
+                    <div class="col-md-12 text-center p-3">
+                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
+                            <small>&copy; Copyright {{year}}, Al-Gammal Transportation and Services</small>
+                        </p>
                     </div>
                 </div>
             </div>
-        </footer>
-    
-        <!-- Arrow Button -->
+        </div>
+    </footer>
+
+    <!-- Arrow Button -->
     <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
-    
-        <!-- js links -->
-        <script src="{% static 'homepage/js/popper.min.js' %}"></script>
-        <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
-        <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
-    
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script src="{% static 'homepage/js/main.js' %}"></script>
-    
-    
+
+    <!-- js links -->
+    <script src="{% static 'homepage/js/popper.min.js' %}"></script>
+    <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static 'homepage/js/main.js' %}"></script>
+
+
     <script>
         ScrollReveal({
-             reset: true,
-             distance: '60px',
-             duration:2500,
-             delay:400
-            });
-    
-           
-            ScrollReveal().reveal('.w-100 ,.head', { delay: 600,origin:'left' });
-            ScrollReveal().reveal('.subheading ', { delay: 700,origin:'right' });
-            ScrollReveal().reveal('.mb-4 ', { delay: 700,origin:'right' });
-    
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+
+
+        ScrollReveal().reveal('.w-100 ,.head', { delay: 600, origin: 'left' });
+        ScrollReveal().reveal('.subheading ', { delay: 700, origin: 'right' });
+        ScrollReveal().reveal('.mb-4 ', { delay: 700, origin: 'right' });
+
     </script>
 
 </body>
+
 </html>
