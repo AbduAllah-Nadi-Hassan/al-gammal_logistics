@@ -3146,6 +3146,63 @@ textarea.form-control {
   box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.11);
 }
 
+
+/* img of about  */
+
+.careers-left-img:before
+{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 10px;
+  background: #F6B01A;
+  z-index: 1;
+  transition: 500ms all;
+  -webkit-transition: 500ms all;
+}
+
+.careers-left-img:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 100px;
+  background: #F6B01A;
+  z-index: 1;
+  transition: 500ms all;
+  -webkit-transition: 500ms all;
+}
+
+.careers-right-img:before {
+  position: absolute;
+  content: "";
+  left: 20;
+  top: 100; /* Change from bottom to top */
+  width: 100px;
+  height: 10px;
+  background: #F6B01A;
+  z-index: 1;
+  transition: 500ms all;
+  -webkit-transition: 500ms all;
+}
+
+.careers-right-img:after {
+  position: absolute;
+  content: "";
+  left: 20;
+  top: 100; /* Change from bottom to top */
+  width: 10px;
+  height: 100px;
+  background: #F6B01A;
+  z-index: 1;
+  transition: 500ms all;
+  -webkit-transition: 500ms all;
+}
+
+
 .about-author .bio {
   border-radius: 50%;
   width: 80px;
