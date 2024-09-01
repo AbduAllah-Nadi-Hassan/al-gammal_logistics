@@ -125,20 +125,16 @@
                             data-aos-duration="1000" data-aos-delay="100">
                             
                             <!-- put the photo in this link -->
-                            <a href="artical.html" class="block-20 img d-flex align-items-end photo"
-                                style="background-image: url('{% static 'homepage/images/8.webp' %}');">
-                            </a>
+                            <figure class="block-20 img d-flex align-items-end photo"
+                                style="background-image: url('images/service_{{service.id}}.webp');">
+                            </figure>
 
 
                             <div class="text"> 
                                  <!-- write here the main title -->
-                                <h1 class="heading mb-3"><a href="#">Bulk transportation</a></h1>  
+                                <h1 class="heading mb-3"><a href="#">{{service.name}}</a></h1>  
                                 <!-- write here the paragraph -->
-                                <p>Al-Gammal Transport have air compressor-fitted 3-axle bulkers. These machines enable us to carry the payload of 25 to 30 tons and hence meet the customers' requirements with efficiency.
-                                    We are a pioneering force in this industry, and we can transport a total quantity of 2.5 million tons per annum of cement within Egypt's different regions.
-                                    The major customers include Al-Rowad Company, Bonyan Company, Al-Marasem Company, Roxy Co., and Safi Company.
-                                    We are on the job-experienced and devoted to assure highly valued customers dependability and smoothness regarding transport solutions.
-                                    </p>
+                                <p>{{service.description}}</p>
                             </div>
 
 
@@ -148,19 +144,6 @@
                 </div>
             </div>
         </section>
-
-        
-    
-        <!-- Pagination -->
-        <div class="pagination p-2">
-            <a href="#" class="page-link">&laquo; previous article</a>
-            <a href="#" class="page-link">&raquo; next article</a>
-        </div>
-
-
-
-
-
 
 
 
