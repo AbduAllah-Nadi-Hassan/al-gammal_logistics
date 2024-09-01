@@ -71,7 +71,7 @@
     <nav class="navbar navbar-expand-lg  ftco-navbar-light">
         <div class="container-xl">
             <a class="navbar-brand aside-stretch align-items-center" href="index.html">
-                <img src="images/logo_psd.webp" class="logo-img">
+                <img src="{% static 'homepage/images/logo_psd.webp'%}" class="logo-img ">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -125,16 +125,16 @@
                             data-aos-duration="1000" data-aos-delay="100">
                             
                             <!-- put the photo in this link -->
-                            <figure class="block-20 img d-flex align-items-end photo"
-                                style="background-image: url('images/service_{{service.id}}.webp');">
-                            </figure>
+                            <div class="block-20 img d-flex align-items-end photo"
+                                style="background-image: url('/static/homepage/images/service_{{service.id}}.webp');">
+                            </div>
 
 
                             <div class="text"> 
                                  <!-- write here the main title -->
                                 <h1 class="heading mb-3"><a href="#">{{service.name}}</a></h1>  
                                 <!-- write here the paragraph -->
-                                <p>{{service.description}}</p>
+                                <p>{{service.description|linebreaks}}</p>
                             </div>
 
 
