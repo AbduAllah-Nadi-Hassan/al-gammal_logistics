@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Article, Jobs
 
+from datetime import date
+
 
 def index(request):
-    return render(request, "homepage/index.html")
+    year = date.today().year
+    return render(request, "homepage/index.html", {"year": year})
 
 
 def about(request):
