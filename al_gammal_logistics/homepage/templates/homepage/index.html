@@ -13,11 +13,29 @@
     <title>Home</title>
 
 <style>
-    .ser:hover{
-     
-        border: 5px;
-        color: rgb(255, 179, 1);
-    }
+/* Initial state of the arrow */
+
+
+/* Text styling */
+.services .text {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the arrow and text within the text container */
+}
+
+/* Initial state of the arrow */
+.services .arrow {
+    color: transparent; /* Arrow is initially hidden */
+    transition: color 0.3s ease;
+    
+}
+
+/* Hover state */
+.services:hover .arrow {
+    color: rgb(255, 183, 0); /* Arrow becomes visible and yellow on hover */
+}
+
+
 </style>
     
 </head>
@@ -201,7 +219,10 @@
                             data-aos-duration="1000">
                             <div class="icon"><span class="flaticon-construction"></span></div>
                             <div class="text">
-                                <h2>Bulk transportation</h2>
+                            
+                                <h2>
+                                  
+                                    Bulk transportation</h2>
                             </div>
                         </div>
 
@@ -215,18 +236,30 @@
                             data-aos-duration="1000">
                             <div class="icon"><span class="flaticon-house-1"></span></div>
                             <div class="text">
-                                <h2>Good and raw materials transportation</h2>
+                                <h2>
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                          </svg>
+                                    </span>
+                                    Good and raw materials transportation</h2>
                             </div>
                         </div>
                     </a>
 
 
-                    <a href="" class="ser">
+                    <a href="" > 
                         <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
                             data-aos-duration="1000">
                             <div class="icon"><span class="flaticon-engineer"></span></div>
                             <div class="text">
-                                <h2>Container Transportation</h2>
+                                <h2>
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                          </svg>
+                                    </span>
+                                    Container Transportation</h2>
 
 
                             </div>
@@ -239,7 +272,13 @@
                             data-aos-duration="1000">
                             <div class="icon"><span class="flaticon-construction"></span></div>
                             <div class="text">
-                                <h2>FMCG Distribution & Management</h2>
+                                <h2>
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                          </svg>
+                                    </span>
+                                    FMCG Distribution & Management</h2>
                             </div>
                         </div>
                     </a>
@@ -250,7 +289,13 @@
                             data-aos-duration="1000">
                             <div class="icon"><span class="flaticon-engineer"></span></div>
                             <div class="text">
-                                <h2>Project Transportation</h2>
+                                <h2>
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                          </svg>
+                                    </span>
+                                    Project Transportation</h2>
                             </div>
                         </div>
                     </a>
@@ -272,7 +317,13 @@
                             data-aos-duration="1000">
                             <div class="icon"><span class="flaticon-construction"></span></div>
                             <div class="text">
-                                <h2>Chemical Transportation</h2>
+                                <h2>
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                          </svg>
+                                    </span>
+                                    Chemical Transportation</h2>
 
                             </div>
                         </div>
@@ -284,7 +335,13 @@
                             data-aos-duration="1000">
                             <div class="icon"><span class="flaticon-house-1"></span></div>
                             <div class="text">
-                                <h2>Warehousing & Distribution Management</h2>
+                                <h2>
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                          </svg>
+                                    </span>
+                                    Warehousing & Distribution Management</h2>
 
 
                             </div>
@@ -297,7 +354,13 @@
                             data-aos-duration="1000">
                             <div class="icon"><span class="flaticon-engineer"></span></div>
                             <div class="text">
-                                <h2>Contract Logistics</h2>
+                                <h2>
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                          </svg>
+                                    </span>
+                                    Contract Logistics</h2>
 
 
                             </div>
@@ -310,7 +373,13 @@
                             data-aos-duration="1000">
                             <div class="icon"><span class="flaticon-construction"></span></div>
                             <div class="text">
-                                <h2>Automated Distribution System</h2>
+                                <h2>
+                                    <span class="arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                          </svg>
+                                    </span>
+                                    Automated Distribution System</h2>
 
 
                             </div>
@@ -323,7 +392,8 @@
     </section>
 
     <!-- Projects Section 6 -->
-    <section class="ftco-gallery ftco-section">
+    
+     <section class="ftco-gallery ftco-section">
         <div class="container-xl-fluid">
             <div class="row justify-content-center pb-4">
                 <div class="col-md-7 text-center heading-section aos-init aos-animate" data-aos="fade-up">
@@ -334,11 +404,13 @@
             <div class="row g-0">
 
                 <!-- 1 -->
+                 
+                <a  href="{% url 'homepage:index' %}">
                 <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                     data-aos-duration="1000">
                     <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}');">
-
+                        style="background-image: url('{% static 'homepage/images/1.webp' %}');">
+                        
                         <a href="images/work-1.webp"
                             class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
                                 class="fa fa-search"></span></a>
@@ -348,13 +420,14 @@
                         </div>
                     </div>
                 </div>
-
+            </a>
+            <!-- </a> -->
                 <!-- 2 -->
 
                 <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
                     data-aos-duration="1000">
                     <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/bg-1.webp' %}');">
+                        style="background-image: url('{% static 'homepage/images/3.webp' %}');">
                         <a href="images/work-2.webp"
                             class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
                                 class="fa fa-search"></span></a>
@@ -370,7 +443,7 @@
                 <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
                     data-aos-duration="1000">
                     <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/truck-Load-img.webp' %}');">
+                        style="background-image: url('{% static 'homepage/images/2.webp' %}');">
                         <a href="images/work-3.webp"
                             class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
                                 class="fa fa-search"></span></a>
@@ -386,7 +459,7 @@
                 <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                     data-aos-duration="1000">
                     <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/blog-2.webp' %}');">
+                        style="background-image: url('{% static 'homepage/images/4.webp' %}');">
                         <a href="images/work-4.webp"
                             class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
                                 class="fa fa-search"></span></a>
@@ -402,7 +475,7 @@
                 <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
                     data-aos-duration="1000">
                     <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/FTL-Trucking-Canada.webp' %}');">
+                        style="background-image: url('{% static 'homepage/images/8.webp' %}');">
                         <a href="images/work-5.webp"
                             class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
                                 class="fa fa-search"></span></a>
@@ -416,20 +489,20 @@
 
 
 
-                <!-- 6 -->
-                <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
-                    data-aos-duration="1000">
-                    <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/work-6.webp' %}');">
-                        <a href="images/work-6.webp"
-                            class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
-                                class="fa fa-search"></span></a>
-                        <div class="desc w-100 px-4">
-                            <span>Building</span>
-                            <h2><a href="#">High Tower Works</a></h2>
-                        </div>
-                    </div>
+            <!-- 6 -->
+            <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+            data-aos-duration="1000">
+            <div class="gallery-wrap img d-flex align-items-end justify-content-center"
+                style="background-image: url('{% static 'homepage/images/6.webp' %}');">
+                <a href="images/work-6.webp"
+                    class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
+                        class="fa fa-search"></span></a>
+                <div class="desc w-100 px-4">
+                    <span>Building</span>
+                    <h2><a href="#">High Tower Works</a></h2>
                 </div>
+            </div>
+        </div>
 
 
 

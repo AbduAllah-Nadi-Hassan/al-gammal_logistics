@@ -59,7 +59,7 @@
 
     <!-- section 2  -->
 
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/about\ \(2\).webp');">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'homepage/images/4.webp' %}');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -75,14 +75,14 @@
 
 
 
-    <!-- section 3 -->
+    <!-- section 3 about us -->
 
     <section class="ftco-section ftco-about-section">
         <div class="container-xl">
             <div class="row g-xl-5">
                 <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
                     data-aos-delay="100" data-aos-duration="1000">
-                    <div class="w-100 " style="background-image: url(images/work-6.webp); background-repeat: no-repeat;">
+                    <div class="w-100 " style="background-image: url( '{% static 'homepage/images/work-6.webp' %}'); background-repeat: no-repeat;">
 
    
 
@@ -108,11 +108,61 @@
         </div>
     </section>
 
+
+    <!-- fleet -->
+
+    <section class="p-5">
+        <div class="container-xl">
+            <div class="row g-xl-5">
+
+            
+                <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
+                    data-aos-delay="200" data-aos-duration="1000">
+                    <div class="mt-5 mt-md-0">
+                        <span class="subheading">Fleet </span>
+                        <h2 class="mb-2 head">Ability to deliver goods quickly. </h2>
+                        <p class="mb-4">Al-Gammal Transport and Logistics Company operates a versatile fleet of trucks tailored to meet various customer needs.
+                             This includes the transportation of polyethylene and plastic pipes,
+                             as well as trucks specialized for delivering food, mineral water, and other goods. </p>
+                    </div>
+                </div>
+
+    
+                <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
+                    data-aos-delay="100" data-aos-duration="1000">
+                    <div class="w-100 img" style="background-image: url( '{% static 'homepage/images/img-1.webp' %}'); background-repeat: no-repeat; height: 600px; ">
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
     <!-- section 4  vision -->
 
     <section class="ftco-section ftco-about-section">
         <div class="container-xl">
             <div class="row g-xl-5">
+
+
+
+                <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
+                data-aos-delay="100" data-aos-duration="1000">
+                <div class="img w-100" style="background-image: url( '{% static 'homepage/images/goal.png' %}');">
+                </div>
+            </div>
+
+
                 <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
                     data-aos-delay="200" data-aos-duration="1000">
                     <div class="mt-5 mt-md-0">
@@ -126,15 +176,6 @@
                     </div>
                 </div>
 
-
-
-            <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
-                data-aos-delay="100" data-aos-duration="1000">
-                <div class="img w-100" style="background-image: url(images/goal.png);">
-                </div>
-            </div>
-
-
             </div>
         </div>
     </section>
@@ -146,12 +187,6 @@
     <section class="ftco-section ftco-about-section">
         <div class="container-xl">
             <div class="row g-xl-5">
-
-                <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
-                data-aos-delay="100" data-aos-duration="1000">
-                <div class="img w-100" style="background-image: url(images/vision3.jpg.webp);">
-                </div>
-               </div>
 
 
 
@@ -167,7 +202,11 @@
                 </div>
 
 
-
+                <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
+                data-aos-delay="100" data-aos-duration="1000">
+                <div class="img w-100" style="background-image: url( '{% static 'homepage/images/vision3.jpg.webp' %}');">
+                </div>
+               </div>
 
 
             </div>
