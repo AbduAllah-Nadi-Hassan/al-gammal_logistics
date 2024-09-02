@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css links  -->
+    <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/About_us.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
+
+        <!-- CSS Links -->
+        
+        
+        
+    
+
+    <!-- js links -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>About us</title>
+</head>
+
+<body>
+
+        <!-- Loading Screen -->
+        <!-- <div id="loading-screen">
+            <div class="spinner"></div>
+        </div> -->
+
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg ftco-navbar-light">
+        <div class="container-xl">
+            <a class="navbar-brand aside-stretch align-items-center" href="{% url 'homepage:index' %}">
+                <img src="{% static 'homepage/images/logo_psd.webp' %}" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleet' %}">Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    
+    <!-- footer -->
+    <footer class="ftco-footer">
+
+        <div class="container-fluid px-0 py-5 bg-darken">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">Copyright ©
+                            <script type="text/javascript" async=""
+                                src="https://www.google-analytics.com/analytics.js"></script>
+                            <script>document.write(new Date().getFullYear());</script>2024 All rights reserved | This
+                            template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
+                                href="" target="_blank" rel="nofollow noopener">Nada gamal</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Arrow Button -->
+<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+
+    <!-- js links -->
+    <script src="{% static 'homepage/js/popper.min.js' %}"></script>
+    <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static 'homepage/js/main.js' %}"></script>
+
+
+<script>
+    ScrollReveal({
+         reset: true,
+         distance: '60px',
+         duration:2500,
+         delay:400
+        });
+
+       
+        ScrollReveal().reveal('.w-100 ,.head', { delay: 600,origin:'left' });
+        ScrollReveal().reveal('.subheading ', { delay: 700,origin:'right' });
+        ScrollReveal().reveal('.mb-4 ', { delay: 700,origin:'right' });
+
+</script>
+    
+</body>
+</html>
