@@ -18,6 +18,16 @@
 
 
     <title>Career</title>
+
+
+    <style>
+        .emptyTxt
+        {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -100,7 +110,7 @@
 
                 </div>
             {% empty %}
-                <p>Sorry, we have no vacant positions at the moment.</p>
+                <p class="alert alert-danger emptyTxt">Sorry, we have no vacant positions at the moment.</p>
             {% endfor %}
 
         </div>
