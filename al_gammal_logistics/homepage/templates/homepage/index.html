@@ -15,8 +15,19 @@
     <title>Al-Gammal for transportation services.</title>
 
     <style>
+
+
+        .custom-img-size {
+            width: 100%;
+            height: 150px;  /* Adjust this height as needed */
+            object-fit: contain;
+        }
         
-        
+        .carousel-inner .row {
+            display: flex;
+            justify-content: space-between;
+        }
+         
     </style>
 
 </head>
@@ -563,31 +574,89 @@
             </div>
 
 
-            <div class="owl-carousel owl-theme d-flex justify-content-center">
-                <div class="item"><img src="{% static 'homepage/images/partners/p1.webp' %}" alt="Brand 1"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p2.webp' %}" alt="Brand 2"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p3.webp' %}" alt="Brand 3"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p4.webp' %}" alt="Brand 4"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p5.webp' %}" alt="Brand 5"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p6.webp' %}" alt="Brand 6"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p7.webp' %}" alt="Brand 7"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p8.webp' %}" alt="Brand 8"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p9.webp' %}" alt="Brand 9"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p10.webp' %}" alt="Brand 10"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p11.webp' %}" alt="Brand 11"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p12.webp' %}" alt="Brand 12"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p13.webp' %}" alt="Brand 13"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p14.webp' %}" alt="Brand 14"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p15.webp' %}" alt="Brand 15"></div>
-                <div class="item"><img src="{% static 'homepage/images/partners/p16.webp' %}" alt="Brand 16"></div>
+            
+            <div class="container">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p1.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 1">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p2.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 2">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p3.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 3">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p4.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 4">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p5.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 5">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p6.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p7.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 7">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p8.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 8">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p9.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 9">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p10.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 10">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p11.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 11">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p12.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 12">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p13.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 13">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p14.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 14">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p15.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 15">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p16.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 16">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev d-flex justify-content-start" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next d-flex justify-content-end " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
-    
+            
 
         </div>
     </section>
 
 
 
+    
 
     
 
@@ -634,12 +703,9 @@
     <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
     <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
     <script src="{% static 'homepage/js/main.js' %}"></script>
 
-    <script>
 
-    </script>
 
 </body>
 
