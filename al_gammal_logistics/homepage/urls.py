@@ -14,5 +14,5 @@ urlpatterns = [
     path("articles/<int:article_id>/", views.articles, name="articles"),
     path("services/<int:service_id>/", views.services, name="services"),
     path("order/", views.CreateOrder.as_view(), name="create_order"),
-    path("order_success/", TemplateView.as_view(template_name="homepage/order_success.html"), name="create_order"),
+    path("order_success/", TemplateView.as_view(template_name="homepage/order_success.html"), name="order_success"),
 ]

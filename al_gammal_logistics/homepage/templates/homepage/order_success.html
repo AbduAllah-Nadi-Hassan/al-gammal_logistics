@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'homepage/css/About us.css' %}">
     <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
-
+    <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}">
     <!-- js links -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -99,7 +99,8 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:contact' %}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a></li>
                 </ul>
             </div>
         </div>
