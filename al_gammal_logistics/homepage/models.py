@@ -42,9 +42,9 @@ class Services(models.Model):
 class Order(models.Model):
     name = models.CharField("Your name", max_length=100)
     phone = models.CharField("Your phone", max_length=100)
-    company = models.CharField("Your company", max_length=100)
-    order_from = models.CharField("Order will be shipped from", max_length=200)
-    order_to = models.CharField("Order will be shipped to", max_length=200)
+    company = models.CharField("Your company", max_length=100, blank=True)
+    order_from = models.CharField("The Order will be shipped from", max_length=200)
+    order_to = models.CharField("The Order will be shipped to", max_length=200)
 
     def __str__(self):
         return self.name
