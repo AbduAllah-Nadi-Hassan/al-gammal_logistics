@@ -2328,7 +2328,7 @@ h5,
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -20px;
+  right: -30px;
   width: 100px;
   background: #ffa62b;
   -webkit-transform: skewX(20deg);
@@ -2339,7 +2339,7 @@ h5,
 }
 
 .logo-img {
-  width: 200px;
+  width: 300px;
 }
 
 .ftco-navbar-light .navbar-brand:hover,
@@ -2540,7 +2540,7 @@ h5,
   top: -30px;
   right: 0;
   left: 0;
-  width: 50%;
+  width: 70%;
   height: 90%;
   background-attachment: fixed;
   margin: 0 auto;
@@ -2550,10 +2550,10 @@ h5,
 }
 
 .hero-wrap .slider-text .subheading {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 700;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 16px;
+  font-size: 50px;
   display: inline-block;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -2583,7 +2583,7 @@ h5,
 .hero-wrap .slider-text .h1 {
   font-weight: 700;
   color: #fff;
-  font-size: 60px;
+  font-size: 25px;
   line-height: 1.2;
   /* text-transform: uppercase; */
   letter-spacing: 3px;
