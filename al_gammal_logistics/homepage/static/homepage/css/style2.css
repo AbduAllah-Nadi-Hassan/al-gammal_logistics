@@ -2911,7 +2911,7 @@ textarea.form-control {
   width: 100%;
   content: '';
   opacity: .9;
-  background: #532929;
+  background: #636363d1;
   z-index: -1;
 }
 
@@ -2923,7 +2923,7 @@ textarea.form-control {
 
 .appointment {
   width: 100%;
-  background: #875353;
+  background: #ffffff;
   padding: 50px;
   padding-left: 0;
   position: relative;
