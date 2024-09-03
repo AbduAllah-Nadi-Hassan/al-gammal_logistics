@@ -16,12 +16,85 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <title>Make an Order</title>
+
+
+
+
+
+
+    <style>
+        /* Custom CSS for form styling */
+        .form-container {
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+            padding: 20px;
+            display: inline-block;
+            width: 30%;
+        }
+
+        .form-container input[type="text"],
+        .form-container .form-control {
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            padding: 10px;
+            font-size: 16px;
+            display: inline-block;
+            width: 65%;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #ffb300;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #ffae00;
+        }
+
+        .trending-banner {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            font-family: Arial, sans-serif;
+            border-left: 5px solid #f4b200;
+        }
+
+        .trending-title {
+            font-weight: bold;
+            font-size: 30px;
+            color: #2c3e50;
+            margin-right: 20px;
+
+        }
+    </style>
+
+
+
 </head>
 
 <body>
 
-        <!-- Loading Screen -->
-        <!-- <div id="loading-screen">
+    <!-- Loading Screen -->
+    <!-- <div id="loading-screen">
             <div class="spinner"></div>
         </div> -->
 
@@ -41,7 +114,8 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleet' %}">Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive
+                            advantage</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
@@ -53,11 +127,214 @@
 
     <!--start main-->
     <main>
-        <form method="post">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Submit">
-        </form>
+
+        <section class="ftco-appointment img" style="background-image: url('{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}')">
+            <div class="overlay"></div>
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-6 d-flex align-items-center order-lg-last ps-lg-5 py-5 aos-init aos-animate"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="heading-section">
+                            <span class="subheading">Make an Order</span>
+                            <h2 class="mb-3">You Want To Make an Order </h2>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+                                your mouth.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                 <!-- <img src="{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}"> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center align-items-stretch aos-init aos-animate"
+                    data-aos="fade-up" data-aos-delay="100">
+
+        <div class="container">
+            <!-- Breaking News Start -->
+
+            <div class="container-fluid mt-5 mb-3 pt-3">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="trending-banner">
+                                <div class="d-flex justify-content-between">
+                                    <div class="trending-title">Make an Order</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breaking News End -->
+            <div class="form-container">
+
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+    </div>
+</div>
+</section>
+
+
+
+        <!-- <section class="ftco-appointment img" style="background-image: url('{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}')">
+            <div class="overlay"></div>
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-6 d-flex align-items-center order-lg-last ps-lg-5 py-5 aos-init aos-animate"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="heading-section">
+                            <span class="subheading">Make an Order</span>
+                            <h2 class="mb-3">You Want To Make an Order </h2>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+                                your mouth.</p>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                    aria-expanded="false" aria-controls="collapseOne">
+                                                    What are the problems in construction?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse"
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample"
+                                                style="">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    hidden by default, until the collapse plugin adds the appropriate
+                                                    classes that we use to style each element. It's also worth noting
+                                                    that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTwo">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    What is best practice in construction?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    It is hidden by default, until the collapse plugin adds the
+                                                    appropriate classes that we use to style each element. It's also
+                                                    worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingThree">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree">
+                                                    What is best practice in construction?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse"
+                                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    It is hidden by default, until the collapse plugin adds the
+                                                    appropriate classes that we use to style each element. It's also
+                                                    worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center align-items-stretch aos-init aos-animate"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <form action="#" class="appointment aside-stretch">
+                            <span class="subheading">Drop A Message</span>
+                            <h2 class="mb-4 appointment-head">Request A Quote</h2>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="name">Your Full Name</label>
+                                        <input type="text" class="form-control" placeholder="Your Full Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="text" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="subject">Select Subject</label>
+                                        <div class="form-field">
+                                            <div class="select-wrap">
+                                                <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">Construction Services</option>
+                                                    <option value="">Infrastructure Services</option>
+                                                    <option value="">Architecture Services</option>
+                                                    <option value="">Budget Planning</option>
+                                                    <option value="">Interior &amp; Exterior Design</option>
+                                                    <option value="">Project Planning</option>
+                                                    <option value="">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="name">Message</label>
+                                        <textarea name="" id="" cols="30" rows="7" class="form-control"
+                                            placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" value="Send message" class="btn btn-primary py-3 px-4 rounded">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
     <!--end main-->
 
@@ -67,13 +344,24 @@
         <div class="container-fluid px-0 py-5 bg-darken">
             <div class="container-xl">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">Copyright ©
-                            <script type="text/javascript" async=""
-                                src="https://www.google-analytics.com/analytics.js"></script>
-                            <script>document.write(new Date().getFullYear());</script>2024 All rights reserved | This
-                            template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
-                                href="" target="_blank" rel="nofollow noopener">Nada gamal</a>
+
+
+                    <div class="col-md-6 text-center">
+                        <iframe id="location"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                            width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="col-md-6 text-center">
+
+                        <p>Phone: <a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000
+                                416</a></p>
+                    </div>
+
+                    <div class="col-md-12 text-center p-3">
+                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
+                            <small>&copy; Copyright {{year}}, Al-Gammal Transportation and Services</small>
                         </p>
                     </div>
                 </div>
@@ -82,8 +370,7 @@
     </footer>
 
     <!-- Arrow Button -->
-<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
-
+    <a href="#" id="back-to-top" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
     <!-- js links -->
     <script src="{% static 'homepage/js/popper.min.js' %}"></script>
     <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
@@ -94,20 +381,21 @@
     <script src="{% static 'homepage/js/main.js' %}"></script>
 
 
-<script>
-    ScrollReveal({
-         reset: true,
-         distance: '60px',
-         duration:2500,
-         delay:400
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
         });
 
-       
-        ScrollReveal().reveal('.w-100 ,.head', { delay: 600,origin:'left' });
-        ScrollReveal().reveal('.subheading ', { delay: 700,origin:'right' });
-        ScrollReveal().reveal('.mb-4 ', { delay: 700,origin:'right' });
 
-</script>
-    
+        ScrollReveal().reveal('.w-100 ,.head', { delay: 600, origin: 'left' });
+        ScrollReveal().reveal('.subheading ', { delay: 700, origin: 'right' });
+        ScrollReveal().reveal('.mb-4 ', { delay: 700, origin: 'right' });
+
+    </script>
+
 </body>
+
 </html>
