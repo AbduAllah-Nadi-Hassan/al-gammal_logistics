@@ -8,20 +8,19 @@
     <!-- css links  -->
     <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'homepage/css/About_us.css' %}">
     <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
+
     <!-- js links -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>{{article.title}} </title>
 
     <style>
-        .blog-entry
-        {
-            background-color: rgba(248,248,248,1);
+        .blog-entry {
+            background-color: rgba(248, 248, 248, 1);
 
         }
-        .heading
-        {
+
+        .heading {
             font-family: "Poppins", Arial, Helvetica, sans-serif;
             font-weight: 300px;
             font-size: 100px;
@@ -51,16 +50,33 @@
             color: #f8f9fa;
         }
 
-        /*    .page-link.active {
-            background-color: #ffaf30;
-            color: white;
-            border-color: #ffaf30;
+
+        .trending-banner {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            font-family: Arial, sans-serif;
+            border-left: 5px solid #f4b200;
         }
-        */
+
+        .trending-title {
+            font-weight: bold;
+            font-size: 30px;
+            color: #2c3e50;
+            margin-right: 20px;
+
+        }
+
+        .trending-text {
+            font-size: 16px;
+            color: #4a4a4a;
+        }
+
     </style>
 </head>
 
-<body>
+<>
 
     <!-- Loading Screen -->
     <!-- <div id="loading-screen">
@@ -71,7 +87,8 @@
     <nav class="navbar navbar-expand-lg  ftco-navbar-light">
         <div class="container-xl">
             <a class="navbar-brand aside-stretch align-items-center" href="index.html">
-                <img src="{% static 'homepage/images/logo_psd.webp' %}%" class="logo-img">
+                <img src="{% static 'homepage/images/logo_psd.webp' %}" class="logo-img">
+               
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -94,135 +111,135 @@
     </nav>
 
 
-    <!-- section 2  -->
+    <!-- bolg section 1 -->
 
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'homepage/images/2.webp' %}');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 pt-5 text-center">
-                    <p class="breadcrumbs"><span class="me-2"><a href="index.html">Home <i
-                                    class="fa fa-chevron-right"></i></a></span> <span>article <i
-                                class="fa fa-chevron-right"></i></span></p>
-                    <h1 class="mb-0 bread">article </h1>
+
+    <section class="ftco-section bg-light ftco-no-pt p-5">
+        <div class="container-xl">
+
+            <div class="row justify-content-center">
+                <!-- Breaking News Start -->
+
+                <div class="container-fluid mt-5 mb-3 pt-3">
+                    <div class="container">
+                        <div class="row align-items-center art">
+                            <div class="col-6">
+                                <div class="trending-banner">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="trending-title">ARTICLE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Breaking News End -->
+
+
+                <!-- News With Sidebar Start -->
+                <div class="container-fluid ">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-10">
+                                <!-- News Detail Start -->
+                                <div class="position-relative mb-3">
+
+                                    <!-- put the image in src  -->
+                                    <img class="img-fluid w-100"
+                                        src="{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}"
+                                        style="object-fit: cover;">
+                                    <div class="bg-white border border-top-0 p-4">
+                                        <div class="mb-3">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="#f4b200" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg>
+                                            </span>
+                                            <a class="text-body" href="">{{article.pub_date}}</a>
+                                        </div>
+                                        <h1 class="mb-3 text-uppercase font-weight-bold"> {{article.title}}</h1>
+                                        <p>{{article.body}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Pagination -->
+    <div class="pagination p-2">
+        <a href="#" class="page-link">&laquo; previous article</a>
+        <a href="#" class="page-link">&raquo; next article</a>
+    </div>
+
+  </div>
 
 
-     <!-- bolg section 1 -->
 
-        <section class="ftco-section bg-light ftco-no-pt p-5">
+
+</section>
+
+    <!-- Arrow Button -->
+
+    <a href="#" id="back-to-top" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- footer -->
+    <footer class="ftco-footer">
+
+        <div class="container-fluid px-0 py-5 bg-darken">
             <div class="container-xl">
-                <div class="row justify-content-center mb-5">
-
-                </div>
-                <div class="row justify-content-center">
-
-                    <div class="col-md-10 col-lg-5 d-flex">
-                        <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
-                            data-aos-duration="1000" data-aos-delay="100">
-
-                            <div class="text p-2">
-                                 <!-- write here the main title -->
-                             <h1 class="heading mb-3"><a href="#">{{article.title}}</a></h1>
-                            </div>
-                            
-
-                            <!-- put the photo in this link -->
-                            <a href="artical.html" class="block-20 img d-flex align-items-end photo"
-                                style="background-image: url('{% static 'homepage/images/8.webp' %}');">
-                            </a>
-
-                            <!-- write here the date  -->
-                            <div class="meta-date mb-0 ms-12">
-                                <span>{{article.pub_date}}</span>
-                            </div>
-
-                            <div class="text">   
-                                <!-- write here the paragraph -->
-                                <p>{{article.body}}</p>
-                            </div>
-
-
-                        </div>
-
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">Copyright ©
+                            <script type="text/javascript" async=""
+                                src="https://www.google-analytics.com/analytics.js"></script>
+                            <script>document.write(new Date().getFullYear());</script>2024 All rights reserved |
+                            This
+                            template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
+                                href="" target="_blank" rel="nofollow noopener">Nada gamal</a>
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
-      
-        <!-- ######################################################### -->
-        
-        
-    
-        <!-- Pagination -->
-        <div class="pagination p-2">
-            <a href="#" class="page-link">&laquo; previous article</a>
-            <a href="#" class="page-link">&raquo; next article</a>
         </div>
+    </footer>
 
 
 
+    <!-- js links -->
+    <script src="{% static 'homepage/js/popper.min.js' %}"></script>
+    <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static 'homepage/js/main.js' %}"></script>
 
 
 
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
 
 
+        ScrollReveal().reveal('.w-100 ,.heading', { delay: 600, origin: 'left' });
+        ScrollReveal().reveal('p', { delay: 700, origin: 'right' });
+        ScrollReveal().reveal('.photo ', { delay: 600, origin: 'right' });
 
+    </script>
 
-        <!-- footer -->
-        <footer class="ftco-footer">
-
-            <div class="container-fluid px-0 py-5 bg-darken">
-                <div class="container-xl">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">Copyright ©
-                                <script type="text/javascript" async=""
-                                    src="https://www.google-analytics.com/analytics.js"></script>
-                                <script>document.write(new Date().getFullYear());</script>2024 All rights reserved |
-                                This
-                                template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
-                                    href="" target="_blank" rel="nofollow noopener">Nada gamal</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Arrow Button -->
-        <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
-
-        <!-- js links -->
-        <script src="{% static 'homepage/js/popper.min.js' %}"></script>
-        <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
-        <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script src="{% static 'homepage/js/main.js' %}"></script>
-
-
-
-        <script>
-            ScrollReveal({
-                reset: true,
-                distance: '60px',
-                duration: 2500,
-                delay: 400
-            });
-
-
-            ScrollReveal().reveal('.w-100 ,.heading', { delay: 600, origin: 'left' });
-            ScrollReveal().reveal('p', { delay: 700, origin: 'right' });
-            ScrollReveal().reveal('.photo ', { delay: 700, origin: 'right' });
-
-        </script>
-
-</body>
+    </body>
 
 </html>
