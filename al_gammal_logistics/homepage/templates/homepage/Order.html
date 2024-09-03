@@ -28,7 +28,7 @@
             margin: 50px auto;
             padding: 30px;
             max-width: 800px;
-            background-color: #ffffff;
+            background-color: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
@@ -39,7 +39,7 @@
             margin-bottom: 10px;
             padding: 20px;
             display: inline-block;
-            width: 30%;
+            width: 100%;
         }
 
         .form-container input[type="text"],
@@ -49,8 +49,13 @@
             padding: 10px;
             font-size: 16px;
             display: inline-block;
-            width: 65%;
+            width: 100%;
             margin-bottom: 10px;
+        }
+
+        
+        .form-container input[type="text"]:hover {
+            border-color: #ffae00;
         }
 
         .form-container input[type="submit"] {
@@ -84,6 +89,19 @@
             color: #2c3e50;
             margin-right: 20px;
 
+        }
+
+        .overlay-back
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            content: '';
+            opacity: .9;
+            background: #636363d1;
+            z-index: -1;
         }
     </style>
 
@@ -119,7 +137,8 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:create_order' %}">Make an Order</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:create_order' %}">Make an
+                            Order</a></li>
                 </ul>
             </div>
         </div>
@@ -129,200 +148,49 @@
     <main>
 
         <section class="ftco-appointment img" style="background-image: url('{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}')">
-            <div class="overlay"></div>
+            <div class="overlay-back"></div>
             <div class="container-xl">
                 <div class="row">
                     <div class="col-lg-6 d-flex align-items-center order-lg-last ps-lg-5 py-5 aos-init aos-animate"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="heading-section">
                             <span class="subheading">Make an Order</span>
-                            <h2 class="mb-3">You Want To Make an Order </h2>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                                your mouth.</p>
+                            <h2 class="mb-3" style="color: #ffffff;">You Want To Make an Order </h2>
+                            <p style="color: #e5e4e4;">Placing an order with us is simple and efficient. Just provide the details of your cargo and delivery needs,
+                                 and our expert team will handle the rest. We ensure safe, 
+                                timely, and cost-effective transportation, giving you peace of mind throughout the process.</p>
                             <div class="row">
-                                <div class="col-md-6">
-                                 <!-- <img src="{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}"> -->
+                                <div class="col-md-4">
+                                    <!-- <img src="{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}"> -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6 d-flex align-items-center align-items-stretch aos-init aos-animate"
-                    data-aos="fade-up" data-aos-delay="100">
+                        data-aos="fade-up" data-aos-delay="100">
+                        <form method="post" class="appointment aside-stretch">
+                            <span class="subheading">Order Message</span>
+                            <h2 class="mb-4 appointment-head trending-banner">Make An Order</h2>
+                            
 
-        <div class="container">
-            <!-- Breaking News Start -->
-
-            <div class="container-fluid mt-5 mb-3 pt-3">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <div class="trending-banner">
-                                <div class="d-flex justify-content-between">
-                                    <div class="trending-title">Make an Order</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Breaking News End -->
-            <div class="form-container">
-
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form }}
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </div>
-
-                    </div>
-                </div>
-            </div>
             
+                        
+                            <div class="form-container">
+                                <div class="row">
+                                    {% csrf_token %}
+                                    {{ form }}
 
-
-
-    </div>
-</div>
-</section>
-
-
-
-        <!-- <section class="ftco-appointment img" style="background-image: url('{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}')">
-            <div class="overlay"></div>
-            <div class="container-xl">
-                <div class="row">
-                    <div class="col-lg-6 d-flex align-items-center order-lg-last ps-lg-5 py-5 aos-init aos-animate"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <div class="heading-section">
-                            <span class="subheading">Make an Order</span>
-                            <h2 class="mb-3">You Want To Make an Order </h2>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                                your mouth.</p>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="accordion" id="accordionExample">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                    aria-expanded="false" aria-controls="collapseOne">
-                                                    What are the problems in construction?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse"
-                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample"
-                                                style="">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    hidden by default, until the collapse plugin adds the appropriate
-                                                    classes that we use to style each element. It's also worth noting
-                                                    that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    What is best practice in construction?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    It is hidden by default, until the collapse plugin adds the
-                                                    appropriate classes that we use to style each element. It's also
-                                                    worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree">
-                                                    What is best practice in construction?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    It is hidden by default, until the collapse plugin adds the
-                                                    appropriate classes that we use to style each element. It's also
-                                                    worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 d-flex align-items-center align-items-stretch aos-init aos-animate"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <form action="#" class="appointment aside-stretch">
-                            <span class="subheading">Drop A Message</span>
-                            <h2 class="mb-4 appointment-head">Request A Quote</h2>
-                            <div class="row">
-                                <div class="col-md-12 col-lg-6">
-                                    <div class="form-group">
-                                        <label for="name">Your Full Name</label>
-                                        <input type="text" class="form-control" placeholder="Your Full Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-lg-6">
-                                    <div class="form-group">
-                                        <label for="email">Email Address</label>
-                                        <input type="text" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="subject">Select Subject</label>
-                                        <div class="form-field">
-                                            <div class="select-wrap">
-                                                <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                                <select name="" id="" class="form-control">
-                                                    <option value="">Construction Services</option>
-                                                    <option value="">Infrastructure Services</option>
-                                                    <option value="">Architecture Services</option>
-                                                    <option value="">Budget Planning</option>
-                                                    <option value="">Interior &amp; Exterior Design</option>
-                                                    <option value="">Project Planning</option>
-                                                    <option value="">Others</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="name">Message</label>
-                                        <textarea name="" id="" cols="30" rows="7" class="form-control"
-                                            placeholder="Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="submit" value="Send message" class="btn btn-primary py-3 px-4 rounded">
-                                </div>
-                            </div>
+                                <input type="submit" value="Submit">
                         </form>
                     </div>
                 </div>
+
             </div>
-        </section> -->
+
+            </div>
+        </section>
 
 
 
