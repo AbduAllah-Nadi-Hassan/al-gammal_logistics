@@ -101,17 +101,3 @@ document.querySelectorAll('.page-link').forEach(link => {
     });
 
 
-    // video background
-
-    document.addEventListener("DOMContentLoaded", function() {
-        var video = document.getElementById('hero-video');
-        var fallbackImage = document.getElementById('fallback-image');
-        
-        video.addEventListener('canplaythrough', function() {
-            // Hide the fallback image and show the video once it's ready to play
-            fallbackImage.style.display = 'none';
-            video.style.display = 'block';
-            video.play(); // Autoplay video when ready
-        }, false);
-    });
-    
