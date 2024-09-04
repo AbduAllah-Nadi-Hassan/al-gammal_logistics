@@ -100,44 +100,44 @@
 
 
 
-
-    <!-- bolg section -->
-    <section class="ftco-section bg-light ftco-no-pt p-5">
-        <div class="container-xl">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-7 heading-section text-center aos-init aos-animate" data-aos="fade-up"
-                    data-aos-duration="1000">
-                    <span class="subheading">Our Blog</span>
-                    <h2>Recent Blog</h2>
-                </div>
-            </div>
-            <div class="row">
-    
-                <!-- 1 -->
-                <div class="col-md-6 col-lg-6 d-flex">
-                    <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
-                        data-aos-duration="1000" data-aos-delay="100">
-                        <a href="article .html" class="block-20 img d-flex align-items-end"
-                            style="background-image: url('{% static 'homepage/images/banner-bg.webp' %}');">
-                            <div class="meta-date mb-0 ms-4">
-                                <span>16</span>
-                                <small>Jan</small>
-                            </div>
-                        </a>
-                        <div class="text">
-                            <h3 class="heading mb-3"><a href="#">Biggest Logistic in Cairo, EGY</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <p><a href="article.html" class="btn-custom">Learn More <span class="arrow">&#8594;</span></a></p>
-                        </div>
+    <main>
+        <!-- blog section -->
+        <section class="ftco-section bg-light ftco-no-pt p-5">
+            <div class="container-xl">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-7 heading-section text-center aos-init aos-animate" data-aos="fade-up"
+                        data-aos-duration="1000">
+                        <h2>Recent Articles</h2>
                     </div>
                 </div>
-    
+                <div class="row">
+                    {% for article in latest_articles%}
+                    <!-- 1 -->
+                    <div class="col-md-6 col-lg-6 d-flex">
+                        <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
+                            data-aos-duration="1000" data-aos-delay="100">
+                            <a href="{% url 'homepage:articles' article.id %}" class="block-20 img d-flex align-items-end"
+                                style="background-image: url('{{article.image.url}}');">
+                                <div class="meta-date mb-0 ms-4">
+                                    <small>{{article.pub_date}}</small>
+                                </div>
+                            </a>
+                            <div class="text">
+                                <h3 class="heading mb-3"><a href="#">{{article.title}}</a></h3>
+                                <p>{{ article.description }}</p>
+                                <p><a href="{% url 'homepage:articles' article.id %}" class="btn-custom">Learn More <span class="arrow">&#8594;</span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                        <h3>Sorry, there are no articles right now.</h3>
+                    {% endfor %}
+        
+                </div>
             </div>
-        </div>
 
-    </section>
-
+        </section>
+    </main>
 
     <!-- footer -->
    

@@ -76,7 +76,6 @@
     </style>
 </head>
 
-<>
 
     <!-- Loading Screen -->
     <!-- <div id="loading-screen">
@@ -120,19 +119,7 @@
             <div class="row justify-content-center">
                 <!-- Breaking News Start -->
 
-                <div class="container-fluid mt-5 mb-3 pt-3">
-                    <div class="container">
-                        <div class="row align-items-center art">
-                            <div class="col-6">
-                                <div class="trending-banner">
-                                    <div class="d-flex justify-content-between">
-                                        <div class="trending-title">ARTICLE</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- Breaking News End -->
 
 
@@ -146,7 +133,7 @@
 
                                     <!-- put the image in src  -->
                                     <img class="img-fluid w-100"
-                                        src="{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}"
+                                        src="{{ article.image.url}}"
                                         style="object-fit: cover;">
                                     <div class="bg-white border border-top-0 p-4">
                                         <div class="mb-3">
@@ -161,7 +148,7 @@
                                             </span>
                                             <a class="text-body" href="">{{article.pub_date}}</a>
                                         </div>
-                                        <h1 class="mb-3 text-uppercase font-weight-bold"> {{article.title}}</h1>
+                                        <h1 class="mb-3 font-weight-bold"> {{article.title}}</h1>
                                         <p>{{article.body}}</p>
                                     </div>
                                 </div>
@@ -175,8 +162,12 @@
 
     <!-- Pagination -->
     <div class="pagination p-2">
-        <a href="#" class="page-link">&laquo; previous article</a>
-        <a href="#" class="page-link">&raquo; next article</a>
+        {% if prev_article %}
+        <a href="{% url 'homepage:articles' prev_article.id %}" class="page-link">&laquo; previous article</a>
+        {% endif %}
+        {% if next_article %}
+        <a href="{% url 'homepage:articles' next_article.id %}" class="page-link">next article &raquo;</a>
+        {% endif %}
     </div>
 
   </div>
@@ -197,14 +188,23 @@
         <div class="container-fluid px-0 py-5 bg-darken">
             <div class="container-xl">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">Copyright ©
-                            <script type="text/javascript" async=""
-                                src="https://www.google-analytics.com/analytics.js"></script>
-                            <script>document.write(new Date().getFullYear());</script>2024 All rights reserved |
-                            This
-                            template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
-                                href="" target="_blank" rel="nofollow noopener">Nada gamal</a>
+
+
+                    <div class="col-md-6 text-center">
+                        <iframe id="location"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                            width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                   
+                        <p>Phone: <a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000 416</a></p>
+                    </div>
+
+                    <div class="col-md-12 text-center p-3">
+                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
+                            <small>&copy; Copyright {{year}}, Al-Gammal Transportation and Services</small>
                         </p>
                     </div>
                 </div>

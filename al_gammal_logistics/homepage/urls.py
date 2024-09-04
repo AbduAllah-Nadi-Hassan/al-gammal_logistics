@@ -1,4 +1,6 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from django.views.generic import TemplateView
 from . import views
 
@@ -16,3 +18,5 @@ urlpatterns = [
     path("order/", views.CreateOrder.as_view(), name="create_order"),
     path("order_success/", TemplateView.as_view(template_name="homepage/order_success.html"), name="order_success"),
 ]
+if settings.DEBUG == True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

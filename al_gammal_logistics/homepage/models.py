@@ -4,7 +4,7 @@ class Article(models.Model):
     title = models.CharField("Article's title", max_length=200)
     description = models.CharField("Short description of the Article (for SEO)", max_length=300)
     body = models.TextField("Article's body")
-    image = models.ImageField(upload_to="Articles images")
+    image = models.ImageField(upload_to="articles_images")
     pub_date = models.DateTimeField("date published")
 
     def __str__(self):
