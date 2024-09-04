@@ -27,6 +27,37 @@
             display: flex;
             justify-content: space-between;
         }
+
+        .hero-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            display: none; /* Hide video initially */
+        }
+        
+        .fallback-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .overlay, .text {
+            position: relative;
+            z-index: 2;
+        }
          
     </style>
 
@@ -64,7 +95,7 @@
     </nav>
 
     <!-- Section 2 -->
-    <section class="hero-wrap h-100" style="background-image: url('{% static 'homepage/images/blog-3.webp' %}');">
+    <section class="hero-wrap h-100">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center text-center">
@@ -98,6 +129,14 @@
                 </div>
             </div>
         </div>
+
+           <!-- Video Background -->
+    <video id="hero-video" class="video-bg" muted loop>
+        <source src="video/your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Fallback Background Image -->
+    <img id="fallback-image" class="fallback-bg" src="static 'homepage/images/blog-3.webp'" alt="Fallback Image">
     </section>
 
 
