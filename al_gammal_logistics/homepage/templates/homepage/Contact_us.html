@@ -8,7 +8,7 @@
     <!-- css links  -->
     <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'homepage/css/About us.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/About_us.css' %}">
     <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}">
     <!-- js links -->
@@ -17,21 +17,47 @@
     <title>Contact us</title>
 
     <style>
-        .trending-banner {
-            display: flex;
-            align-items: center;
-            background-color: #ffffff;
-            padding: 10px 20px;
-            font-family: Arial, sans-serif;
-            border-left: 5px solid #f4b200;
+        /* Contact Information Section */
+        .contact-info-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
         }
 
-        .trending-title {
-            font-weight: bold;
-            font-size: 30px;
-            color: #2c3e50;
-            margin-right: 20px;
+        .contact-info-section h3 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
 
+        .contact-info-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contact-card {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-card i {
+            font-size: 2em;
+            color: #ffa62b;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .contact-card p:last-child {
+            font-weight: bold;
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -58,11 +84,13 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleet' %}">Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive
+                            advantage</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:contact' %}">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -70,7 +98,8 @@
 
 
     <!-- section 2  -->
-    <!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/contact.webp');">
+    <section class="hero-wrap hero-wrap-2"
+        style="background-image: url('{% static 'homepage/images/contact-us-banner.jpg' %}');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -82,7 +111,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
 
     <!-- section 3  -->
@@ -93,26 +122,68 @@
                 <div class="col-md-10">
                     <div class="row">
                         <div class="col-md-12 mb-4">
-                            <h2 class="h3"></h2>
                             <h2 class="mb-4 appointment-head trending-banner">Contact Information</h2>
                         </div>
                         <div class="col-md-12">
                             <div class="row">
-                                <div class="col-md-3">
-                                    <p><span>Address:</span> 10 A Rama building, Kattameya, Ring Road, Maadi, Cairo, Egypt</p>
+
+
+                                <!-- email -->
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="services d-flex">
+                                        <div class="contact-card">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="40 " height="40"
+                                                    fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="text">
+                                            <h2>Send us an Email</h2>
+                                            <span>
+                                                <p class="mb-4 fw-bold">10 A Rama building, Kattameya, Ring Road, Maadi,
+                                                    Cairo, Egypt.</p>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <p><strong>Phone: </strong><a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000 416</a></p>
+
+                                <!-- phone -->
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="services d-flex">
+                                        <div class="contact-card">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                    fill="currentColor" class="bi bi-telephone-fill"
+                                                    viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="icon"></span></div>
+                                        <div class="text">
+                                            <h2>Give us a Call</h2>
+                                            <p class="mb-4 fw-bold" style="font-size:30px;">+20 120 0000 416</p>
+
+                                        </div>
+                                    </div>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
 
+    <!-- end section -->
     <section class="ftco-intro img m-2" style="background-image: url('{% static 'homepage/images/4.webp' %}');">
         <div class="overlay"></div>
         <div class="container-xl">
@@ -124,7 +195,8 @@
                             <div>
                                 <span class="subheading">You May Contact Us For Logistics
                                     Work</span>
-                                <h3 class="mb-md-0 mb-4">We are here to assist with all your logistics and transportation needs.</h3>
+                                <h3 class="mb-md-0 mb-4">We are here to assist with all your logistics and
+                                    transportation needs.</h3>
                             </div>
                         </div>
                         <div class="col-md-4 d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
@@ -137,17 +209,6 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -168,8 +229,9 @@
                     </div>
 
                     <div class="col-md-6 text-center">
-                   
-                        <p>Phone: <a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000 416</a></p>
+
+                        <p>Phone: <a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000
+                                416</a></p>
                     </div>
 
                     <div class="col-md-12 text-center p-3">
