@@ -44,6 +44,13 @@
             color: #4B4B4B;
             /* Arrow color similar to the gray in the image */
         }
+
+        .no-data
+        {
+            width:300px;
+            height: auto;
+            padding-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -130,7 +137,11 @@
                         </div>
                     </div>
                     {% empty %}
-                        <h3>Sorry, there are no articles right now.</h3>
+
+                    <div class="d-flex  justify-content-center">
+                        <img src="{% static 'homepage/images/no-data-.png' %}" class="d-block no-data" alt="No Data">
+                    </div>
+                        <h3 class="alert alert-primary text-center">Sorry, there are no articles right now.</h3>
                     {% endfor %}
         
                 </div>
