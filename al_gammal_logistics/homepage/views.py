@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView
-from .models import Article, Jobs, Services, Order, Fleet
+from .models import Article, Jobs, Services, Order, Fleet, Project
 
 from datetime import date
 
@@ -70,3 +70,8 @@ class CreateOrder(CreateView):
 def fleet(request, fleet_id):
     fleet = get_object_or_404(Fleet, pk=fleet_id)
     return render(request, "homepage/fleet.html", {"fleet": fleet})
+
+
+def project(request, project_id):
+    project = get_object_or_404(Project, pk=project_id)
+    return render(request, "homepage/project.html", {"project": project})

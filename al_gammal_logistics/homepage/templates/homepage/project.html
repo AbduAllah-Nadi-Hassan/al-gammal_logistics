@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css links  -->
+    <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/About_us.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}">
+    <!-- js links -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>{{project.name}}</title>
+
+    <style>
+        .blog-entry
+        {
+            background-color: rgba(248,248,248,1);
+
+        }
+        .heading
+        {
+            font-family: "Poppins", Arial, Helvetica, sans-serif;
+            font-weight: 300px;
+            font-size: 100px;
+            color: #0056b3;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .page-link {
+            color: #f8f9fa;
+            padding: 10px 15px;
+            margin: 0 5px;
+            text-decoration: none;
+            background-color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .page-link:hover {
+            background-color: #0056b3;
+            color: #f8f9fa;
+        }
+        p
+        {
+            color: black;
+        }
+     
+    
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <!-- <div id="loading-screen">
+            <div class="spinner"></div>
+        </div> -->
+
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg  ftco-navbar-light">
+        <div class="container-fluid me-5">
+            <a class="navbar-brand aside-stretch align-items-center" href="index.html">
+                <img src="{% static 'homepage/images/logo_psd.webp'%}" class="logo-img ">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleets' %}">Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- section 2  -->
+
+        <section class="ftco-section bg-light ftco-no-pt p-5  shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="container-xl">
+         
+                <div class="row justify-content-center">
+
+                    <div class="col-md-10 col-lg-5 d-flex">
+                        <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
+                            data-aos-duration="1000" data-aos-delay="100">
+                            
+                            <!-- put the photo in this link -->
+                            <div class="block-20 img d-flex align-items-end photo"
+                                style="background-image: url('/static/homepage/images/project_{{project.id}}.webp');">
+                            </div>
+
+
+                            <div class="text"> 
+                                 <!-- write here the main title -->
+                                <h1 class="heading mb-3">{{project.name}}</h1>  
+                                <!-- write here the paragraph -->
+                                {% autoescape off %}
+                                <p class="serDes">{{project.description|linebreaks}}</p>
+                                {% endautoescape %}
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- footer -->
+        <footer class="ftco-footer">
+
+            <div class="container-fluid px-0 py-5 bg-darken">
+                <div class="container-xl">
+                    <div class="row">
+    
+    
+                        <div class="col-md-6 text-center">
+                            <iframe id="location"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                                width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+    
+                        <div class="col-md-6 text-center">
+    
+                            <p>Phone: <a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000 416</a></p>
+                        </div>
+    
+                        <div class="col-md-12 text-center p-3">
+                            <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
+                                <small>&copy; Copyright {{year}}, Al-Gammal Transportation and Services</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <!-- Arrow Button -->
+    <a href="#" id="back-to-top" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+        <!-- js links -->
+        <script src="{% static 'homepage/js/popper.min.js' %}"></script>
+        <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
+        <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="{% static 'homepage/js/main.js' %}"></script>
+
+
+
+        <script>
+            ScrollReveal({
+                reset: true,
+                distance: '60px',
+                duration: 2500,
+                delay: 400
+            });
+
+
+            ScrollReveal().reveal('.w-100 ,.heading', { delay: 400, origin: 'left' });
+            ScrollReveal().reveal('p', { delay: 700, origin: 'right' });
+            ScrollReveal().reveal('.photo ', { delay: 700, origin: 'right' });
+
+        </script>
+
+</body>
+
+</html>
