@@ -109,7 +109,7 @@
                             
                             <!-- put the photo in this link -->
                             <div class="block-20 img d-flex align-items-end photo"
-                                style="background-image: url('/static/homepage/images/service_{{fleet.id}}.webp');">
+                                style="background-image: url('/static/homepage/images/fleet_{{fleet.id}}.webp');">
                             </div>
 
 
@@ -117,7 +117,9 @@
                                  <!-- write here the main title -->
                                 <h1 class="heading mb-3"><a href="#">{{fleet.name}}</a></h1>  
                                 <!-- write here the paragraph -->
+                                {% autoescape off %}
                                 <p class="serDes">{{fleet.description|linebreaks}}</p>
+                                {% endautoescape %}
                             </div>
 
 
