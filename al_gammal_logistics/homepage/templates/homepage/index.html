@@ -15,15 +15,7 @@
     <title>Al-Gammal for transportation services.</title>
 
     <style>
-        #video_container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
+
 
         .custom-img-size {
             width: 100%;
@@ -83,41 +75,52 @@
     </nav>
 
     <!-- Section 2 -->
-<section class="hero-wrap h-100" style="position: relative; overflow: hidden;">
-    <!-- start Background video -->
-    <div id="video_container">
-        <iframe src="https://player.vimeo.com/video/1006507720?badge=0&amp;background=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen;" title="al-gammal_logistics_bg"></iframe>
-    </div>
-    <script src="https://player.vimeo.com/api/player.js"></script>
-    <!-- end Background Video-->
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.536); z-index: 2;"></div>
-    <div class="container" style="position: relative; z-index: 3;">
-        <div class="row no-gutters slider-text align-items-center justify-content-center text-center">
-            <div class="col-lg-9">
-                <div class="text aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <span class="subheading">Your logistics are no longer your problem!</span>
-                    <h1 class="mb-5">Your attention is important, leave the <span>hassle</span> to us. Focus on your more important<span> tasks</span>.</h1>
-                    <p>
-                        <a href="{% url 'homepage:create_order' %}" class="btn btn-primary p-4 py-3">Make an Order
-                            <span class="arrow">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
-                                </svg>
-                            </span>
-                        </a>
-                        <a href="{% url 'homepage:about' %}" class="btn btn-darken p-4 py-3 ms-4">Read More
-                            <span class="arrow">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
-                                </svg>
-                            </span>
-                        </a>
-                    </p>
+    <section class="hero-wrap h-100" style="position: relative; overflow: hidden; height: 100vh; width: 100vw;">
+        <!-- start Background video -->
+        <div id="video_container" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; overflow: hidden;">
+            <iframe 
+                src="https://player.vimeo.com/video/1006507720?badge=0&amp;background=1&amp;player_id=0&amp;app_id=58479" 
+                frameborder="0" 
+                allow="autoplay; fullscreen;" 
+                title="al-gammal_logistics_bg" 
+                style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover;"
+            ></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <!-- end Background Video-->
+        
+        <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.536); z-index: 2;"></div>
+        
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="row no-gutters slider-text align-items-center justify-content-center text-center">
+                <div class="col-lg-9">
+                    <div class="text aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                        <span class="subheading">Your logistics are no longer your problem!</span>
+                        <h1 class="mb-5">Your attention is important, leave the <span>hassle</span> to us. Focus on your more important<span> tasks</span>.</h1>
+                        <p>
+                            <a href="{% url 'homepage:create_order' %}" class="btn btn-primary p-4 py-3">Make an Order
+                                <span class="arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="{% url 'homepage:about' %}" class="btn btn-darken p-4 py-3 ms-4">Read More
+                                <span class="arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
+    
+    
 
 
 
@@ -130,13 +133,13 @@
                     data-aos-delay="100" data-aos-duration="1000">
                     <div class="img w-100 careers-left-img"
                         style="background-image: url('{% static 'homepage/images/blog-3.webp' %}');">
-                        <div class="counter-wrap d-flex">
+                        <!-- <div class="counter-wrap d-flex">
                             <div class="icon"><span class="flaticon-engineer"></span></div>
                             <div class="text ps-3">
                                 <span class="number"><span class="countup">Al-Gammal</span></span>
                                 <span class="caption">Years of experienced</span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -152,46 +155,7 @@
                             buses to meet all
                             of the transportation needs of our customers.</p>
 
-                        <h4>We Can Help You</h4>
-                        <div class="row mt-4 g-lg-2">
-                            <div class="col-lg-6 d-flex align-items-stretch services-wrap">
-                                <div class="services d-flex">
-                                    <div class="icon"><span><i class="fas fa-rocket"></i></span></div>
-                                    <div class="text">
-                                        <h2>Transport</h2>
-                                        <p class="mb-0">Safe & Reliable Logistic Solutions!.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 d-flex align-items-stretch services-wrap">
-                                <div class="services d-flex">
-                                    <div class="icon"><span><i class="fas fa-puzzle-piece"></i></span></div>
-                                    <div class="text">
-                                        <h2>Planning</h2>
-
-                                        <p class="mb-0">Customer Service Planning.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 d-flex align-items-stretch services-wrap">
-                                <div class="services d-flex">
-                                    <div class="icon"><span><i class="fas fa-truck"></i></span></div>
-                                    <div class="text">
-                                        <h2>Trucks </h2>
-                                        <p class="mb-0">Far far away, behind the word mountains.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 d-flex align-items-stretch services-wrap">
-                                <div class="services d-flex">
-                                    <div class="icon"><span class="flaticon-construction"></span></div>
-                                    <div class="text">
-                                        <h2>Contract Logistics</h2>
-                                        <p class="mb-0">Far far away, behind the word mountains.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                     
                     </div>
                 </div>
 
@@ -709,7 +673,7 @@
                     <div class="col-md-6 text-center">
                         <iframe id="location"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
-                            width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
