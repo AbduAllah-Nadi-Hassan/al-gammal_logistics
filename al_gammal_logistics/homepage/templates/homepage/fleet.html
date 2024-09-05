@@ -13,7 +13,7 @@
     <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}">
     <!-- js links -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>{{service.name}} </title>
+    <title>{{fleet.name}}</title>
 
     <style>
         .blog-entry
@@ -84,7 +84,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleet' %}">Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleets' %}">Fleet</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
@@ -109,15 +109,15 @@
                             
                             <!-- put the photo in this link -->
                             <div class="block-20 img d-flex align-items-end photo"
-                                style="background-image: url('/static/homepage/images/service_{{service.id}}.webp');">
+                                style="background-image: url('/static/homepage/images/service_{{fleet.id}}.webp');">
                             </div>
 
 
                             <div class="text"> 
                                  <!-- write here the main title -->
-                                <h1 class="heading mb-3"><a href="#">{{service.name}}</a></h1>  
+                                <h1 class="heading mb-3"><a href="#">{{fleet.name}}</a></h1>  
                                 <!-- write here the paragraph -->
-                                <p class="serDes">{{service.description|linebreaks}}</p>
+                                <p class="serDes">{{fleet.description|linebreaks}}</p>
                             </div>
 
 
@@ -138,14 +138,24 @@
             <div class="container-fluid px-0 py-5 bg-darken">
                 <div class="container-xl">
                     <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">Copyright ©
-                                <script type="text/javascript" async=""
-                                    src="https://www.google-analytics.com/analytics.js"></script>
-                                <script>document.write(new Date().getFullYear());</script>2024 All rights reserved |
-                                This
-                                template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
-                                    href="" target="_blank" rel="nofollow noopener">Nada gamal</a>
+    
+    
+                        <div class="col-md-6 text-center">
+                            <iframe id="location"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                                width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+    
+                        <div class="col-md-6 text-center">
+    
+                            <p>Phone: <a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000
+                                    416</a></p>
+                        </div>
+    
+                        <div class="col-md-12 text-center p-3">
+                            <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
+                                <small>&copy; Copyright {{year}}, Al-Gammal Transportation and Services</small>
                             </p>
                         </div>
                     </div>

@@ -52,3 +52,15 @@ class Order(models.Model):
     class Meta:
         verbose_name = "Customer's Order"
         verbose_name_plural = "Customer's Orders"
+
+
+class Fleet(models.Model):
+    name = models.CharField("Fleet's name", max_length=(200))
+    description = models.TextField("Fleet's Description")
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "Fleet"
+        verbose_name_plural = "Fleets"
