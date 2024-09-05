@@ -14,8 +14,8 @@ def about(request):
     return render(request, "homepage/About_us.html")
 
 
-def fleet(request):
-    return render(request, "homepage/Fleet.html")
+def fleets(request):
+    return render(request, "homepage/fleets.html")
 
 
 def advantage(request):
