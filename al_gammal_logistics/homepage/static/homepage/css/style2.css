@@ -2957,7 +2957,7 @@ textarea.form-control {
   display: block;
   margin-bottom: 5px;
   color: #ffa62b;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 500;
 }
 
@@ -3295,7 +3295,7 @@ textarea.form-control {
   display: block;
   margin-bottom: 5px;
   color: #fff;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -3397,10 +3397,10 @@ textarea.form-control {
   color: #fff;
 }
 
-.ftco-gallery .gallery-wrap .desc h2 a,
+/* .ftco-gallery .gallery-wrap .desc h2 a,
 .ftco-gallery .gallery-wrap .desc .h2 a {
   color: #fff;
-}
+} */
 
 .ftco-gallery .gallery-wrap:hover:after {
   opacity: .3;

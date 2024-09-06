@@ -11,18 +11,17 @@
     <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
     <!-- favicon link-->
     <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}">
- 
+
     <title>Al-Gammal for transportation services.</title>
 
     <style>
-
-
         .custom-img-size {
             width: 100%;
-            height: 150px;  /* Adjust this height as needed */
+            height: 150px;
+            /* Adjust this height as needed */
             object-fit: contain;
         }
-        
+
         .carousel-inner .row {
             display: flex;
             justify-content: space-between;
@@ -32,13 +31,166 @@
             position: relative;
             overflow: hidden;
         }
-    
-        
-        .overlay, .text {
+
+
+        .overlay,
+        .text {
             position: relative;
             z-index: 2;
         }
-         
+
+
+/* Image container with shape behind */
+.careers-left-img {
+    height: 400px;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.career-left-img::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 172, 7, 0.826); /* Yellow transparent background */
+    transform: rotate(-5deg);
+    z-index: -1;
+    border-radius: 20px;
+}
+
+
+
+/* Text section styling */
+
+.heading-section-about {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.heading-section-about::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 193, 7, 0.4);
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.heading-section-about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.heading-section-about .subheading {
+    font-size: 1.2rem;
+    color: #ffc107;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.heading-section-about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.heading-section-about .subheading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #ffc107;
+    margin-top: 5px;
+}
+
+/* Hover effect for text */
+.heading-section-about:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Service icons style 
+.services-icon {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-wrapper {
+    background-color: #ffc107;
+    padding: 20px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.icon-wrapper:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+    */
+
+/* Text inside service box
+.services h3 {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+    
+}
+     */
+
+/* Service container styles */
+/* Align cards and images 
+.services {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+*/
+/* Image container styling */
+.careers-right-img {
+    height: 250px;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .careers-right-img {
+        height: 200px;
+    }
+}
+
+
+        
     </style>
 
 </head>
@@ -64,11 +216,13 @@
                     <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleets' %}">Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive
+                            advantage</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -77,38 +231,44 @@
     <!-- Section 2 -->
     <section class="hero-wrap h-100" style="position: relative; overflow: hidden; height: 100vh; width: 100vw;">
         <!-- start Background video -->
-        <div id="video_container" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; overflow: hidden;">
-            <iframe 
-                src="https://player.vimeo.com/video/1006507720?badge=0&amp;background=1&amp;player_id=0&amp;app_id=58479" 
-                frameborder="0" 
-                allow="autoplay; fullscreen;" 
-                title="al-gammal_logistics_bg" 
-                style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover;"
-            ></iframe>
+        <div id="video_container"
+            style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; overflow: hidden;">
+            <iframe
+                src="https://player.vimeo.com/video/1006507720?badge=0&amp;background=1&amp;player_id=0&amp;app_id=58479"
+                frameborder="0" allow="autoplay; fullscreen;" title="al-gammal_logistics_bg"
+                style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover;"></iframe>
         </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
         <!-- end Background Video-->
-        
-        <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.536); z-index: 2;"></div>
-        
+
+        <div class="overlay"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.536); z-index: 2;">
+        </div>
+
         <div class="container" style="position: relative; z-index: 3;">
             <div class="row no-gutters slider-text align-items-center justify-content-center text-center">
                 <div class="col-lg-9">
-                    <div class="text aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                    <div class="text aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                        data-aos-duration="1000">
                         <span class="subheading">Your logistics are no longer your problem!</span>
-                        <h1 class="mb-5">Your attention is important, leave the <span>hassle</span> to us. Focus on your more important<span> tasks</span>.</h1>
+                        <h1 class="mb-5">Your attention is important, leave the <span>hassle</span> to us. Focus on your
+                            more important<span> tasks</span>.</h1>
                         <p>
                             <a href="{% url 'homepage:create_order' %}" class="btn btn-primary p-4 py-3">Make an Order
                                 <span class="arrow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
                                     </svg>
                                 </span>
                             </a>
                             <a href="{% url 'homepage:about' %}" class="btn btn-darken p-4 py-3 ms-4">Read More
                                 <span class="arrow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
                                     </svg>
                                 </span>
                             </a>
@@ -118,32 +278,22 @@
             </div>
         </div>
     </section>
-    
-    
-    
 
 
 
     <!-- Section 3  aboutus-->
     <section class="ftco-section ftco-about-section">
         <div class="container-xl">
-            <div class="row g-xl-5">
-
-                <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
+            <div class="row g-xl-5 align-items-center">
+                <!-- Image Section with Shape -->
+                <div class="col-md-6 d-flex align-items-stretch position-relative" data-aos="fade-up"
                     data-aos-delay="100" data-aos-duration="1000">
-                    <div class="img w-100 careers-left-img"
-                        style="background-image: url('{% static 'homepage/images/blog-3.webp' %}');">
-                        <!-- <div class="counter-wrap d-flex">
-                            <div class="icon"><span class="flaticon-engineer"></span></div>
-                            <div class="text ps-3">
-                                <span class="number"><span class="countup">Al-Gammal</span></span>
-                                <span class="caption">Years of experienced</span>
-                            </div>
-                        </div> -->
+                    <div class="img w-100 careers-left-img position-relative" style="background-image: url('{% static 'homepage/images/blog-3.webp' %}');">
                     </div>
                 </div>
-
-                <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
+    
+                <!-- Text Section with Effects -->
+                <div class="col-md-6 heading-section-about d-flex align-items-center position-relative" data-aos="fade-up"
                     data-aos-delay="200" data-aos-duration="1000">
                     <div class="mt-5 mt-md-0">
                         <span class="subheading">About Us</span>
@@ -152,16 +302,106 @@
                             The company was established in 2019, And operates in the activity of integrated
                             transportation and transportation services.
                             The sites have a fleet of trucks, excavators, jumbo cars, multiple private vehicles and
-                            buses to meet all
-                            of the transportation needs of our customers.</p>
-
-                     
+                            buses to meet all of the transportation needs of our customers.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
+    
+
+    <!-- test services -->
+    <!-- <section class="ftco-section ftco-services-section" id="services">
+        <div class="container-xl">
+            <div class="row justify-content-center">
+                <div class="col-md-8 heading-section text-center mb-5 aos-init aos-animate" data-aos="fade-up">
+                    <span class="subheading">What We Do</span>
+                    <h2 class="mb-4">Services</h2>
+                </div>
+            </div>
+            <div class="row">
+    
+               
+                <div class="col-md-6 d-flex align-items-stretch">
+                  
+                    <div class="row">
+    
+                        <div class="col-md-12 mb-4">
+                            <a href="{% url 'homepage:services' 1 %}" class="ser">
+                                <div class="services d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                                    data-aos-duration="1000">
+                                    <div class="services-icon">
+                                        <div class="icon-wrapper">
+                                            <span class="icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                    fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <h3>Bulk transportation</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+    
+                        <div class="col-md-12 mb-4">
+                            <a href="{% url 'homepage:services' 2 %}" class="ser">
+                                <div class="services d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
+                                    data-aos-duration="1000">
+                                    <div class="services-icon">
+                                        <div class="icon-wrapper">
+                                            <span class="icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                    fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <h3>Goods and raw materials transportation</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                   
+    
+                    </div>
+                </div>
+    
+                
+                <div class="col-md-6">
+                    <div class="row">
+                      
+                        <div class="col-md-12 mb-4">
+                            <div class="img w-100 careers-right-img"
+                                style="background: url('{% static 'homepage/images/com.webp' %}'); background-size: cover;">
+                            </div>
+                        </div>
+    
+                        
+                        <div class="col-md-12 mb-4">
+                            <div class="img w-100 careers-right-img"
+                                style="background: url('{% static 'homepage/images/another-image.webp' %}'); background-size: cover;">
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section> -->
+    
+    
 
     <!-- Services Section 4 -->
     <section class="ftco-section ftco-services-section" id="services">
@@ -442,105 +682,107 @@
                     <h2 class="mb-5">Projects</h2>
                 </div>
             </div>
-            <div class="row g-0">
+            <div class="row g-0"> <!-- g-0 ensures no gutters -->
 
                 <!-- 1 -->
-
-                <a href="{% url 'homepage:index' %}">
-                    <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                        data-aos-duration="1000">
+                <a href="{% url 'homepage:project' 1 %}" class="col-md-4 p-0"> <!-- p-0 removes padding -->
+                    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
                         <div class="gallery-wrap img d-flex align-items-end justify-content-center"
                             style="background-image: url('{% static 'homepage/images/project_1.webp' %}');">
 
-                            <a href="images/work-1.webp"
-                                class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
-                                    class="fa fa-search"></span></a>
+                            <div class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink">
+                                <span class="fa fa-search"></span>
+                            </div>
                             <div class="desc w-100 px-4">
-
-                                <h2><a href="{% url 'homepage:project' 1 %}">The Role of the Polyethylene Pipes in the Electricity Field</a></h2>
+                                <h2>The Role of the Polyethylene Pipes in the Electricity Field</h2>
                             </div>
                         </div>
                     </div>
                 </a>
-                <!-- </a> -->
-                <!-- 2 -->
 
-                <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
-                    data-aos-duration="1000">
-                    <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/project_2.webp' %}');">
-                        <a href="images/work-2.webp"
-                            class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
-                                class="fa fa-search"></span></a>
-                        <div class="desc w-100 px-4">
-                            <h2><a href="{% url 'homepage:project' 2 %}">Electrical Interconnection Project between Egypt and Saudi Arabia</a></h2>
+                <!-- 2 -->
+                <a href="{% url 'homepage:project' 2 %}" class="col-md-4 p-0">
+                    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="gallery-wrap img d-flex align-items-end justify-content-center"
+                            style="background-image: url('{% static 'homepage/images/project_2.webp' %}');">
+
+                            <div class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink">
+                                <span class="fa fa-search"></span>
+                            </div>
+                            <div class="desc w-100 px-4">
+                                <h2>Electrical Interconnection Project between Egypt and Saudi Arabia</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- 3 -->
+                <a href="{% url 'homepage:project' 3 %}" class="col-md-4 p-0">
+                    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                        <div class="gallery-wrap img d-flex align-items-end justify-content-center"
+                            style="background-image: url('{% static 'homepage/images/project_3.webp' %}');">
 
-                <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
-                    data-aos-duration="1000">
-                    <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/project_3.webp' %}');">
-                        <a href="images/work-3.webp"
-                            class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
-                                class="fa fa-search"></span></a>
-                        <div class="desc w-100 px-4">
-                            <h2><a href="{% url 'homepage:project' 3 %}">The Third Line of the High-Speed Electric Train Network</a></h2>
+                            <div class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink">
+                                <span class="fa fa-search"></span>
+                            </div>
+                            <div class="desc w-100 px-4">
+                                <h2>The Third Line of the High-Speed Electric Train Network</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-
+                </a>
 
                 <!-- 4 -->
-                <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                    data-aos-duration="1000">
-                    <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/project_4.webp' %}');">
-                        <a href="images/work-4.webp"
-                            class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
-                                class="fa fa-search"></span></a>
-                        <div class="desc w-100 px-4">
-                            <h2><a href="{% url 'homepage:project' 4 %}">The Toshka Project</a></h2>
+                <a href="{% url 'homepage:project' 4 %}" class="col-md-4 p-0">
+                    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                        <div class="gallery-wrap img d-flex align-items-end justify-content-center"
+                            style="background-image: url('{% static 'homepage/images/project_4.webp' %}');">
+
+                            <div class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink">
+                                <span class="fa fa-search"></span>
+                            </div>
+                            <div class="desc w-100 px-4">
+                                <h2>The Toshka Project</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-
+                </a>
 
                 <!-- 5 -->
-                <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
-                    data-aos-duration="1000">
-                    <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/project_5.webp' %}');">
-                        <a href="images/work-5.webp"
-                            class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
-                                class="fa fa-search"></span></a>
-                        <div class="desc w-100 px-4">
-                            <h2><a href="{% url 'homepage:project' 5 %}">The Future Project in Dabaa</a></h2>
+                <a href="{% url 'homepage:project' 5 %}" class="col-md-4 p-0">
+                    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="gallery-wrap img d-flex align-items-end justify-content-center"
+                            style="background-image: url('{% static 'homepage/images/project_5.webp' %}');">
+
+                            <div class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink">
+                                <span class="fa fa-search"></span>
+                            </div>
+                            <div class="desc w-100 px-4">
+                                <h2>The Future Project in Dabaa</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-
-
+                </a>
 
                 <!-- 6 -->
-                <div class="col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
-                    data-aos-duration="1000">
-                    <div class="gallery-wrap img d-flex align-items-end justify-content-center"
-                        style="background-image: url('{% static 'homepage/images/project_6.webp' %}');">
-                        <a href="images/work-6.webp"
-                            class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink"><span
-                                class="fa fa-search"></span></a>
-                        <div class="desc w-100 px-4">
-                            <h2><a href="{% url 'homepage:project' 6 %}">Vinci Project in the New Administrative Capital</a></h2>
+                <a href="{% url 'homepage:project' 6 %}" class="col-md-4 p-0">
+                    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                        <div class="gallery-wrap img d-flex align-items-end justify-content-center"
+                            style="background-image: url('{% static 'homepage/images/project_6.webp' %}');">
+
+                            <div class="icon d-flex align-items-center justify-content-center glightbox hoverZoomLink">
+                                <span class="fa fa-search"></span>
+                            </div>
+                            <div class="desc w-100 px-4">
+                                <h2>Vinci Project in the New Administrative Capital</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
             </div>
+
+
         </div>
     </section>
 
@@ -556,91 +798,109 @@
             </div>
 
 
-            
+
             <div class="container">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p1.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 1">
+                                    <img src="{% static 'homepage/images/partners/p1.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 1">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p2.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 2">
+                                    <img src="{% static 'homepage/images/partners/p2.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 2">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p3.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 3">
+                                    <img src="{% static 'homepage/images/partners/p3.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 3">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p4.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 4">
+                                    <img src="{% static 'homepage/images/partners/p4.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 4">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p5.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 5">
+                                    <img src="{% static 'homepage/images/partners/p5.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 5">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p6.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 6">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p7.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 7">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p8.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 8">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p9.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 9">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p10.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 10">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p11.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 11">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p12.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 12">
+                                    <img src="{% static 'homepage/images/partners/p6.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 6">
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p13.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 13">
+                                    <img src="{% static 'homepage/images/partners/p7.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 7">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p14.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 14">
+                                    <img src="{% static 'homepage/images/partners/p8.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 8">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p15.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 15">
+                                    <img src="{% static 'homepage/images/partners/p9.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 9">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'homepage/images/partners/p16.webp' %}" class="d-block w-100 custom-img-size" alt="Brand 16">
+                                    <img src="{% static 'homepage/images/partners/p10.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 10">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p11.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 11">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p12.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 12">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p13.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 13">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p14.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 14">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p15.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 15">
+                                </div>
+                                <div class="col">
+                                    <img src="{% static 'homepage/images/partners/p16.webp' %}"
+                                        class="d-block w-100 custom-img-size" alt="Brand 16">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev d-flex justify-content-start" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <button class="carousel-control-prev d-flex justify-content-start" type="button"
+                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next d-flex justify-content-end " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <button class="carousel-control-next d-flex justify-content-end " type="button"
+                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
                         <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
             </div>
-            
+
 
         </div>
     </section>
 
 
 
-    
 
-    
+
+
 
 
     <!-- footer -->
