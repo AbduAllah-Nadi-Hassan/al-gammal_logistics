@@ -13,8 +13,17 @@
     <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}">
 
     <title>Al-Gammal for transportation services.</title>
-
     <style>
+        html,body {
+            height:100%;
+            width: 100%;
+        }
+
+        #video_container {
+            height: 100vh;
+            width: 100vw;
+        }
+
         .custom-img-size {
             width: 100%;
             height: 150px;
@@ -232,11 +241,11 @@
     <section class="hero-wrap h-100" style="position: relative; overflow: hidden; height: 100vh; width: 100vw;">
         <!-- start Background video -->
         <div id="video_container"
-            style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; overflow: hidden;">
+            style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; overflow: hidden; padding: 28%;">
             <iframe
                 src="https://player.vimeo.com/video/1006507720?badge=0&amp;background=1&amp;player_id=0&amp;app_id=58479"
                 frameborder="0" allow="autoplay; fullscreen;" title="al-gammal_logistics_bg"
-                style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover;"></iframe>
+                style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
         </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
         <!-- end Background Video-->
@@ -296,7 +305,7 @@
                 <div class="col-md-6 heading-section-about d-flex align-items-center position-relative" data-aos="fade-up"
                     data-aos-delay="200" data-aos-duration="1000">
                     <div class="mt-5 mt-md-0">
-                        <span class="subheading">About Us</span>
+                        <span class="subheading">Who are we?</span>
                         <h2 class="mb-2">Al-Gammal Transportation services company</h2>
                         <p class="mb-4">We are a company affiliated with Al-Gammal public contracting group.
                             The company was established in 2019, And operates in the activity of integrated
