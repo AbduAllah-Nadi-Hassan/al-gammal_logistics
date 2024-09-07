@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
     <!-- favicon link-->
     <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}">
+     <!-- js links -->
+     <script src="https://unpkg.com/scrollreveal"></script>
 
     <title>Al-Gammal for transportation services.</title>
     <style>
@@ -59,7 +61,6 @@
             background-size: cover;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
         }
-
         .career-left-img::before {
             content: '';
             position: absolute;
@@ -153,19 +154,6 @@
         }
 
         /*services*/
-        /* General container styles */
-        .container-xl {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 15px;
-        }
-
-        /* Section headings */
-
-
-
-
-
         /* Service item link styling */
 
 
@@ -173,17 +161,7 @@
             text-decoration: none;
         }
 
-        .services {
 
-            padding: 40px;
-
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
 
         .services:hover {
             background-color: #626262e0;
@@ -225,6 +203,38 @@
             font-size: 16px;
             color: #666;
         }
+
+
+        /* img of about  */
+
+.line-left-img:before
+{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 10px;
+  background: #F6B01A;
+  z-index: 1;
+  transition: 500ms all;
+  -webkit-transition: 500ms all;
+}
+
+.line-left-img:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 100px;
+  background: #F6B01A;
+  z-index: 1;
+  transition: 500ms all;
+  -webkit-transition: 500ms all;
+}
+
+
     </style>
 
 </head>
@@ -314,30 +324,43 @@
     </section>
 
 
-
-    <!-- Section 3  who are we?-->
+        <!-- Section 3  aboutus-->
     <section class="ftco-section ftco-about-section">
         <div class="container-xl">
-            <div class="row g-xl-5 align-items-center">
-                <!-- Image Section with Shape -->
-                <div class="col-md-6 d-flex align-items-stretch position-relative" data-aos="fade-up"
+            <div class="row g-xl-5">
+                <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
                     data-aos-delay="100" data-aos-duration="1000">
-                    <div class="img w-100 careers-left-img position-relative"
-                        style="background-image: url('{% static 'homepage/images/blog-3.webp' %}');">
+                    <div class="img w-100 line-left-img" style="background-image: url('{% static 'homepage/images/blog-3.webp' %}');">
+                       
                     </div>
                 </div>
-
-                <!-- Text Section with Effects -->
-                <div class="col-md-6 heading-section-about d-flex align-items-center position-relative"
-                    data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div class="col-md-6 heading-section-about d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
+                    data-aos-delay="200" data-aos-duration="1000">
                     <div class="mt-5 mt-md-0">
-                        <h3>Who are we?</h3>
-                        <h2 class="mb-2">Al-Gammal Transportation services company</h2>
+                        <span class="subheading">Who are we?</span>
+                        <h2 class="mb-2">Al-Gammal Transportation Services Company</h2>
                         <p class="mb-4">We are a company affiliated with Al-Gammal public contracting group.
-                            The company was established in 2019, And operates in the activity of integrated
+                            The company was established in 2019, and operates in the activity of integrated
                             transportation and transportation services.
                             The sites have a fleet of trucks, excavators, jumbo cars, multiple private vehicles and
                             buses to meet all of the transportation needs of our customers.</p>
+
+                        <!-- Video Section -->
+                        <div class="video-container mt-4" style="
+                            width: 100%;
+                            height: auto;
+                            overflow: hidden;
+                            border-radius: 8px; /* Optional: round the video corners */
+                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: add a shadow effect */
+                            margin-top: 20px; /* Ensure some space above the video */">
+                            <iframe style="
+
+                                border: none;
+                                border-radius: 8px; /* Optional: round the video corners */ " width="100%" height="315"
+                                src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube video player"
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -345,7 +368,7 @@
     </section>
 
 
-<!-- Services Section 4 -->
+    <!-- Services Section 4 -->
 
     <section class="ftco-section ftco-services-section" id="services">
         <div class="container-xl">
@@ -390,13 +413,14 @@
 
                             <a href="{% url 'homepage:services' 2 %}" class="ser">
 
-                                <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
-                                    data-aos-duration="1000">
-        
+                                <div class="services d-flex  aos-init aos-animate" data-aos="fade-up"
+                                    data-aos-delay="200" data-aos-duration="1000">
+
                                     <div class="icon">
                                         <span class="arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                                class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                                viewBox="0 0 16 16">
                                                 <path
                                                     d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
                                             </svg>
@@ -406,19 +430,20 @@
                                     <div class="text">
                                         <h2>Goods and raw materials transportation</h2>
                                     </div>
-        
+
                                 </div>
                             </a>
 
 
                             <a href="{% url 'homepage:services' 3 %}" class="ser">
-                                <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
-                                    data-aos-duration="1000">
-        
+                                <div class="services d-flex  aos-init aos-animate" data-aos="fade-up"
+                                    data-aos-delay="300" data-aos-duration="1000">
+
                                     <div class="icon">
                                         <span class="arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                                class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                                viewBox="0 0 16 16">
                                                 <path
                                                     d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
                                             </svg>
@@ -428,7 +453,7 @@
                                     <div class="text">
                                         <h2>Container Transportation</h2>
                                     </div>
-        
+
                                 </div>
                             </a>
 
@@ -536,103 +561,103 @@
 
                 </div>
             </div>
-        
 
 
-        <!-- row3 -->
-        <div class="row pt-5">
 
-            <!-- main links -->
-            <div class="col-md-6">
+            <!-- row3 -->
+            <div class="row pt-5">
 
-                <!-- links -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- 7 -->
-                        <a href="{% url 'homepage:services' 7%}" class="ser">
-                            <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
-                                data-aos-duration="1000">
+                <!-- main links -->
+                <div class="col-md-6">
 
-                                <div class="icon">
-                                    <span class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-                                        </svg>
-                                    </span>
-                                    </span>
+                    <!-- links -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- 7 -->
+                            <a href="{% url 'homepage:services' 7%}" class="ser">
+                                <div class="services d-flex  aos-init aos-animate" data-aos="fade-up"
+                                    data-aos-delay="200" data-aos-duration="1000">
+
+                                    <div class="icon">
+                                        <span class="arrow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                            </svg>
+                                        </span>
+                                        </span>
+                                    </div>
+                                    <div class="text">
+                                        <h2>FMCG Distribution and Management</h2>
+                                    </div>
+
                                 </div>
-                                <div class="text">
-                                    <h2>FMCG Distribution and Management</h2>
+                            </a>
+
+
+                            <!-- 8 -->
+
+                            <a href="{% url 'homepage:services' 8 %}" class="ser">
+                                <div class="services d-flex  aos-init aos-animate" data-aos="fade-up"
+                                    data-aos-delay="300" data-aos-duration="1000">
+
+                                    <div class="icon">
+                                        <span class="arrow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                            </svg>
+                                        </span>
+                                        </span>
+                                    </div>
+                                    <div class="text">
+                                        <h2>Project Transportation</h2>
+                                    </div>
+
                                 </div>
-
-                            </div>
-                        </a>
+                            </a>
 
 
-                        <!-- 8 -->
+                            <!-- 9 -->
+                            <a href="{% url 'homepage:services' 9 %}" class="ser">
+                                <div class="services d-flex aos-init aos-animate" data-aos="fade-up"
+                                    data-aos-delay="100" data-aos-duration="1000">
 
-                        <a href="{% url 'homepage:services' 8 %}" class="ser">
-                            <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
-                                data-aos-duration="1000">
+                                    <div class="icon">
+                                        <span class="arrow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                fill="currentColor" class="bi bi-arrow-right-circle-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                                            </svg>
+                                        </span>
+                                        </span>
+                                    </div>
+                                    <div class="text">
+                                        <h2>Warehousing and Distribution Management</h2>
+                                    </div>
 
-                                <div class="icon">
-                                    <span class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-                                        </svg>
-                                    </span>
-                                    </span>
                                 </div>
-                                <div class="text">
-                                    <h2>Project Transportation</h2>
-                                </div>
-
-                            </div>
-                        </a>
+                            </a>
 
 
-                        <!-- 9 -->
-                        <a href="{% url 'homepage:services' 9 %}" class="ser">
-                            <div class="services d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                                data-aos-duration="1000">
-
-                                <div class="icon">
-                                    <span class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                            fill="currentColor" class="bi bi-arrow-right-circle-fill"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-                                        </svg>
-                                    </span>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <h2>Warehousing and Distribution Management</h2>
-                                </div>
-
-                            </div>
-                        </a>
+                        </div>
+                    </div>
+                </div>
 
 
+                <!-- image -->
+                <div class="col-md-6">
+                    <div class="img w-100 careers-left-img position-relative"
+                        style="background-image: url('{% static 'homepage/images/3.webp' %}');">
                     </div>
                 </div>
             </div>
-
-
-            <!-- image -->
-            <div class="col-md-6">
-                <div class="img w-100 careers-left-img position-relative"
-                    style="background-image: url('{% static 'homepage/images/3.webp' %}');">
-                </div>
-            </div>
-        </div>
 
 
         </div>
@@ -801,27 +826,27 @@
                             <div class="row">
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p1.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 1">
+                                        class="d-block  custom-img-size" alt="Brand 1">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p2.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 2">
+                                        class="d-block  custom-img-size" alt="Brand 2">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p3.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 3">
+                                        class="d-block  custom-img-size" alt="Brand 3">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p4.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 4">
+                                        class="d-block  custom-img-size" alt="Brand 4">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p5.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 5">
+                                        class="d-block  custom-img-size" alt="Brand 5">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p6.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 6">
+                                        class="d-block  custom-img-size" alt="Brand 6">
                                 </div>
                             </div>
                         </div>
@@ -829,27 +854,27 @@
                             <div class="row">
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p7.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 7">
+                                        class="d-block  custom-img-size" alt="Brand 7">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p8.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 8">
+                                        class="d-block  custom-img-size" alt="Brand 8">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p9.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 9">
+                                        class="d-block  custom-img-size" alt="Brand 9">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p10.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 10">
+                                        class="d-block  custom-img-size" alt="Brand 10">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p11.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 11">
+                                        class="d-block  custom-img-size" alt="Brand 11">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p12.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 12">
+                                        class="d-block  custom-img-size" alt="Brand 12">
                                 </div>
                             </div>
                         </div>
@@ -857,19 +882,19 @@
                             <div class="row">
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p13.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 13">
+                                        class="d-block  custom-img-size" alt="Brand 13">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p14.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 14">
+                                        class="d-block  custom-img-size" alt="Brand 14">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p15.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 15">
+                                        class="d-block  custom-img-size" alt="Brand 15">
                                 </div>
                                 <div class="col">
                                     <img src="{% static 'homepage/images/partners/p16.webp' %}"
-                                        class="d-block w-100 custom-img-size" alt="Brand 16">
+                                        class="d-block  custom-img-size" alt="Brand 16">
                                 </div>
                             </div>
                         </div>
@@ -936,13 +961,26 @@
     <!-- JavaScript Links -->
     <script src="{% static 'homepage/js/popper.min.js' %}"></script>
     <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
-    <!-- <script src="{% static 'homepage/js/aos.js' %}"></script> -->
     <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
     <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="{% static 'homepage/js/main.js' %}"></script>
 
 
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 200
+        });
+
+
+        ScrollReveal().reveal('.w-100 ', { delay: 200, origin: 'left' });
+        ScrollReveal().reveal('.subheading ,.head ', { delay: 300, origin: 'right' });
+        ScrollReveal().reveal('p ', { delay: 300, origin: 'right' });
+
+    </script>
 
 </body>
 

@@ -3156,7 +3156,7 @@ textarea.form-control {
 
 /* img of about  */
 
-.careers-left-img:before
+.line-left-img:before
 {
   position: absolute;
   content: "";
@@ -3170,7 +3170,7 @@ textarea.form-control {
   -webkit-transition: 500ms all;
 }
 
-.careers-left-img:after {
+.line-left-img:after {
   position: absolute;
   content: "";
   left: 0;
@@ -3183,7 +3183,7 @@ textarea.form-control {
   -webkit-transition: 500ms all;
 }
 
-.careers-right-img:before {
+.line-right-img:before {
   position: absolute;
   content: "";
   left: 20;
@@ -3196,7 +3196,7 @@ textarea.form-control {
   -webkit-transition: 500ms all;
 }
 
-.careers-right-img:after {
+.line-right-img:after {
   position: absolute;
   content: "";
   left: 20;
@@ -3752,6 +3752,7 @@ textarea.form-control {
 
 .ftco-about-section .img {
   position: relative;
+  border-radius: 5%
 }
 
 @media (max-width: 767.98px) {
