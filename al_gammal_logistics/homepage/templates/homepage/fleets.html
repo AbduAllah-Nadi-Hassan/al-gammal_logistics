@@ -19,16 +19,60 @@
 
 <style>
     h2{
-        font-size: 20px;
+        font-size: 500px;
     }
+
+    .styled-heading {
+        font-size: 1.5rem; /* Adjust font size */
+        font-weight: 600; /* Semi-bold text */
+        color: #1b3b5f; /* Dark blue text color */
+        background-color: #f8f9fa; /* Light background color */
+        padding: 20px 40px; /* Spacing inside the heading */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        letter-spacing: 0.5px; /* Slight spacing between letters */
+        word-spacing: 2px; /* Slight spacing between words */
+        line-height: 1.6; /* Increased line height for readability */
+        text-align: center; /* Center-align text */
+        position: relative; /* For pseudo-elements */
+        transition: all 0.3s ease; /* Smooth transition on hover */
+    }
+    
+    /* Optional: Adding an underline effect */
+    .styled-heading::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 4px;
+        background-color: #ffb300; /* Accent color for the underline */
+        border-radius: 2px;
+    }
+
+    .styled-heading::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 4px;
+        background-color: #ffb300; /* Accent color for the underline */
+        border-radius: 2px;
+    }
+    
+    /* Hover Effect */
+    .styled-heading:hover {
+        color: #4b4b4b; /* Text color changes on hover */
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    }
+    
 </style>
 
 <body>
 
-    <!-- Loading Screen -->
-    <!-- <div id="loading-screen">
-        <div class="spinner"></div>
-    </div> -->
 
 
     <!-- Nav bar -->
@@ -71,11 +115,10 @@
                 </div>
             </div>
 
-            <h2 class="mb-4 appointment-head trending-banner sm fs-5 fw-semibold lh-base p-4 text-center mb-5">Al-Gammal Transport and Logistics Company operates
-                a versatile fleet of trucks tailored to meet various customer needs. This includes the
-                transportation
-                of polyethylene and plastic pipes,
-                as well as trucks specialized for delivering food, mineral water, and other goods.</h2>
+            <h2 class="styled-heading mb-4 appointment-head  sm fs-4 fw-semibold lh-base p-4 text-center mb-5">
+                Al-Gammal Transport and Logistics Company operates a versatile fleet of trucks tailored to meet various customer needs. This includes the transportation of polyethylene and plastic pipes, as well as trucks specialized for delivering food, mineral water, and other goods.
+            </h2>
+            
 
 
 
@@ -531,9 +574,8 @@
         });
 
 
-        ScrollReveal().reveal('.w-100 ', { delay: 700, origin: 'left' });
-        ScrollReveal().reveal('.subheading ,.head ', { delay: 700, origin: 'right' });
-        ScrollReveal().reveal('p ', { delay: 700, origin: 'right' });
+        ScrollReveal().reveal('.subheading , h2 ', { delay: 100, origin: 'right' });
+        ScrollReveal().reveal('p ', { delay: 100, origin: 'right' });
 
     </script>
 
