@@ -38,35 +38,48 @@
     }
     
     /* Optional: Adding an underline effect */
-    .styled-heading::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        height: 4px;
-        background-color: #ffb300; /* Accent color for the underline */
-        border-radius: 2px;
+    .styled-heading {
+        position: relative;
+        display: inline-block;
+        font-size: 24px; /* Example font size */
+        padding: 10px 0;
+        color: #000; /* Default text color */
+        transition: color 0.3s ease, box-shadow 0.3s ease; /* Transition for text and shadow */
     }
-
+    
+    .styled-heading::after,
     .styled-heading::before {
         content: '';
         position: absolute;
-        top: -10px;
         left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
+        width: 0; /* Initially, the lines are not visible */
         height: 4px;
-        background-color: #ffb300; /* Accent color for the underline */
+        background: linear-gradient(to right, #ffa62b, #51555f);
         border-radius: 2px;
+        transition: width 0.4s ease, transform 0.4s ease; /* Animation on hover */
+    }
+    
+    .styled-heading::after {
+        bottom: -10px;
+        transform: translateX(-50%);
+    }
+    
+    .styled-heading::before {
+        top: -10px;
+        transform: translateX(-50%);
     }
     
     /* Hover Effect */
     .styled-heading:hover {
-        color: #4b4b4b; /* Text color changes on hover */
+        color: #4b4b4b; /* Change text color on hover */
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
     }
+    
+    .styled-heading:hover::after,
+    .styled-heading:hover::before {
+        width: 100%; /* Lines grow to full width */
+    }
+    
     
 </style>
 
