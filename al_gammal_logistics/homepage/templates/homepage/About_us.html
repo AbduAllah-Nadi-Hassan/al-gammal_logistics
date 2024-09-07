@@ -21,11 +21,7 @@
 
 <body>
 
-        <!-- Loading Screen -->
-        <!-- <div id="loading-screen">
-            <div class="spinner"></div>
-        </div> -->
-
+   
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg ftco-navbar-light">
         <div class="container-fluid me-5">
@@ -53,25 +49,8 @@
     </nav>
 
 
-    <!-- section 2  -->
 
-    <!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'homepage/images/4.webp' %}');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 pt-5 text-center">
-                    <p class="breadcrumbs"><span class="me-2"><a href="{% url 'homepage:index' %}">Home <i
-                                    class="fa fa-chevron-right"></i></a></span> <span>About us <i
-                                class="fa fa-chevron-right"></i></span></p>
-                    <h1 class="mb-0 bread">About Us</h1>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
-
-    <!-- section 3 about us -->
+    <!-- section 2 about us -->
 
     <section class="ftco-section ftco-about-section">
         <div class="container-xl">
@@ -213,27 +192,70 @@
 
     <!-- footer -->
     <footer class="ftco-footer">
+        <div class="container-xl">
+            <div class="row mb-5 pb-5 justify-content-between">
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2 logo d-flex">
+                            <a class="navbar-brand align-items-center" href="index.html">
+                                Al-Gammal
+                            </a>
+                        </h2>
+                        <iframe id="location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </p>
+                        
+                    </div>
+                </div>
+               
+                <div class="col-md-6 col-lg-2">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Quick Links</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'homepage:index' %}"><span class="fa fa-chevron-right me-2"></span>Home</a></li>
+                            <li><a href="{% url 'homepage:about' %}"><span class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="{% url 'homepage:blog' %}"><span class="fa fa-chevron-right me-2"></span>Blog</a></li>
+                            <li><a href="{% url 'homepage:fleets' %}"><span class="fa fa-chevron-right me-2"></span>Fleets</a></li>
+                            <li><a href="{% url 'homepage:advantage' %}"><span class="fa fa-chevron-right me-2"></span>Advantage</a></li>
+                            <li><a href="{% url 'homepage:contact' %}"><span class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
+                            <li><a href="{% url 'homepage:create_order' %}"><span class="fa fa-chevron-right me-2"></span>Create Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon fa fa-map marker"></span><span class="text">
+                                    10 A Rama building, Kattameya, Ring Road, Maadi,
+                                                    Cairo, Egypt.
+                                </span></li>
+                                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+20 120 0000
+                                    416</span></a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
 
+
+                    <ul class="ftco-footer-social list-unstyled mt-2">
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid px-0 py-5 bg-darken">
             <div class="container-xl">
                 <div class="row">
-
-
-                    <div class="col-md-6 text-center">
-                        <iframe id="location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
-                            width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-
-                    <div class="col-md-6 text-center">
-                   
-                        <p>Phone: <a href="tel:+201200000416"> <span class="icon fa fa-phone"></span> +20 120 0000 416</a></p>
-                    </div>
-
-                    <div class="col-md-12 text-center p-3">
+                    <div class="col-md-12 text-center">
                         <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
-                            <small>&copy; Copyright {{year}}, Al-Gammal Transportation and Services</small>
+                            Copyright {{year}}, Al-Gammal Transportation and Services
                         </p>
                     </div>
                 </div>
@@ -263,9 +285,9 @@
         });
 
        
-        ScrollReveal().reveal('.w-100 ,.head', { delay: 600,origin:'left' });
-        ScrollReveal().reveal('.subheading ', { delay: 700,origin:'right' });
-        ScrollReveal().reveal('.mb-4 ', { delay: 700,origin:'right' });
+        ScrollReveal().reveal('.w-100 ,.head', { delay: 200,origin:'left' });
+        ScrollReveal().reveal('.subheading ', { delay: 300,origin:'right' });
+        ScrollReveal().reveal('.mb-4 ', { delay: 300,origin:'right' });
 
 </script>
     
