@@ -373,54 +373,49 @@
         </div>
 
         <div class="row">
-
+            <aside>
             <!-- sidebar -->
-            <div class="col-md-3">
-                <!-- Sidebar Navigation -->
-                <nav id="sidebar" class="col-md-3 text-white p-3 custom-sidebar">
-                    <h4 class="text-center mb-4">Services</h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link " href="#service1">Server 1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#service2">Server 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#service3">Server 3</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#service4">Server 4</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
+                <div class="col-md-3">
+                    <!-- Sidebar Navigation -->
+                    <nav id="sidebar" class="col-md-3 text-white p-3 custom-sidebar">
+                        <h4 class="text-center mb-4">Other services</h4>
+                        <ul class="nav flex-column">
+                            {% for service in other_services %}
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{% url 'homepage:services' service.id %}">{{ service.name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
 
 
             <!-- contetnt -->
             <div class="col-md-9">
-                <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-5 d-flex">
-                        <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
-                            data-aos-duration="1000" data-aos-delay="100">
+                <main>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-5 d-flex">
+                            <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
+                                data-aos-duration="1000" data-aos-delay="100">
 
-                            <!-- Image Block -->
-                            <div class="block-20 img d-flex align-items-end photo"
-                                style="background-image: url('/static/homepage/images/service_{{service.id}}.webp');">
+                                <!-- Image Block -->
+                                <div class="block-20 img d-flex align-items-end photo"
+                                    style="background-image: url('/static/homepage/images/service_{{service.id}}.webp');">
+                                </div>
+
+                                <!-- Text Block -->
+                                <div class="text p-4">
+                                    <!-- Main Title -->
+                                    <h1 class="heading mb-3">{{service.name}}</h1>
+                                    <!-- Paragraph Description -->
+                                    <p class="serDes">{{service.description|linebreaks}}</p>
+                                </div>
+
                             </div>
-
-                            <!-- Text Block -->
-                            <div class="text p-4">
-                                <!-- Main Title -->
-                                <h1 class="heading mb-3">{{service.name}}</h1>
-                                <!-- Paragraph Description -->
-                                <p class="serDes">{{service.description|linebreaks}}</p>
-                            </div>
-
                         </div>
                     </div>
-                </div>
+                </main>
             </div>
         </div>
     </section>

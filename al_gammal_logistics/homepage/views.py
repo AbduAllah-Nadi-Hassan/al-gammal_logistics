@@ -57,7 +57,8 @@ def articles(request, article_id):
 
 def services(request, service_id):
     service = get_object_or_404(Services, pk=service_id)
-    return render(request, "homepage/Services.html", {"service": service})
+    other_services = Services.objects.exclude(pk=service_id)
+    return render(request, "homepage/Services.html", {"service": service, "other_services": other_services})
 
 
 class CreateOrder(CreateView):
