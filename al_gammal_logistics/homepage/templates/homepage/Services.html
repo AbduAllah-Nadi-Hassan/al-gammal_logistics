@@ -316,7 +316,7 @@
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg  ftco-navbar-light">
         <div class="container-fluid me-5">
-            <a class="navbar-brand aside-stretch align-items-center" href="index.html">
+            <a class="navbar-brand aside-stretch align-items-center" href="{% url 'homepage:index' %}">
                 <img src="{% static 'homepage/images/logo_psd.webp'%}" class="logo-img ">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -360,7 +360,7 @@
                 <div class="col-md-3">
                     <!-- Sidebar Navigation -->
                     <nav id="sidebar" class="col-md-3 text-white p-3 custom-sidebar">
-                        <h4 class="text-center mb-4">Other services</h4>
+                        <h4 class="text-center mb-4">Other Services</h4>
                         <ul class="nav flex-column">
                             {% for service in other_services %}
                                 <li class="nav-item">
