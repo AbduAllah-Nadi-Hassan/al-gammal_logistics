@@ -3097,23 +3097,6 @@ textarea.form-control {
   }
 }
 
-.block-7 .price {
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-
-.block-7 .price sup {
-  font-size: 24px;
-  top: -.8em;
-  color: gray;
-}
-
-.block-7 .price .number {
-  font-size: 50px;
-  font-weight: 600;
-  color: #ffa62b;
-}
 
 .block-7 .excerpt {
   margin-bottom: 0;
@@ -3229,9 +3212,7 @@ textarea.form-control {
   }
 }
 
-/* .ftco-no-pt {
-  padding-top: 0 !important;
-} */
+
 
 .ftco-intro {
   color: rgba(255, 255, 255, 0.8);
@@ -3385,10 +3366,6 @@ textarea.form-control {
   color: #fff;
 }
 
-/* .ftco-gallery .gallery-wrap .desc h2 a,
-.ftco-gallery .gallery-wrap .desc .h2 a {
-  color: #fff;
-} */
 
 .ftco-gallery .gallery-wrap:hover:after {
   opacity: .3;
