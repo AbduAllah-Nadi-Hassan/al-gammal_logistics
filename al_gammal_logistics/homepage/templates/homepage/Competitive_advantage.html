@@ -65,11 +65,24 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleets' %}">Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:advantage' %}">Competitive
+                            advantage</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a>
+                    </li>
+                    <!-- Language Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=ar">العربية</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -89,7 +102,8 @@
             </div>
             <div class="row">
                 <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="img w-100" style="background: url('{% static 'homepage/images/competitive2.jpeg' %}');"></div>
+                    <div class="img w-100" style="background: url('{% static 'homepage/images/competitive2.jpeg' %}');">
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
@@ -102,7 +116,7 @@
                                 level of protection. By adhering to rigorous safety standards and regularly maintaining
                                 our fleet,
                                 we minimize the risk of damage and ensure your shipments arrive intact.</p>
-                            
+
                         </div>
                     </div>
                     <div class="services d-flex active-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
@@ -113,7 +127,7 @@
                             <p class="mb-4">We meet all industry safety regulations and standards, providing peace of
                                 mind that your transportation needs are handled responsibly and legally.
                                 This compliance also helps avoid potential disruptions or legal issues.</p>
-                            
+
                         </div>
                     </div>
                     <div class="services d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
@@ -125,7 +139,7 @@
                                 handling and transportation,
                                 further safeguarding your cargo and reducing the likelihood of accidents or incidents
                                 during transit.</p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -151,8 +165,9 @@
                             <h2 class="head">Rapid Response</h2>
                             <p class="mb-4">Our agile logistics operations allow us to quickly adapt to changing
                                 customer requirements and market conditions. Whether you need expedited shipping or
-                                adjustments to your transportation schedule, we can accommodate your needs efficiently.</p>
-                            
+                                adjustments to your transportation schedule, we can accommodate your needs efficiently.
+                            </p>
+
                         </div>
                     </div>
                     <div class="services d-flex active-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
@@ -164,7 +179,7 @@
                                 types of cargo and delivery needs.
                                 This flexibility ensures that we can handle diverse and dynamic logistics challenges
                                 effectively.</p>
-                            
+
                         </div>
                     </div>
                     <div class="services d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
@@ -175,7 +190,7 @@
                             <p class="mb-4">Our streamlined processes and technology-driven approach enable us to
                                 optimize routes and reduce transit times, ensuring timely delivery and improved overall
                                 service efficiency.</p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -186,56 +201,59 @@
         </div>
 
 
-                <!-- Trust -->
-                <div class="container-xl">
-                    <div class="row justify-content-center p-5">
-                        <div class="col-md-8 heading-section text-center mb-5 aos-init aos-animate" data-aos="fade-up">
-                            <h2 class="mb-4 heading-line head">Trust</h2>
+        <!-- Trust -->
+        <div class="container-xl">
+            <div class="row justify-content-center p-5">
+                <div class="col-md-8 heading-section text-center mb-5 aos-init aos-animate" data-aos="fade-up">
+                    <h2 class="mb-4 heading-line head">Trust</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="img w-100" style="background: url('{% static 'homepage/images/4.webp' %}');"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                        data-aos-duration="1000">
+                        <div class="icon"><span class="flaticon-construction"></span></div>
+                        <div class="text">
+                            <h2 class="head">Reliable Performance</h2>
+                            <p class="mb-4">Our proven track record of dependable service builds trust with our clients.
+                                We
+                                consistently deliver on our promises, ensuring that your shipments are handled with care
+                                and arrive as scheduled.</p>
+
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 d-flex align-items-stretch">
-                            <div class="img w-100" style="background: url('{% static 'homepage/images/4.webp' %}');"></div>
+                    <div class="services d-flex active-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
+                        data-aos-duration="1000">
+                        <div class="icon"><span class="flaticon-house-1"></span></div>
+                        <div class="text">
+                            <h2 class="head">Transparent Communication</h2>
+                            <p class="mb-4"> We prioritize clear and open communication with our customers, providing
+                                regular updates
+                                on shipment status and addressing any concerns promptly.
+                                This transparency fosters confidence in our services.</p>
+
                         </div>
-                        <div class="col-md-6">
-                            <div class="services d-flex active aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                                data-aos-duration="1000">
-                                <div class="icon"><span class="flaticon-construction"></span></div>
-                                <div class="text">
-                                    <h2 class="head">Reliable Performance</h2>
-                                    <p class="mb-4">Our proven track record of dependable service builds trust with our clients. We
-                                        consistently deliver on our promises, ensuring that your shipments are handled with care
-                                        and arrive as scheduled.</p>
-                                    
-                                </div>
-                            </div>
-                            <div class="services d-flex active-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
-                                data-aos-duration="1000">
-                                <div class="icon"><span class="flaticon-house-1"></span></div>
-                                <div class="text">
-                                    <h2 class="head">Transparent Communication</h2>
-                                    <p class="mb-4"> We prioritize clear and open communication with our customers, providing regular updates
-                                        on shipment status and addressing any concerns promptly.
-                                        This transparency fosters confidence in our services.</p>
-                                    
-                                </div>
-                            </div>
-                            <div class="services d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
-                                data-aos-duration="1000">
-                                <div class="icon"><span class="flaticon-engineer"></span></div>
-                                <div class="text">
-                                    <h2 class="head">Established Reputation</h2>
-                                    <p class="mb-4"> With years of experience and a strong reputation in the industry, we have earned the
-                                        trust of numerous clients.
-                                        Our dedication to quality and integrity reinforces our reliability as a trusted partner
-                                        in transportation and logistics.</p>
-                                    
-                                </div>
-                            </div>
+                    </div>
+                    <div class="services d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                        data-aos-duration="1000">
+                        <div class="icon"><span class="flaticon-engineer"></span></div>
+                        <div class="text">
+                            <h2 class="head">Established Reputation</h2>
+                            <p class="mb-4"> With years of experience and a strong reputation in the industry, we have
+                                earned the
+                                trust of numerous clients.
+                                Our dedication to quality and integrity reinforces our reliability as a trusted partner
+                                in transportation and logistics.</p>
+
                         </div>
                     </div>
                 </div>
-        
+            </div>
+        </div>
+
     </section>
 
 
@@ -252,25 +270,32 @@
                             </a>
                         </h2>
                         <iframe id="location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </p>
-                        
+
                     </div>
                 </div>
-               
+
                 <div class="col-md-6 col-lg-2">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Quick Links</h2>
                         <ul class="list-unstyled">
-                            <li><a href="{% url 'homepage:index' %}"><span class="fa fa-chevron-right me-2"></span>Home</a></li>
-                            <li><a href="{% url 'homepage:about' %}"><span class="fa fa-chevron-right me-2"></span>About</a></li>
-                            <li><a href="{% url 'homepage:blog' %}"><span class="fa fa-chevron-right me-2"></span>Blog</a></li>
-                            <li><a href="{% url 'homepage:fleets' %}"><span class="fa fa-chevron-right me-2"></span>Fleets</a></li>
-                            <li><a href="{% url 'homepage:advantage' %}"><span class="fa fa-chevron-right me-2"></span>Advantage</a></li>
-                            <li><a href="{% url 'homepage:contact' %}"><span class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
-                            <li><a href="{% url 'homepage:create_order' %}"><span class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
+                            <li><a href="{% url 'homepage:index' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Home</a></li>
+                            <li><a href="{% url 'homepage:about' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="{% url 'homepage:blog' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Blog</a></li>
+                            <li><a href="{% url 'homepage:fleets' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Fleets</a></li>
+                            <li><a href="{% url 'homepage:advantage' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Advantage</a></li>
+                            <li><a href="{% url 'homepage:contact' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
+                            <li><a href="{% url 'homepage:create_order' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
                         </ul>
                     </div>
                 </div>
@@ -280,12 +305,12 @@
                         <div class="block-23 mb-3">
                             <ul>
                                 <li><span class="icon fa fa-map marker"></span><span class="text">
-                                    10 A Rama building, Kattameya, Ring Road, Maadi,
-                                                    Cairo, Egypt.
-                                </span></li>
+                                        10 A Rama building, Kattameya, Ring Road, Maadi,
+                                        Cairo, Egypt.
+                                    </span></li>
                                 <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+20 120 0000
-                                    416</span></a></li>
-                               
+                                            416</span></a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -345,5 +370,3 @@
 </body>
 
 </html>
-
-

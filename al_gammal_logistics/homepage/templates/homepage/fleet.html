@@ -15,13 +15,12 @@
     <title>{{fleet.name}}</title>
 
     <style>
-        .blog-entry
-        {
-            background-color: rgba(248,248,248,1);
+        .blog-entry {
+            background-color: rgba(248, 248, 248, 1);
 
         }
-        .heading
-        {
+
+        .heading {
             font-family: "Poppins", Arial, Helvetica, sans-serif;
             font-weight: 300px;
             font-size: 100px;
@@ -50,311 +49,306 @@
             background-color: #0056b3;
             color: #f8f9fa;
         }
-        p
-        {
+
+        p {
             color: black;
         }
-     
-    
-
-
     </style>
 
     <style>
-       
-            /* Section Container */
-            .ftco-section {
-                padding: 80px 0;
-                background-color: #f8f9fa;
-                /* Light background */
-                border-radius: 12px;
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-                /* Soft shadow for a floating effect */
-                transition: all 0.3s ease-in-out;
-            }
-    
-            /* Card Styling */
-            .blog-entry {
-                position: relative;
-                background: #fff;
-                border-radius: 10px;
-                overflow: hidden;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                /* Soft shadow for the card */
-                transition: transform 0.3s ease-in-out;
-                z-index: 1;
-            }
-    
-            /* Before and After pseudo-elements for additional styling */
-            .blog-entry::before,
-            .blog-entry::after {
-                content: '';
-                position: absolute;
-                width: 50px;
-                height: 50px;
-                background-color: #ff6700;
-                border-radius: 50%;
-                opacity: 0.2;
-                z-index: -1;
-                transition: all 0.3s ease-in-out;
-            }
-    
-            .blog-entry::before {
-                top: -20px;
-                left: -20px;
-            }
-    
-            .blog-entry::after {
-                bottom: -20px;
-                right: -20px;
-            }
-    
-            /* Hover Effect on Card */
-            .blog-entry:hover {
-                transform: translateY(-10px);
-                /* Lift the card slightly on hover */
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                /* Stronger shadow on hover */
-            }
-    
-            .blog-entry:hover::before,
-            .blog-entry:hover::after {
-                width: 80px;
-                height: 80px;
-                opacity: 0.4;
-            }
-    
-            /* Image Block */
+        /* Section Container */
+        .ftco-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            /* Light background */
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for a floating effect */
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Card Styling */
+        .blog-entry {
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            /* Soft shadow for the card */
+            transition: transform 0.3s ease-in-out;
+            z-index: 1;
+        }
+
+        /* Before and After pseudo-elements for additional styling */
+        .blog-entry::before,
+        .blog-entry::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ff6700;
+            border-radius: 50%;
+            opacity: 0.2;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .blog-entry::before {
+            top: -20px;
+            left: -20px;
+        }
+
+        .blog-entry::after {
+            bottom: -20px;
+            right: -20px;
+        }
+
+        /* Hover Effect on Card */
+        .blog-entry:hover {
+            transform: translateY(-10px);
+            /* Lift the card slightly on hover */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            /* Stronger shadow on hover */
+        }
+
+        .blog-entry:hover::before,
+        .blog-entry:hover::after {
+            width: 80px;
+            height: 80px;
+            opacity: 0.4;
+        }
+
+        /* Image Block */
+        .block-20 {
+            width: 100%;
+            height: 250px;
+            /* Fixed height for the image */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px 10px 0 0;
+            /* Rounded top corners */
+            transition: opacity 0.3s ease;
+        }
+
+        /* On Hover, the image becomes more prominent */
+        .blog-entry:hover .block-20 {
+            opacity: 0.85;
+        }
+
+        /* Text Content */
+        .text {
+            padding: 20px;
+        }
+
+        /* Larger Header */
+        .text .heading {
+            font-size: 36px;
+            /* Larger size */
+            font-weight: 800;
+            color: #1b3b5f;
+            /* Dark blue for heading */
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover Effect for Title */
+        .blog-entry:hover .heading {
+            color: #ff6700;
+            /* Change to brighter color on hover */
+        }
+
+        /* Paragraph Description */
+        .text .serDes {
+            font-size: 16px;
+            color: #666;
+            /* Soft gray for better readability */
+            line-height: 1.8;
+            /* Increased line height for better spacing between lines */
+            text-align: justify;
+            /* Justified text for clean alignment */
+            margin-bottom: 20px;
+            /* Additional space after paragraph */
+            letter-spacing: 0.5px;
+            /* Slight letter spacing for better readability */
+            word-spacing: 2px;
+            /* Additional spacing between words */
+            text-indent: 20px;
+            /* Indentation for the first line */
+        }
+
+        /* Hover Effect for Paragraph */
+        .blog-entry:hover .serDes {
+            color: #333;
+            /* Slightly darker color on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
             .block-20 {
-                width: 100%;
-                height: 250px;
-                /* Fixed height for the image */
-                background-size: cover;
-                background-position: center;
-                border-radius: 10px 10px 0 0;
-                /* Rounded top corners */
-                transition: opacity 0.3s ease;
+                height: 200px;
+                /* Smaller image height on mobile */
             }
-    
-            /* On Hover, the image becomes more prominent */
-            .blog-entry:hover .block-20 {
-                opacity: 0.85;
-            }
-    
-            /* Text Content */
-            .text {
-                padding: 20px;
-            }
-    
-            /* Larger Header */
+
             .text .heading {
-                font-size: 36px;
-                /* Larger size */
-                font-weight: 800;
-                color: #1b3b5f;
-                /* Dark blue for heading */
-                margin-bottom: 15px;
-                transition: color 0.3s ease;
+                font-size: 28px;
+                /* Adjusted for mobile */
             }
-    
-            /* Hover Effect for Title */
-            .blog-entry:hover .heading {
-                color: #ff6700;
-                /* Change to brighter color on hover */
-            }
-    
-            /* Paragraph Description */
+
             .text .serDes {
-                font-size: 16px;
-                color: #666;
-                /* Soft gray for better readability */
-                line-height: 1.8;
-                /* Increased line height for better spacing between lines */
-                text-align: justify;
-                /* Justified text for clean alignment */
-                margin-bottom: 20px;
-                /* Additional space after paragraph */
-                letter-spacing: 0.5px;
-                /* Slight letter spacing for better readability */
-                word-spacing: 2px;
-                /* Additional spacing between words */
-                text-indent: 20px;
-                /* Indentation for the first line */
+                font-size: 14px;
             }
-    
-            /* Hover Effect for Paragraph */
-            .blog-entry:hover .serDes {
-                color: #333;
-                /* Slightly darker color on hover */
-            }
-    
-            /* Responsive Design */
-            @media (max-width: 768px) {
-                .block-20 {
-                    height: 200px;
-                    /* Smaller image height on mobile */
-                }
-    
-                .text .heading {
-                    font-size: 28px;
-                    /* Adjusted for mobile */
-                }
-    
-                .text .serDes {
-                    font-size: 14px;
-                }
-            }
-    
-    
-    
-            /*sidebar*/
-    
-            #sidebar {
-                min-height: auto;
-                width: 100%;
-                position: relative;
-                color: white;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                /* Shadow for 3D effect */
-                margin-bottom: 20px;
-                /* Spacing below the sidebar */
-            }
-    
-            #sidebar .nav-link {
-                font-size: 16px;
-                padding: 10px;
-                transition: background-color 0.2s ease;
-            }
-    
-            #sidebar .nav-link:hover {
-                background-color: #495057;
-                color: #ffffff;
-            }
-    
-            /* Sidebar Title */
-            #sidebar h4 {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
-                text-align: center;
-                position: relative;
-                padding-bottom: 10px;
-                color: #f8f9fa;
-            }
-    
-            /* Sidebar Navigation List */
-            #sidebar .nav {
-                list-style: none;
-                padding-left: 0;
-            }
-    
-            /* Sidebar Navigation Items */
-            #sidebar .nav-item {
-                position: relative;
-                margin-bottom: 10px;
-            }
-    
-            /* Sidebar Navigation Links */
-            #sidebar .nav-link {
-                color: rgb(255, 255, 255);
-                text-decoration: none;
-                font-size: 1.1rem;
-                display: block;
-                padding: 10px;
-                border-radius: 4px;
-                transition: background-color 0.3s, color 0.3s;
-                /* Smooth transition for hover effect */
-            }
-    
-            /* Hover Effect */
-            #sidebar .nav-link:hover {
-                background-color: #495057;
-                /* Darker shade on hover */
-                color: #f8f9fa;
-                /* Light text color on hover */
-            }
-    
-    
-    
-    
-    
-            /* Custom Sidebar Styling */
-            .custom-sidebar {
-                background-color: #2C3E50;
-                /* Dark blue background */
-                border-radius: 8px;
-                /* Rounded corners */
-                height: auto;
-                /* Full viewport height */
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-                /* Shadow for depth */
-                padding: 20px;
-            }
-    
-            /* Styling the h4 Header */
-            .custom-sidebar h4 {
-                color: #EAF0F1;
-                /* Light grey for the title */
-                font-size: 1.5em;
-                font-weight: bold;
-                border-bottom: 2px solid #ffb300;
-                /* Add a line under the title */
-                padding-bottom: 10px;
-                /* Add space between the line and the title */
-                margin-bottom: 20px;
-                /* Space below the title */
-            }
-    
-            /* Navigation Links */
-            .custom-sidebar .nav-link {
-                font-size: 1.1em;
-                padding: 10px;
-                margin: 5px 0;
-                border-radius: 4px;
-                transition: background-color 0.3s ease-in-out;
-                color: #EAF0F1;
-            }
-    
-            /* Divider between services */
-            .custom-sidebar .nav-item {
-                position: relative;
-                margin-bottom: 10px;
-            }
-    
-            .custom-sidebar .nav-item:not(:last-child)::after {
-                content: "";
-                display: block;
-                position: absolute;
-                bottom: -5px;
-                left: 0;
-                width: 100%;
-                height: 1px;
-                background-color: #ffb300;
-                /* Line color between services */
-            }
-    
-            /* Hover Effect */
-            .custom-sidebar .nav-link:hover {
-                background-color: #ffb300;
-                /* Hover color - teal */
-                color: #fff;
-                text-decoration: none;
-            }
-    
-            /* Active Link Styling */
-            .custom-sidebar .nav-link.active {
-                background-color: #ffb300;
-                /* Highlight active link */
-                color: white;
-            }
-        </style>
-   
+        }
+
+
+
+        /*sidebar*/
+
+        #sidebar {
+            min-height: auto;
+            width: 100%;
+            position: relative;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Shadow for 3D effect */
+            margin-bottom: 20px;
+            /* Spacing below the sidebar */
+        }
+
+        #sidebar .nav-link {
+            font-size: 16px;
+            padding: 10px;
+            transition: background-color 0.2s ease;
+        }
+
+        #sidebar .nav-link:hover {
+            background-color: #495057;
+            color: #ffffff;
+        }
+
+        /* Sidebar Title */
+        #sidebar h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+            color: #f8f9fa;
+        }
+
+        /* Sidebar Navigation List */
+        #sidebar .nav {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        /* Sidebar Navigation Items */
+        #sidebar .nav-item {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        /* Sidebar Navigation Links */
+        #sidebar .nav-link {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        /* Hover Effect */
+        #sidebar .nav-link:hover {
+            background-color: #495057;
+            /* Darker shade on hover */
+            color: #f8f9fa;
+            /* Light text color on hover */
+        }
+
+
+
+
+
+        /* Custom Sidebar Styling */
+        .custom-sidebar {
+            background-color: #2C3E50;
+            /* Dark blue background */
+            border-radius: 8px;
+            /* Rounded corners */
+            height: auto;
+            /* Full viewport height */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* Shadow for depth */
+            padding: 20px;
+        }
+
+        /* Styling the h4 Header */
+        .custom-sidebar h4 {
+            color: #EAF0F1;
+            /* Light grey for the title */
+            font-size: 1.5em;
+            font-weight: bold;
+            border-bottom: 2px solid #ffb300;
+            /* Add a line under the title */
+            padding-bottom: 10px;
+            /* Add space between the line and the title */
+            margin-bottom: 20px;
+            /* Space below the title */
+        }
+
+        /* Navigation Links */
+        .custom-sidebar .nav-link {
+            font-size: 1.1em;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+            color: #EAF0F1;
+        }
+
+        /* Divider between services */
+        .custom-sidebar .nav-item {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .custom-sidebar .nav-item:not(:last-child)::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #ffb300;
+            /* Line color between services */
+        }
+
+        /* Hover Effect */
+        .custom-sidebar .nav-link:hover {
+            background-color: #ffb300;
+            /* Hover color - teal */
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Active Link Styling */
+        .custom-sidebar .nav-link.active {
+            background-color: #ffb300;
+            /* Highlight active link */
+            color: white;
+        }
+    </style>
+
 </head>
 
 <body>
 
-  
+
 
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg  ftco-navbar-light">
@@ -372,11 +366,25 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleets' %}">Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive
+                            advantage</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a>
+                    </li>
+
+                    <!-- Language Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=ar">العربية</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -385,171 +393,178 @@
 
     <!-- section 2  -->
 
-        <section class="ftco-section bg-light ftco-no-pt p-5  shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-            <div class="container-xl">
-         
-                <h2
+    <section class="ftco-section bg-light ftco-no-pt p-5  shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <div class="container-xl">
+
+            <h2
                 class="mb-4 appointment-head trending-banner sm fs-2 fw-semibold lh-base p-4 text-center mb-5 section-heading">
                 Fleet</h2>
 
 
-                <div class="row justify-content-center">
-            
-                    <!-- sidebar -->
-                        <div class="col-md-3">
-                            <!-- Sidebar Navigation -->
-                            <nav id="sidebar" class="col-md-3 text-white p-3 custom-sidebar">
-                                <h4 class="text-center mb-4">Other Fleets</h4>
-                                <ul class="nav flex-column">
-                                    {% for fleet in other_fleets %}
-                                        <li class="nav-item">
-                                            <a class="nav-link " href="{% url 'homepage:fleet' fleet.id %}">{{ fleet.name }}</a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </nav>
-                        </div>
-                    
-        
-        
-                    <!-- contetnt -->
-                    <div class="col-md-9">
-                        <main>
-                            <div class="row justify-content-center">
-                                <div class="col-md-10 col-lg-5 d-flex">
-                                    <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
-                                        data-aos-duration="1000" data-aos-delay="100">
-        
-                                        <!-- Image Block -->
-                                        <div class="block-20 img d-flex align-items-end photo"
-                                            style="background-image: url('/static/homepage/images/fleet_{{fleet.id}}.webp');">
-                                        </div>
-        
-                                        <!-- Text Block -->
-                                        <div class="text"> 
-                                            <!-- write here the main title -->
-                                           <h1 class="heading mb-3">{{fleet.name}}</h1>  
-                                           <!-- write here the paragraph -->
-                                           {% autoescape off %}
-                                           <p class="serDes">{{fleet.description|linebreaks}}</p>
-                                           {% endautoescape %}
-                                       </div>
-        
-                                    </div>
-                                </div>
-                            </div>
-                        </main>
-                    </div>
+            <div class="row justify-content-center">
+
+                <!-- sidebar -->
+                <div class="col-md-3">
+                    <!-- Sidebar Navigation -->
+                    <nav id="sidebar" class="col-md-3 text-white p-3 custom-sidebar">
+                        <h4 class="text-center mb-4">Other Fleets</h4>
+                        <ul class="nav flex-column">
+                            {% for fleet in other_fleets %}
+                            <li class="nav-item">
+                                <a class="nav-link " href="{% url 'homepage:fleet' fleet.id %}">{{ fleet.name }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
                 </div>
 
-           
+
+
+                <!-- contetnt -->
+                <div class="col-md-9">
+                    <main>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-5 d-flex">
+                                <div class="blog-entry justify-content-end aos-init aos-animate" data-aos="fade-up"
+                                    data-aos-duration="1000" data-aos-delay="100">
+
+                                    <!-- Image Block -->
+                                    <div class="block-20 img d-flex align-items-end photo"
+                                        style="background-image: url('/static/homepage/images/fleet_{{fleet.id}}.webp');">
+                                    </div>
+
+                                    <!-- Text Block -->
+                                    <div class="text">
+                                        <!-- write here the main title -->
+                                        <h1 class="heading mb-3">{{fleet.name}}</h1>
+                                        <!-- write here the paragraph -->
+                                        {% autoescape off %}
+                                        <p class="serDes">{{fleet.description|linebreaks}}</p>
+                                        {% endautoescape %}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
             </div>
-        </section>
+
+
+        </div>
+    </section>
 
 
 
 
 
-        <!-- footer -->
-        <footer class="ftco-footer">
-            <div class="container-xl">
-                <div class="row mb-5 pb-5 justify-content-between">
-                    <div class="col-md-6 col-lg">
-                        <div class="ftco-footer-widget mb-4">
-                            <h2 class="ftco-heading-2 logo d-flex">
-                                <a class="navbar-brand align-items-center" href="index.html">
-                                    Al-Gammal
-                                </a>
-                            </h2>
-                            <iframe id="location"
+    <!-- footer -->
+    <footer class="ftco-footer">
+        <div class="container-xl">
+            <div class="row mb-5 pb-5 justify-content-between">
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2 logo d-flex">
+                            <a class="navbar-brand align-items-center" href="index.html">
+                                Al-Gammal
+                            </a>
+                        </h2>
+                        <iframe id="location"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
                             width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </p>
-                            
-                        </div>
+                        </p>
+
                     </div>
-                   
-                    <div class="col-md-6 col-lg-2">
-                        <div class="ftco-footer-widget mb-4">
-                            <h2 class="ftco-heading-2">Quick Links</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="{% url 'homepage:index' %}"><span class="fa fa-chevron-right me-2"></span>Home</a></li>
-                                <li><a href="{% url 'homepage:about' %}"><span class="fa fa-chevron-right me-2"></span>About</a></li>
-                                <li><a href="{% url 'homepage:blog' %}"><span class="fa fa-chevron-right me-2"></span>Blog</a></li>
-                                <li><a href="{% url 'homepage:fleets' %}"><span class="fa fa-chevron-right me-2"></span>Fleets</a></li>
-                                <li><a href="{% url 'homepage:advantage' %}"><span class="fa fa-chevron-right me-2"></span>Advantage</a></li>
-                                <li><a href="{% url 'homepage:contact' %}"><span class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
-                                <li><a href="{% url 'homepage:create_order' %}"><span class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg">
-                        <div class="ftco-footer-widget mb-4">
-                            <h2 class="ftco-heading-2">Have a Question?</h2>
-                            <div class="block-23 mb-3">
-                                <ul>
-                                    <li><span class="icon fa fa-map marker"></span><span class="text">
-                                        10 A Rama building, Kattameya, Ring Road, Maadi,
-                                                        Cairo, Egypt.
-                                    </span></li>
-                                    <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+20 120 0000
-                                        416</span></a></li>
-                                   
-                                </ul>
-                            </div>
-                        </div>
-    
-    
-                        <ul class="ftco-footer-social list-unstyled mt-2">
-                            <li><a href="#"><span class="fab fa-youtube"></span></a></li>
-                            <li><a href="#"><span class="fab fa-facebook"></span></a></li>
-                            <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
-                            <li><a href="#"><span class="fab fa-whatsapp"></span></a></li>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Quick Links</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'homepage:index' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Home</a></li>
+                            <li><a href="{% url 'homepage:about' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="{% url 'homepage:blog' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Blog</a></li>
+                            <li><a href="{% url 'homepage:fleets' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Fleets</a></li>
+                            <li><a href="{% url 'homepage:advantage' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Advantage</a></li>
+                            <li><a href="{% url 'homepage:contact' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
+                            <li><a href="{% url 'homepage:create_order' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="container-fluid px-0 py-5 bg-darken">
-                <div class="container-xl">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
-                                Copyright {{year}}, Al-Gammal Transportation and Services
-                            </p>
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Question?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon fa fa-map marker"></span><span class="text">
+                                        10 A Rama building, Kattameya, Ring Road, Maadi,
+                                        Cairo, Egypt.
+                                    </span></li>
+                                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+20 120 0000
+                                            416</span></a></li>
+
+                            </ul>
                         </div>
+                    </div>
+
+
+                    <ul class="ftco-footer-social list-unstyled mt-2">
+                        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                        <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                        <li><a href="#"><span class="fab fa-whatsapp"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0 py-5 bg-darken">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
+                            Copyright {{year}}, Al-Gammal Transportation and Services
+                        </p>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     <!-- Arrow Button -->
     <a href="#" id="back-to-top" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-        <!-- js links -->
-        <script src="{% static 'homepage/js/popper.min.js' %}"></script>
-        <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
-        <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
+    <!-- js links -->
+    <script src="{% static 'homepage/js/popper.min.js' %}"></script>
+    <script src="{% static 'homepage/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'homepage/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'homepage/js/owl.carousel.min.js' %}"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script src="{% static 'homepage/js/main.js' %}"></script>
-
-
-
-        <script>
-            ScrollReveal({
-                reset: true,
-                distance: '60px',
-                duration: 2500,
-                delay: 400
-            });
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="{% static 'homepage/js/main.js' %}"></script>
 
 
-            ScrollReveal().reveal('.w-100 ,.heading', { delay: 200, origin: 'left' });
-            ScrollReveal().reveal('p', { delay: 700, origin: 'right' });
-            ScrollReveal().reveal('.photo ', { delay: 200, origin: 'right' });
 
-        </script>
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+
+
+        ScrollReveal().reveal('.w-100 ,.heading', { delay: 200, origin: 'left' });
+        ScrollReveal().reveal('p', { delay: 700, origin: 'right' });
+        ScrollReveal().reveal('.photo ', { delay: 200, origin: 'right' });
+
+    </script>
 
 </body>
 

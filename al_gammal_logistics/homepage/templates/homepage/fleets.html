@@ -17,70 +17,89 @@
 </head>
 
 <style>
-    h2{
+    h2 {
         font-size: 500px;
     }
 
     .styled-heading {
-        font-size: 1.5rem; /* Adjust font size */
-        font-weight: 600; /* Semi-bold text */
-        color: #1b3b5f; /* Dark blue text color */
-        background-color: #f8f9fa; /* Light background color */
-        padding: 20px 40px; /* Spacing inside the heading */
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
-        letter-spacing: 0.5px; /* Slight spacing between letters */
-        word-spacing: 2px; /* Slight spacing between words */
-        line-height: 1.6; /* Increased line height for readability */
-        text-align: center; /* Center-align text */
-        position: relative; /* For pseudo-elements */
-        transition: all 0.3s ease; /* Smooth transition on hover */
+        font-size: 1.5rem;
+        /* Adjust font size */
+        font-weight: 600;
+        /* Semi-bold text */
+        color: #1b3b5f;
+        /* Dark blue text color */
+        background-color: #f8f9fa;
+        /* Light background color */
+        padding: 20px 40px;
+        /* Spacing inside the heading */
+        border-radius: 8px;
+        /* Rounded corners */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* Soft shadow */
+        letter-spacing: 0.5px;
+        /* Slight spacing between letters */
+        word-spacing: 2px;
+        /* Slight spacing between words */
+        line-height: 1.6;
+        /* Increased line height for readability */
+        text-align: center;
+        /* Center-align text */
+        position: relative;
+        /* For pseudo-elements */
+        transition: all 0.3s ease;
+        /* Smooth transition on hover */
     }
-    
+
     /* Optional: Adding an underline effect */
     .styled-heading {
         position: relative;
         display: inline-block;
-        font-size: 24px; /* Example font size */
+        font-size: 24px;
+        /* Example font size */
         padding: 10px 0;
-        color: #000; /* Default text color */
-        transition: color 0.3s ease, box-shadow 0.3s ease; /* Transition for text and shadow */
+        color: #000;
+        /* Default text color */
+        transition: color 0.3s ease, box-shadow 0.3s ease;
+        /* Transition for text and shadow */
     }
-    
+
     .styled-heading::after,
     .styled-heading::before {
         content: '';
         position: absolute;
         left: 50%;
-        width: 0; /* Initially, the lines are not visible */
+        width: 0;
+        /* Initially, the lines are not visible */
         height: 4px;
         background: linear-gradient(to right, #ffa62b, #51555f);
         border-radius: 2px;
-        transition: width 0.4s ease, transform 0.4s ease; /* Animation on hover */
+        transition: width 0.4s ease, transform 0.4s ease;
+        /* Animation on hover */
     }
-    
+
     .styled-heading::after {
         bottom: -10px;
         transform: translateX(-50%);
     }
-    
+
     .styled-heading::before {
         top: -10px;
         transform: translateX(-50%);
     }
-    
+
     /* Hover Effect */
     .styled-heading:hover {
-        color: #4b4b4b; /* Change text color on hover */
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+        color: #4b4b4b;
+        /* Change text color on hover */
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        /* Stronger shadow on hover */
     }
-    
+
     .styled-heading:hover::after,
     .styled-heading:hover::before {
-        width: 100%; /* Lines grow to full width */
+        width: 100%;
+        /* Lines grow to full width */
     }
-    
-    
 </style>
 
 <body>
@@ -103,11 +122,24 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:fleets' %}">Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive
+                            advantage</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a>
+                    </li>
+
+                    <!-- Language Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=ar">العربية</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -118,7 +150,7 @@
 
     <section class="ftco-section ftco-services-section">
 
-        
+
         <div class="container-xl">
 
             <div class="d-flex justify-content-center">
@@ -128,9 +160,11 @@
             </div>
 
             <h2 class="styled-heading mb-4 appointment-head  sm fs-4 fw-semibold lh-base p-4 text-center mb-5">
-                Al-Gammal Transport and Logistics Company operates a versatile fleet of trucks tailored to meet various customer needs. This includes the transportation of polyethylene and plastic pipes, as well as trucks specialized for delivering food, mineral water, and other goods.
+                Al-Gammal Transport and Logistics Company operates a versatile fleet of trucks tailored to meet various
+                customer needs. This includes the transportation of polyethylene and plastic pipes, as well as trucks
+                specialized for delivering food, mineral water, and other goods.
             </h2>
-            
+
 
 
 
@@ -141,8 +175,8 @@
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 1 %}" >
+
+                    <a href="{% url 'homepage:fleet' 1 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -158,22 +192,23 @@
                                     </span>
                                 </div>
                                 <div class="text">
-                                    <h2 class="fs-5 fw-bolder">Specialty Equipment for Heavy and Specialized Transport</h2>
+                                    <h2 class="fs-5 fw-bolder">Specialty Equipment for Heavy and Specialized Transport
+                                    </h2>
                                 </div>
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 2 -->
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 2 %}" >
+
+                    <a href="{% url 'homepage:fleet' 2 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -194,9 +229,9 @@
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 3 -->
@@ -204,8 +239,8 @@
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 3 %}" >
+
+                    <a href="{% url 'homepage:fleet' 3 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -221,14 +256,15 @@
                                     </span>
                                 </div>
                                 <div class="text">
-                                    <h2 class="fs-5 fw-bolder" >Specialized Flatbed Trucks for Extra Large Size and Weighty Equipment</h2>
+                                    <h2 class="fs-5 fw-bolder">Specialized Flatbed Trucks for Extra Large Size and
+                                        Weighty Equipment</h2>
                                 </div>
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
 
@@ -236,8 +272,8 @@
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 4 %}" >
+
+                    <a href="{% url 'homepage:fleet' 4 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -253,22 +289,23 @@
                                     </span>
                                 </div>
                                 <div class="text">
-                                    <h2 class="fs-5 fw-bolder">Medium-Duty Trucks for Diverse Transport Requirements</h2>
+                                    <h2 class="fs-5 fw-bolder">Medium-Duty Trucks for Diverse Transport Requirements
+                                    </h2>
                                 </div>
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 5 -->
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 5 %}" >
+
+                    <a href="{% url 'homepage:fleet' 5 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -289,17 +326,17 @@
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 6 -->
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 6 %}" >
+
+                    <a href="{% url 'homepage:fleet' 6 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -320,9 +357,9 @@
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 7 -->
@@ -330,8 +367,8 @@
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 7 %}" >
+
+                    <a href="{% url 'homepage:fleet' 7 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -352,9 +389,9 @@
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 8 -->
@@ -362,8 +399,8 @@
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 8 %}" >
+
+                    <a href="{% url 'homepage:fleet' 8 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -384,17 +421,17 @@
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 9 -->
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 9 %}" >
+
+                    <a href="{% url 'homepage:fleet' 9 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -411,14 +448,15 @@
                                 </div>
                                 <div class="text">
                                     <h2 class="fs-5 fw-bolder">Premium SUVs for
-                                        <br> Executives and Managers</h2>
+                                        <br> Executives and Managers
+                                    </h2>
                                 </div>
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 10 -->
@@ -426,8 +464,8 @@
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 10 %}" >
+
+                    <a href="{% url 'homepage:fleet' 10 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -448,17 +486,17 @@
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 11 -->
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 11 %}" >
+
+                    <a href="{% url 'homepage:fleet' 11 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -479,9 +517,9 @@
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
 
                 <!-- 12 -->
@@ -489,8 +527,8 @@
 
                 <div class="col-md-6 col-lg-5">
 
-                
-                    <a href="{% url 'homepage:fleet' 12 %}" >
+
+                    <a href="{% url 'homepage:fleet' 12 %}">
                         <div class="services d-flex  aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                             data-aos-duration="1000">
                             <div class="services d-flex">
@@ -511,9 +549,9 @@
                             </div>
                         </div>
                     </a>
-                
-                
-                
+
+
+
                 </div>
             </div>
 
@@ -545,25 +583,32 @@
                             </a>
                         </h2>
                         <iframe id="location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </p>
-                        
+
                     </div>
                 </div>
-               
+
                 <div class="col-md-6 col-lg-2">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Quick Links</h2>
                         <ul class="list-unstyled">
-                            <li><a href="{% url 'homepage:index' %}"><span class="fa fa-chevron-right me-2"></span>Home</a></li>
-                            <li><a href="{% url 'homepage:about' %}"><span class="fa fa-chevron-right me-2"></span>About</a></li>
-                            <li><a href="{% url 'homepage:blog' %}"><span class="fa fa-chevron-right me-2"></span>Blog</a></li>
-                            <li><a href="{% url 'homepage:fleets' %}"><span class="fa fa-chevron-right me-2"></span>Fleets</a></li>
-                            <li><a href="{% url 'homepage:advantage' %}"><span class="fa fa-chevron-right me-2"></span>Advantage</a></li>
-                            <li><a href="{% url 'homepage:contact' %}"><span class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
-                            <li><a href="{% url 'homepage:create_order' %}"><span class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
+                            <li><a href="{% url 'homepage:index' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Home</a></li>
+                            <li><a href="{% url 'homepage:about' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="{% url 'homepage:blog' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Blog</a></li>
+                            <li><a href="{% url 'homepage:fleets' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Fleets</a></li>
+                            <li><a href="{% url 'homepage:advantage' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Advantage</a></li>
+                            <li><a href="{% url 'homepage:contact' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
+                            <li><a href="{% url 'homepage:create_order' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
                         </ul>
                     </div>
                 </div>
@@ -573,12 +618,12 @@
                         <div class="block-23 mb-3">
                             <ul>
                                 <li><span class="icon fa fa-map marker"></span><span class="text">
-                                    10 A Rama building, Kattameya, Ring Road, Maadi,
-                                                    Cairo, Egypt.
-                                </span></li>
+                                        10 A Rama building, Kattameya, Ring Road, Maadi,
+                                        Cairo, Egypt.
+                                    </span></li>
                                 <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+20 120 0000
-                                    416</span></a></li>
-                               
+                                            416</span></a></li>
+
                             </ul>
                         </div>
                     </div>

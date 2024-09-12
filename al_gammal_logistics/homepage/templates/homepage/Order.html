@@ -48,7 +48,7 @@
             margin-bottom: 10px;
         }
 
-        
+
         .form-container input[type="text"]:hover {
             border-color: #ffae00;
         }
@@ -68,9 +68,6 @@
         .form-container input[type="submit"]:hover {
             background-color: #ffae00;
         }
-
-
-    
     </style>
 
 
@@ -103,6 +100,18 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
                     <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:create_order' %}">Make an
                             Order</a></li>
+                    <!-- Language Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=ar">العربية</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -111,7 +120,8 @@
     <!--start main-->
     <main>
 
-        <section class="ftco-appointment img" style="background-image: url('{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}')">
+        <section class="ftco-appointment img"
+            style="background-image: url('{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}')">
             <div class="overlay"></div>
             <div class="container-xl">
                 <div class="row">
@@ -120,9 +130,11 @@
                         <div class="heading-section">
                             <span class="subheading">Make an Order</span>
                             <h2 class="mb-3" style="color: #ffffff;">You Want To Make an Order </h2>
-                            <p style="color: #e5e4e4;">Placing an order with us is simple and efficient. Just provide the details of your cargo and delivery needs,
-                                 and our expert team will handle the rest. We ensure safe, 
-                                timely, and cost-effective transportation, giving you peace of mind throughout the process.</p>
+                            <p style="color: #e5e4e4;">Placing an order with us is simple and efficient. Just provide
+                                the details of your cargo and delivery needs,
+                                and our expert team will handle the rest. We ensure safe,
+                                timely, and cost-effective transportation, giving you peace of mind throughout the
+                                process.</p>
                             <div class="row">
                                 <div class="col-md-4">
                                     <!-- <img src="{% static 'homepage/images/Trucking-Logistics-Companies-Complete-Controller.webp' %}"> -->
@@ -136,10 +148,10 @@
                         <form method="post" class="appointment aside-stretch">
                             <span class="subheading">Order Message</span>
                             <h2 class="mb-4 appointment-head trending-banner">Make An Order</h2>
-                            
 
-            
-                        
+
+
+
                             <div class="form-container">
                                 <div class="row">
                                     {% csrf_token %}
@@ -182,25 +194,32 @@
                             </a>
                         </h2>
                         <iframe id="location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </p>
-                        
+
                     </div>
                 </div>
-               
+
                 <div class="col-md-6 col-lg-2">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Quick Links</h2>
                         <ul class="list-unstyled">
-                            <li><a href="{% url 'homepage:index' %}"><span class="fa fa-chevron-right me-2"></span>Home</a></li>
-                            <li><a href="{% url 'homepage:about' %}"><span class="fa fa-chevron-right me-2"></span>About</a></li>
-                            <li><a href="{% url 'homepage:blog' %}"><span class="fa fa-chevron-right me-2"></span>Blog</a></li>
-                            <li><a href="{% url 'homepage:fleets' %}"><span class="fa fa-chevron-right me-2"></span>Fleets</a></li>
-                            <li><a href="{% url 'homepage:advantage' %}"><span class="fa fa-chevron-right me-2"></span>Advantage</a></li>
-                            <li><a href="{% url 'homepage:contact' %}"><span class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
-                            <li><a href="{% url 'homepage:create_order' %}"><span class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
+                            <li><a href="{% url 'homepage:index' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Home</a></li>
+                            <li><a href="{% url 'homepage:about' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="{% url 'homepage:blog' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Blog</a></li>
+                            <li><a href="{% url 'homepage:fleets' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Fleets</a></li>
+                            <li><a href="{% url 'homepage:advantage' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Advantage</a></li>
+                            <li><a href="{% url 'homepage:contact' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
+                            <li><a href="{% url 'homepage:create_order' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
                         </ul>
                     </div>
                 </div>
@@ -210,12 +229,12 @@
                         <div class="block-23 mb-3">
                             <ul>
                                 <li><span class="icon fa fa-map marker"></span><span class="text">
-                                    10 A Rama building, Kattameya, Ring Road, Maadi,
-                                                    Cairo, Egypt.
-                                </span></li>
+                                        10 A Rama building, Kattameya, Ring Road, Maadi,
+                                        Cairo, Egypt.
+                                    </span></li>
                                 <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+20 120 0000
-                                    416</span></a></li>
-                               
+                                            416</span></a></li>
+
                             </ul>
                         </div>
                     </div>
