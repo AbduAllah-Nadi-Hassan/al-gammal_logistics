@@ -189,6 +189,15 @@
         <section class=" ftco-about-section m-5 v1">
             <div class="container-xl">
                 <div class="row g-xl-5">
+
+
+                    <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
+                    data-aos-delay="100" data-aos-duration="1000">
+                    <div class="img w-50 vision-img"
+                    style="background-image: url('{% static 'homepage/images/mission.png' %}');">
+                </div>
+                </div>
+
                     <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate"
                         data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                         <div class="mt-5 mt-md-0">
@@ -200,12 +209,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
-                        data-aos-delay="100" data-aos-duration="1000">
-                        <div class="img w-50 vision-img"
-                        style="background-image: url('{% static 'homepage/images/mission.png' %}');">
-                    </div>
-                    </div>
+              
                 </div>
             </div>
         </section>
@@ -241,45 +245,11 @@
 
 
 
-
-
-
-
-
-
-
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-            
-                <div class="image-section">
-                    <img src="/static/homepage/images/blog-3.webp" alt="Image of person working">
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="text-section">
-                    <h1>Our Goals</h1>
-                    <h2>Lorem ipsum dolor sit amet</h2>
-                    <p>To be a key player & Essential partner for infrastructure projects throughout
-                        Egypt and the Middle East, using our accumulated experience and integrated
-                        solutions to deliver exceptional outcomes for clients and support sustainable
-                        development.
-                        </p>
-                </div>
-            </div>
-        </div>
-       
-  
-    </div> -->
-
-
-    <!-- section  Our Core Values -->
-
-<section class="ftco-appointment img" >
-    <div class="overlay"></div>
+<section class="ftco-appointment " >
+    <!-- <div class="overlay"></div> -->
      
 
+    <!-- section  Our Core Values -->
 
     <section class="p-5 ftco-appointment ">
         <div class="container-xl ">
@@ -385,10 +355,10 @@
                 </div>
 
                 <!-- Image Section -->
-                <!-- <div class="col-md-6 text-end">
-                    <img src="{% static 'homepage/images/coreValues.png' %}" class="img-fluid w-60  " alt="Trophy Image"
+                <div class="col-md-6 text-end">
+                    <img src="{% static 'homepage/images/vlaues.PNG' %}" class="img-fluid w-60  " alt="core values"
                         style="max-height: 500px;">
-                </div> -->
+                </div>
             </div>
         </div>
 
@@ -400,6 +370,16 @@
     <section class="p-5 ftco-appointment">
         <div class="container-xl ">
             <div class="row">
+
+
+                <!-- Image Section -->
+                <div class="col-md-6 text-end">
+                    <img src="{% static 'homepage/images/Core.PNG' %}" class="img-fluid w-100" alt="Our Core Competencies"
+                        style="max-height: 500px;">
+                </div>
+
+
+
                 <!-- Text Section -->
                 <div class="col-md-6">
 
@@ -531,11 +511,7 @@
                     </div>
                 </div>
 
-                <!-- Image Section -->
-                <!-- <div class="col-md-6 text-end">
-                    <img src="{% static 'homepage/images/vlaues.PNG' %}" class="img-fluid w-100" alt="Trophy Image"
-                        style="max-height: 500px;">
-                </div> -->
+
             </div>
         </div>
 
@@ -659,7 +635,7 @@
         });
 
 
-        ScrollReveal().reveal('.w-100 ,.head', { delay: 200, origin: 'left' });
+        ScrollReveal().reveal('.w-100 , .w-60 ,.head , .image-1', { delay: 200, origin: 'left' });
         ScrollReveal().reveal('.subheading ', { delay: 300, origin: 'right' });
         ScrollReveal().reveal('.mb-4 ', { delay: 300, origin: 'right' });
 
