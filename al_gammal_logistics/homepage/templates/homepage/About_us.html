@@ -9,6 +9,7 @@
     <!-- css links  -->
     <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/AboutUs.css' %}">
     <link rel="stylesheet" href="{% static 'homepage/css/style2.css' %}">
 
     <link rel="icon" type="image/x-icon" href="{% static 'homepage/images/favicon.ico' %}">
@@ -16,11 +17,13 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <title>About us</title>
+
+
 </head>
 
-<body>
+<body style="background-color: rgb(255, 255, 255);">
 
-   
+
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg ftco-navbar-light">
         <div class="container-fluid me-5">
@@ -37,32 +40,167 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="{% url 'homepage:about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:fleets' %}">Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive advantage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:advantage' %}">Competitive
+                            advantage</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:career' %}">Career</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:blog' %}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'homepage:contact' %}">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage:create_order' %}">Make an Order</a>
+                    </li>
+
+
+                                 <!-- Language Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Language
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                        <li><a class="dropdown-item" href="?lang=ar">العربية</a></li>
+                    </ul>
+                </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+ 
+
+    <!-- section 1 about us -->
+    <section class="about-section ftco-section ftco-about-section mt-5">
+        <div class="container-xl">
+            <div class="row g-xl-5">
+                <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                    <div class="inner-column">
+                        <div class="sec-title">
+                            <span class="title">About Our Company</span>
+                            <h2>Quality and Affordable Logistics Company</h2>
+                        </div>
+                        <div class="text">Al-Gammal Transport and Logistics Company, affiliated with the Al-Gammal Group
+                            of Companies for General Contracting, was established in 2018. It operates in various
+                            transportation service activities, boasting a fleet of trucks, excavators, private cars, and
+                            multiple buses. This enables the company to meet the transportation needs of equipment and
+                            heavy loads across the Republic of Egypt.</div>
+
+                        <h4 class="head">Additionally,</h4>
+                        <div class="text">
+                            Al-Gammal has a specialized department for welding polyethylene pipes, catering
+                            to major projects throughout the Arab Republic of Egypt.
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="image-column col-lg-6 col-md-12 col-sm-12 ">
+                    <div class="inner-column wow fadeInLeft">
+
+                        <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images">
+                                <img src="{% static 'homepage/images/com.webp' %}" alt=""></a>
+                        </figure>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-    <!-- section 2 about us -->
 
-    <section class="ftco-section ftco-about-section">
+
+
+    <!-- section 2 Fleet -->
+    <section class="about-section ftco-section ftco-about-section mt-5">
+        <div class="container-xl">
+            <div class="row g-xl-5">
+
+                <!-- Content Column (now on the left) -->
+                <div class="content-column col-lg-6 col-md-12 col-sm-12 order-1 order-lg-1">
+                    <div class="inner-column pt-5">
+                        <div class="sec-title">
+                            <span class="title">Fleet</span>
+                            <h2>Ability to deliver goods quickly.</h2>
+                        </div>
+                        <div class="text ">
+                            Al-Gammal Transport and Logistics Company operates a versatile fleet of trucks
+                            tailored to meet various customer needs.
+                            This includes the transportation of polyethylene and plastic pipes,
+                            as well as trucks specialized for delivering food, mineral water, and other goods.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Column (now on the right) -->
+                <div class="image-column col-lg-6 col-md-12 col-sm-12 order-2 order-lg-2">
+                    <div class="inner-column wow fadeInLeft">
+                        <figure class="image-1">
+                            <a href="#" class="lightbox-image" data-fancybox="images">
+                                <img style="width: 90%;" src="{% static 'homepage/images/img-1.webp' %}" alt="">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- fleet -->
+
+    <!-- <section class="p-5">
+            <div class="container-xl">
+                <div class="row g-xl-5">
+    
+    
+                    <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
+                        data-aos-delay="200" data-aos-duration="1000">
+                        <div class="mt-5 mt-md-0">
+                            <span class="subheading">Fleet </span>
+                            <h2 class="mb-2 head">Ability to deliver goods quickly. </h2>
+                            <p class="mb-4">Al-Gammal Transport and Logistics Company operates a versatile fleet of trucks
+                                tailored to meet various customer needs.
+                                This includes the transportation of polyethylene and plastic pipes,
+                                as well as trucks specialized for delivering food, mineral water, and other goods. </p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
+                        data-aos-delay="100" data-aos-duration="1000">
+                        <div class="w-100 img"
+                            style="background-image: url( '{% static 'homepage/images/img-1.webp' %}'); background-repeat: no-repeat; height: 600px; ">
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section> -->
+
+
+
+        
+
+
+
+
+
+
+    <!-- <section class="ftco-section ftco-about-section ">
         <div class="container-xl">
             <div class="row g-xl-5">
                 <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
                     data-aos-delay="100" data-aos-duration="1000">
-                    <div class="w-100 " style="background-image: url( '{% static 'homepage/images/work-6.webp' %}'); background-repeat: no-repeat;">
+                    <div class="w-100 "
+                        style="background-image: url( '{% static 'homepage/images/work-6.webp' %}'); background-repeat: no-repeat;">
 
-   
+
 
                     </div>
                 </div>
-                <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
+                <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate " data-aos="fade-up"
                     data-aos-delay="200" data-aos-duration="1000">
                     <div class="mt-5 mt-md-0">
                         <span class="subheading">About Our Company</span>
@@ -72,7 +210,7 @@
                             transportation service activities, boasting a fleet of trucks, excavators, private cars, and
                             multiple buses. This enables the company to meet the transportation needs of equipment and
                             heavy loads across the Republic of Egypt. </p>
-                        <h4  class="head">Additionally,</h4>
+                        <h4 class="head">Additionally,</h4>
                         <p class="mb-4">Al-Gammal has a specialized department for welding polyethylene pipes, catering
                             to major projects throughout the Arab Republic of Egypt. </p>
 
@@ -80,37 +218,381 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+
+
+    <!-- vission , mission and goal -->
+
+
+
+    <!-- section   vision -->
+    <section class="goal mt-5">
+<!-- Vision Section -->
+<section class="ftco-section ftco-about-section m-5">
+    <div class="container-xl">
+        <div class="row g-xl-5">
+            <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
+                data-aos-delay="100" data-aos-duration="1000">
+                <div class="img w-100 vision-img"
+                    style="background-image: url('{% static 'homepage/images/banner-bg.webp' %}');">
+                </div>
+            </div>
+            <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
+                data-aos-delay="200" data-aos-duration="1000">
+                <div class="mt-5 mt-md-0">
+                    <h5 class="mb-2 head">Our Vision</h5>
+                    <p class="mb-4">To be a key player & Essential partner for infrastructure projects throughout
+                        Egypt and the Middle East, using our accumulated experience and integrated
+                        solutions to deliver exceptional outcomes for clients and support sustainable
+                        development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+        <!-- Mission Section -->
+        <section class="ftco-section ftco-about-section m-5">
+            <div class="container-xl">
+                <div class="row g-xl-5">
+                    <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
+                        data-aos-delay="200" data-aos-duration="1000">
+                        <div class="mt-5 mt-md-0">
+                            <h5 class="mb-2 head">Our <span class="subHead">Mission</span></h5>
+                            <p class="mb-4">Building a sustainable future by Developing our employees’ Technical &
+                                interpersonal capabilities to deliver integrated infrastructure solutions in Egypt and the
+                                Middle East through our accumulated Experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
+                        data-aos-delay="100" data-aos-duration="1000">
+                        <div class="img w-100"
+                            style="background-image: url('{% static 'homepage/images/banner-bg.webp' %}');">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Goal Section -->
+        <section class="ftco-section ftco-about-section m-5">
+            <div class="container-xl">
+                <div class="row g-xl-5">
+                    <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
+                        data-aos-delay="100" data-aos-duration="1000">
+                        <div class="img w-100"
+                            style="background-image: url('{% static 'homepage/images/4.webp' %}');">
+                        </div>
+                    </div>
+                    <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
+                        data-aos-delay="200" data-aos-duration="1000">
+                        <div class="mt-5 mt-md-0">
+                            <h5 class="mb-2 head">Our Commitment to Quality and Customer Satisfaction</h5>
+                            <p class="mb-4">Our goal is to meet the needs of our current and future customers.
+                                We strive to build long-term relationships with our customers, that is why quality is our
+                                top priority.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
+    
 
 
-    <!-- fleet -->
 
-    <section class="p-5">
-        <div class="container-xl">
-            <div class="row g-xl-5">
 
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-6">
             
-                <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
-                    data-aos-delay="200" data-aos-duration="1000">
-                    <div class="mt-5 mt-md-0">
-                        <span class="subheading">Fleet </span>
-                        <h2 class="mb-2 head">Ability to deliver goods quickly. </h2>
-                        <p class="mb-4">Al-Gammal Transport and Logistics Company operates a versatile fleet of trucks tailored to meet various customer needs.
-                             This includes the transportation of polyethylene and plastic pipes,
-                             as well as trucks specialized for delivering food, mineral water, and other goods. </p>
-                    </div>
+                <div class="image-section">
+                    <img src="/static/homepage/images/blog-3.webp" alt="Image of person working">
                 </div>
+            </div>
 
-    
-                <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
-                    data-aos-delay="100" data-aos-duration="1000">
-                    <div class="w-100 img" style="background-image: url( '{% static 'homepage/images/img-1.webp' %}'); background-repeat: no-repeat; height: 600px; ">
-                       
-                    </div>
+            <div class="col-md-6">
+                <div class="text-section">
+                    <h1>Our Goals</h1>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>To be a key player & Essential partner for infrastructure projects throughout
+                        Egypt and the Middle East, using our accumulated experience and integrated
+                        solutions to deliver exceptional outcomes for clients and support sustainable
+                        development.
+                        </p>
                 </div>
-
             </div>
         </div>
+       
+  
+    </div> -->
+
+
+    <!-- section  Our Core Values -->
+
+    <section class="p-5 ftco-appointment ">
+        <div class="container-xl ">
+            <div class="row">
+                <!-- Text Section -->
+                <div class="col-md-6">
+
+                    <h2 class="display-5 ">Our <span class="subHead">Core</span> <span
+                            class="text-secondary">Values</span>
+                    </h2>
+
+                    <div class="accordion" id="competenciesAccordion">
+                        <!-- Integrity -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Integrity
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Acting ethically and honestly in all business dealings, prioritizing doing the
+                                    right thing over personal gain or short-term benefits.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Excellence -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Excellence
+
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Acting ethically and honestly in all business dealings, prioritizing doing the
+                                    right thing over personal gain or short-term benefits.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Cooperation And Collaboration -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Accountability
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Acting ethically and honestly in all business dealings, prioritizing doing the
+                                    right thing over personal gain or short-term benefits.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Collaboration -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Collaboration
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Working effectively together as a team to achieve common goals, fostering
+                                    open communication and shared responsibility.
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!--  Respect -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Respect
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Treating all stakeholders (employees, customers, partners, and the community)
+                                    with dignity and courtesy, fostering a positive and inclusive work environment.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <!-- <div class="col-md-6 text-end">
+                    <img src="{% static 'homepage/images/coreValues.png' %}" class="img-fluid w-60  " alt="Trophy Image"
+                        style="max-height: 500px;">
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- section  core Competencies -->
+
+    <section class="p-5 ftco-appointment">
+        <div class="container-xl ">
+            <div class="row">
+                <!-- Text Section -->
+                <div class="col-md-6">
+
+                    <h2 class="display-5 ">Our <span class="subHead">Core</span> <span
+                            class="text-secondary ">Competencies</span></h2>
+
+                    <div class="accordion" id="competenciesAccordion">
+                        <!-- Ensures Accountability -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    Ensures Accountability
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Assumes responsibility for successfully accomplishing work objectives and
+                                    delivering business results; setting high standards of performance for self and
+                                    others.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Adaptability & Flexibility -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Adaptability & Flexibility
+
+
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Ability to readily adjust one’s behavior to meet the demands of a changing work
+                                    environment. It includes reacting positively to change, co-operating readily with
+                                    revised
+                                    methods and priorities. Flexibility entails understanding and appreciating different
+                                    and
+                                    opposing perspectives on an issue, adapting one’s approach as the requirements of a
+                                    situation change, and changing or easily accepting changes in one’s own organization
+                                    or job requirements.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Cooperation And Collaboration -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    Cooperation And Collaboration
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Ability to collaborate effectively with others, to be part of a team and to
+                                    promote quality work through effective contribution to others’ efforts. It
+                                    includes promoting cooperation and partnerships between individuals and
+                                    groups at various levels, both inside and outside the organization.
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Client Service Orientation -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Client Service Orientation
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Focusing one’s efforts on discovering and meeting the client’s or clients’ needs.
+                                    It implies a desire to help or serve others, to meet their needs.
+                                    <strong>“Clients” can be
+                                        internal or external.</strong>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Taking Initiative -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    Taking Initiative
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Identifies opportunities and issues, and proactively acts and follows through
+                                    on work activities to capitalize or resolve them.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Change Management -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                    Change Management
+                                </button>
+                            </h2>
+                            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                                data-bs-parent="#competenciesAccordion">
+                                <div class="accordion-body">
+                                    Understands the need for change and helps plan for and accommodate it as
+                                    creatively and positively as possible.
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <!-- <div class="col-md-6 text-end">
+                    <img src="{% static 'homepage/images/vlaues.PNG' %}" class="img-fluid w-100" alt="Trophy Image"
+                        style="max-height: 500px;">
+                </div> -->
+            </div>
+        </div>
+
     </section>
 
 
@@ -122,70 +604,8 @@
 
 
 
-    <!-- section 4  vision -->
-
-    <section class="ftco-section ftco-about-section">
-        <div class="container-xl">
-            <div class="row g-xl-5">
 
 
-
-                <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
-                data-aos-delay="100" data-aos-duration="1000">
-                <div class="img w-100" style="background-image: url( '{% static 'homepage/images/goal.png' %}');">
-                </div>
-            </div>
-
-
-                <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
-                    data-aos-delay="200" data-aos-duration="1000">
-                    <div class="mt-5 mt-md-0">
-                        <span class="subheading">Our Vision</span>
-                        <h2 class="mb-2 head">We Are Trusted Logistics Company</h2>
-                        <p class="mb-4">Our vision for Al-Gammal Transport and Logistics Company is to broaden the company's operations,
-                             grow its market share within Egypt, and venture into international markets.
-                             We are committed to leveraging cutting-edge technology to enhance and develop 
-                             the logistics industry in Egypt. </p>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    
-    <!-- section 4  GOALS -->
-
-    <section class="ftco-section ftco-about-section">
-        <div class="container-xl">
-            <div class="row g-xl-5">
-
-
-
-                <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up"
-                    data-aos-delay="200" data-aos-duration="1000">
-                    <div class="mt-5 mt-md-0">
-                        <span class="subheading">Our Goals</span>
-                        <h2 class="mb-2 head">Our Commitment to Quality and Customer Satisfaction</h2>
-                        <p class="mb-4">Our goal is to meet the needs of our current and future customers. 
-                            We strive to build long-term relationships with our customers, that is why quality is our top priority. </p>
-
-                    </div>
-                </div>
-
-
-                <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up"
-                data-aos-delay="100" data-aos-duration="1000">
-                <div class="img w-100" style="background-image: url( '{% static 'homepage/images/vision3.jpg.webp' %}');">
-                </div>
-               </div>
-
-
-            </div>
-        </div>
-    </section>
 
 
 
@@ -201,25 +621,32 @@
                             </a>
                         </h2>
                         <iframe id="location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227751.55269257154!2d31.224163327718493!3d29.94173548220289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584712e964f1b5%3A0x25813575b74961c3!2sAlGammal%20Contracting!5e0!3m2!1sen!2seg!4v1725178153486!5m2!1sen!2seg"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </p>
-                        
+
                     </div>
                 </div>
-               
+
                 <div class="col-md-6 col-lg-2">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Quick Links</h2>
                         <ul class="list-unstyled">
-                            <li><a href="{% url 'homepage:index' %}"><span class="fa fa-chevron-right me-2"></span>Home</a></li>
-                            <li><a href="{% url 'homepage:about' %}"><span class="fa fa-chevron-right me-2"></span>About</a></li>
-                            <li><a href="{% url 'homepage:blog' %}"><span class="fa fa-chevron-right me-2"></span>Blog</a></li>
-                            <li><a href="{% url 'homepage:fleets' %}"><span class="fa fa-chevron-right me-2"></span>Fleets</a></li>
-                            <li><a href="{% url 'homepage:advantage' %}"><span class="fa fa-chevron-right me-2"></span>Advantage</a></li>
-                            <li><a href="{% url 'homepage:contact' %}"><span class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
-                            <li><a href="{% url 'homepage:create_order' %}"><span class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
+                            <li><a href="{% url 'homepage:index' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Home</a></li>
+                            <li><a href="{% url 'homepage:about' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="{% url 'homepage:blog' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Blog</a></li>
+                            <li><a href="{% url 'homepage:fleets' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Fleets</a></li>
+                            <li><a href="{% url 'homepage:advantage' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Advantage</a></li>
+                            <li><a href="{% url 'homepage:contact' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Contact Us</a></li>
+                            <li><a href="{% url 'homepage:create_order' %}"><span
+                                        class="fa fa-chevron-right me-2"></span>Make an Order</a></li>
                         </ul>
                     </div>
                 </div>
@@ -229,12 +656,12 @@
                         <div class="block-23 mb-3">
                             <ul>
                                 <li><span class="icon fa fa-map marker"></span><span class="text">
-                                    10 A Rama building, Kattameya, Ring Road, Maadi,
-                                                    Cairo, Egypt.
-                                </span></li>
+                                        10 A Rama building, Kattameya, Ring Road, Maadi,
+                                        Cairo, Egypt.
+                                    </span></li>
                                 <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+20 120 0000
-                                    416</span></a></li>
-                               
+                                            416</span></a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -275,20 +702,21 @@
     <script src="{% static 'homepage/js/main.js' %}"></script>
 
 
-<script>
-    ScrollReveal({
-         reset: true,
-         distance: '60px',
-         duration:2500,
-         delay:400
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
         });
 
-       
-        ScrollReveal().reveal('.w-100 ,.head', { delay: 200,origin:'left' });
-        ScrollReveal().reveal('.subheading ', { delay: 300,origin:'right' });
-        ScrollReveal().reveal('.mb-4 ', { delay: 300,origin:'right' });
 
-</script>
-    
+        ScrollReveal().reveal('.w-100 ,.head', { delay: 200, origin: 'left' });
+        ScrollReveal().reveal('.subheading ', { delay: 300, origin: 'right' });
+        ScrollReveal().reveal('.mb-4 ', { delay: 300, origin: 'right' });
+
+    </script>
+
 </body>
+
 </html>
