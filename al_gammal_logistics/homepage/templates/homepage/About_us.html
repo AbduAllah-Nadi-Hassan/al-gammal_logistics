@@ -95,7 +95,7 @@
                     <div class="inner-column wow fadeInLeft">
 
                         <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images">
-                                <img src="{% static 'homepage/images/com.webp' %}" alt=""></a>
+                                <img style="width: 100%;" src="{% static 'homepage/images/com.webp' %}" alt=""></a>
                         </figure>
 
                     </div>
@@ -373,8 +373,8 @@
 
                     <!-- Image Section -->
                     <div class="col-md-6 text-end">
-                        <img src="{% static 'homepage/images/core.png' %}" class="img-fluid w-100"
-                            alt="Our Core Competencies" style="max-height: 500px;">
+                        <img src="{% static 'homepage/images/award.png' %}" class="img-fluid "
+                            alt="Our Core Competencies" style="max-height: auto; width: 90%;" >
                     </div>
 
 
@@ -629,7 +629,7 @@
         });
 
 
-        ScrollReveal().reveal('.w-100 , .w-60 ,.head , .image-1', { delay: 200, origin: 'left' });
+        ScrollReveal().reveal('.w-100 , .w-60 ,.head , .image-1 ,.img-fluid', { delay: 200, origin: 'left' });
         ScrollReveal().reveal('.subheading ', { delay: 300, origin: 'right' });
         ScrollReveal().reveal('.mb-4 ', { delay: 300, origin: 'right' });
 
