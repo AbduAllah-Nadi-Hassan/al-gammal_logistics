@@ -4515,4 +4515,16 @@ p {
 }
 
 
+/* language button */
+.language{
+  /* background-color: rgb(80, 80, 80); */
+  color: #f0f0f0;
+  padding-top: 30px;
+  border-radius: 5%;
+}
+.language:hover{
+  /* background-color: rgb(116, 116, 116); */
+  color: #f5b506;
+  border-radius: 5%;
+}
 

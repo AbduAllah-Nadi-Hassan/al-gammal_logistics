@@ -75,61 +75,33 @@ document.querySelectorAll('.page-link').forEach(link => {
 
 // Language Switcher
 
-// Function to get the current language
-function getCurrentLanguage() {
-    return document.documentElement.lang || 'en'; // Defaults to 'en' if lang attribute is not set
-}
-
-// Function to set the button label
-function setLanguageSwitcher() {
-    const currentLang = getCurrentLanguage();
-    const switcherButton = document.getElementById('languageSwitcher');
-    
-    if (currentLang === 'en') {
-        switcherButton.textContent = 'العربية'; // Show Arabic if current language is English
-    } else {
-        switcherButton.textContent = 'English'; // Show English if current language is not English
-    }
-}
-
-// Event listener to switch the language
-document.getElementById('languageSwitcher').addEventListener('click', function() {
-    const currentLang = getCurrentLanguage();
-    const newLang = currentLang === 'en' ? 'ar' : 'en'; // Toggle between 'en' and 'ar'
-
-    // Redirect to change the language (this assumes you have a URL setup to change language)
-    window.location.href = `/set_language/?language=${newLang}`;
-});
-
-// Initialize the language switcher button
-setLanguageSwitcher();
 
 
 ////////////////////////////////////
-function checkVisibility() {
-    const switcher = document.querySelector('.language-switch');
-    const navbar = document.querySelector('nav');
-    const footer = document.querySelector('footer');
+// function checkVisibility() {
+//     const switcher = document.querySelector('.language-switch');
+//     const navbar = document.querySelector('nav');
+//     const footer = document.querySelector('footer');
 
-    const switcherRect = switcher.getBoundingClientRect();
-    const navbarRect = navbar.getBoundingClientRect();
-    const footerRect = footer.getBoundingClientRect();
+//     const switcherRect = switcher.getBoundingClientRect();
+//     const navbarRect = navbar.getBoundingClientRect();
+//     const footerRect = footer.getBoundingClientRect();
 
-    // Check if switcher overlaps with navbar or footer
-    if (
-        (switcherRect.top < navbarRect.bottom && switcherRect.bottom > navbarRect.top) ||
-        (switcherRect.top < footerRect.bottom && switcherRect.bottom > footerRect.top)
-    ) {
-        switcher.classList.add('hidden');
-    } else {
-        switcher.classList.remove('hidden');
-    }
-}
+   
+//     if (
+//         (switcherRect.top < navbarRect.bottom && switcherRect.bottom > navbarRect.top) ||
+//         (switcherRect.top < footerRect.bottom && switcherRect.bottom > footerRect.top)
+//     ) {
+//         switcher.classList.add('hidden');
+//     } else {
+//         switcher.classList.remove('hidden');
+//     }
+// }
 
-window.addEventListener('scroll', checkVisibility);
-window.addEventListener('resize', checkVisibility);
+// window.addEventListener('scroll', checkVisibility);
+// window.addEventListener('resize', checkVisibility);
 
-// Initial check
-checkVisibility();
+
+// checkVisibility();
 
 
