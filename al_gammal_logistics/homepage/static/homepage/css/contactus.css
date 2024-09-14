@@ -92,13 +92,13 @@
 
 .facebook {
     background-color: #3b5998;
-    background-image: url("/static/homepage/images/facebook-icon.png");
+    background-image: url("/static/homepage/images/facebook-icon.webp");
     background-position: center;
 }
 
 .whatsapp {
     background-color: #ffffff;
-    background-image: url("/static/homepage/images/whatsapp-icon-png.png");
+    background-image: url("/static/homepage/images/whatsapp-icon-png.webp");
     background-position: center;
 }
 
